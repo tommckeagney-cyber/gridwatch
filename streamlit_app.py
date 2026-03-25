@@ -6,9 +6,12 @@ from datetime import datetime, timedelta
 import folium
 from folium import plugins
 from streamlit.components.v1 import html
-import re
+import time
 
 st.set_page_config(page_title="GridWatch Ireland", page_icon="⚡", layout="wide")
+
+# Import live scraper
+from live_scraper import LiveScraper
 
 # County coordinates
 county_coords = {
@@ -41,74 +44,77 @@ energy_icons = {
     "data_centre": "🏢", "other": "🏭", "unknown": "❓"
 }
 
-# Function to parse date
-def parse_date(date_str):
-    """Parse various date formats"""
-    if not date_str or date_str == 'Unknown':
-        return None
-    try:
-        # Try dd/mm/yyyy format
-        return datetime.strptime(date_str, '%d/%m/%Y')
-    except:
-        try:
-            # Try yyyy-mm-dd format
-            return datetime.strptime(date_str, '%Y-%m-%d')
-        except:
-            return None
-
-# Load data
+# Load cached data
 @st.cache_data(ttl=3600)
-def load_data():
+def load_cached_data():
     try:
         with open("data/cases.json", "r") as f:
             return json.load(f)
     except:
         return []
 
+# Live scrape function
+def scrape_date_range_with_progress(start_date, end_date):
+    """Scrape data for a date range with progress updates"""
+    scraper = LiveScraper()
+    
+    # Create progress bar
+    progress_bar = st.progress(0)
+    status_text = st.empty()
+    
+    def update_progress(message):
+        status_text.text(message)
+    
+    # Run scraper
+    cases = scraper.scrape_date_range(
+        start_date, 
+        end_date,
+        progress_callback=update_progress
+    )
+    
+    progress_bar.progress(100)
+    status_text.text(f"✅ Found {len(cases)} energy cases!")
+    time.sleep(1)
+    status_text.empty()
+    progress_bar.empty()
+    
+    return cases
+
 st.title("⚡ GridWatch Ireland")
-st.markdown("### Energy Planning Intelligence Dashboard")
+st.markdown("### Energy Planning Intelligence Dashboard with Live Scraping")
 st.markdown("---")
-
-cases = load_data()
-
-if not cases:
-    st.error("No data loaded. Please contact administrator.")
-    st.stop()
-
-df = pd.DataFrame(cases)
-df['energy_type'] = df['energy_type'].fillna('unknown')
-df['county'] = df['county'].fillna('Unknown')
-df['status'] = df['status'].fillna('Unknown')
-df['title'] = df['title'].fillna('No Title')
-
-# Parse dates
-df['date_parsed'] = df['date_lodged'].apply(parse_date)
-
-# Get date range for the data
-valid_dates = df[df['date_parsed'].notna()]['date_parsed']
-if len(valid_dates) > 0:
-    min_date = valid_dates.min()
-    max_date = valid_dates.max()
-else:
-    min_date = datetime.now() - timedelta(days=365)
-    max_date = datetime.now()
 
 # Sidebar
 with st.sidebar:
     st.image("https://img.icons8.com/color/96/ireland.png", width=80)
     st.markdown("### About")
-    st.markdown("Monitoring energy planning applications across Ireland.")
-    st.markdown("**Data Source:** An Coimisiún Pleanála")
+    st.markdown("Live scraping from An Coimisiún Pleanála")
     st.markdown("---")
     
-    st.markdown("### 📅 Date Range Filter")
+    st.markdown("### 📅 Date Range")
+    
+    # Get date range for data
+    cached_cases = load_cached_data()
+    if cached_cases:
+        df_cache = pd.DataFrame(cached_cases)
+        df_cache['date_parsed'] = pd.to_datetime(df_cache['date_lodged'], errors='coerce')
+        valid_dates = df_cache[df_cache['date_parsed'].notna()]['date_parsed']
+        if len(valid_dates) > 0:
+            min_date = valid_dates.min()
+            max_date = valid_dates.max()
+        else:
+            min_date = datetime.now() - timedelta(days=365)
+            max_date = datetime.now()
+    else:
+        min_date = datetime.now() - timedelta(days=365)
+        max_date = datetime.now()
     
     # Date range selector
     col1, col2 = st.columns(2)
     with col1:
         start_date = st.date_input(
             "From",
-            value=min_date,
+            value=max_date - timedelta(days=30),
             min_value=min_date,
             max_value=max_date
         )
@@ -120,58 +126,87 @@ with st.sidebar:
             max_value=max_date
         )
     
-    # Quick date range buttons
-    st.markdown("**Quick select:**")
-    quick_col1, quick_col2, quick_col3 = st.columns(3)
+    # Live scrape button
+    st.markdown("---")
+    scrape_button = st.button(
+        "🚀 Fetch Live Data", 
+        use_container_width=True,
+        help="Scrape the ACP website for this date range"
+    )
     
-    with quick_col1:
-        if st.button("Last 7 days", use_container_width=True):
-            start_date = max_date - timedelta(days=7)
-            end_date = max_date
-            st.rerun()
-    
-    with quick_col2:
-        if st.button("Last 30 days", use_container_width=True):
-            start_date = max_date - timedelta(days=30)
-            end_date = max_date
-            st.rerun()
-    
-    with quick_col3:
-        if st.button("Last 90 days", use_container_width=True):
-            start_date = max_date - timedelta(days=90)
-            end_date = max_date
-            st.rerun()
-    
-    # Show recent updates toggle
-    show_recent_only = st.checkbox("📅 Show recent only", value=True, 
-                                    help="Show only applications from the last 30 days")
-    if show_recent_only:
-        start_date = max_date - timedelta(days=30)
+    # Info about live scraping
+    st.info("💡 **Tip:** Click 'Fetch Live Data' to get the latest applications for your date range. This may take 30-60 seconds.")
     
     st.markdown("---")
-    
     st.markdown("### 🔍 Filters")
     
-    selected_type = st.selectbox("Energy Type", ["All"] + sorted(df['energy_type'].unique().tolist()))
-    selected_county = st.selectbox("County", ["All"] + sorted(df['county'].unique().tolist()))
-    selected_status = st.selectbox("Status", ["All"] + sorted(df['status'].unique().tolist()))
+    # We'll load filters after we have data
+
+# Main content area
+if scrape_button:
+    # Convert to datetime
+    start_datetime = datetime.combine(start_date, datetime.min.time())
+    end_datetime = datetime.combine(end_date, datetime.max.time())
     
-    st.markdown("---")
-    st.caption(f"📅 Data range: {min_date.strftime('%d/%m/%Y')} - {max_date.strftime('%d/%m/%Y')}")
+    st.info(f"🔍 Fetching live data from {start_date.strftime('%d %B %Y')} to {end_date.strftime('%d %B %Y')}...")
+    st.markdown("This may take 30-60 seconds while we scrape the ACP website.")
+    
+    # Scrape live data
+    with st.spinner("Scraping planning applications..."):
+        cases = scrape_date_range_with_progress(start_datetime, end_datetime)
+    
+    if cases:
+        st.success(f"✅ Successfully retrieved {len(cases)} energy projects!")
+        df_filtered = pd.DataFrame(cases)
+        
+        # Show in session state
+        st.session_state['live_data'] = cases
+        st.session_state['date_range'] = (start_date, end_date)
+    else:
+        st.warning("No energy projects found in this date range. Try a different range.")
+        st.stop()
 
-# Convert dates to datetime for filtering
-start_datetime = datetime.combine(start_date, datetime.min.time())
-end_datetime = datetime.combine(end_date, datetime.max.time())
+elif 'live_data' in st.session_state and st.session_state['date_range'][0] == start_date and st.session_state['date_range'][1] == end_date:
+    # Use cached live data
+    cases = st.session_state['live_data']
+    df_filtered = pd.DataFrame(cases)
+else:
+    # Load cached data
+    cases = load_cached_data()
+    if cases:
+        df = pd.DataFrame(cases)
+        df['date_parsed'] = pd.to_datetime(df['date_lodged'], errors='coerce')
+        
+        # Filter by date range
+        start_datetime = datetime.combine(start_date, datetime.min.time())
+        end_datetime = datetime.combine(end_date, datetime.max.time())
+        
+        df_filtered = df[
+            (df['date_parsed'].notna()) & 
+            (df['date_parsed'] >= start_datetime) & 
+            (df['date_parsed'] <= end_datetime)
+        ]
+        
+        if len(df_filtered) == 0:
+            st.info(f"No cached data for {start_date.strftime('%d %B %Y')} to {end_date.strftime('%d %B %Y')}. Click 'Fetch Live Data' to scrape it.")
+            st.stop()
+    else:
+        st.error("No data loaded. Click 'Fetch Live Data' to start scraping.")
+        st.stop()
 
-# Apply date filter
-df_filtered = df.copy()
-df_filtered = df_filtered[
-    (df_filtered['date_parsed'].notna()) & 
-    (df_filtered['date_parsed'] >= start_datetime) & 
-    (df_filtered['date_parsed'] <= end_datetime)
-]
+# Now apply sidebar filters
+with st.sidebar:
+    if len(df_filtered) > 0:
+        selected_type = st.selectbox("Energy Type", ["All"] + sorted(df_filtered['energy_type'].unique().tolist()))
+        selected_county = st.selectbox("County", ["All"] + sorted(df_filtered['county'].unique().tolist()))
+        selected_status = st.selectbox("Status", ["All"] + sorted(df_filtered['status'].unique().tolist()))
+    else:
+        selected_type = "All"
+        selected_county = "All"
+        selected_status = "All"
+        st.stop()
 
-# Apply other filters
+# Apply filters
 if selected_type != "All":
     df_filtered = df_filtered[df_filtered['energy_type'] == selected_type]
 if selected_county != "All":
@@ -179,14 +214,16 @@ if selected_county != "All":
 if selected_status != "All":
     df_filtered = df_filtered[df_filtered['status'] == selected_status]
 
-# Sort by date (most recent first)
-df_filtered = df_filtered.sort_values('date_parsed', ascending=False)
+# Sort by date
+if 'date_parsed' in df_filtered.columns:
+    df_filtered = df_filtered.sort_values('date_parsed', ascending=False)
+else:
+    df_filtered = df_filtered.sort_values('date_lodged', ascending=False)
 
 # Stats Cards
 st.subheader("📊 Project Statistics")
 
-# Show date range summary
-col1, col2, col3, col4, col5, col6 = st.columns(6)
+col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
     st.metric("Total Projects", len(df_filtered))
@@ -198,16 +235,6 @@ with col4:
     st.metric("🔋 BESS", len(df_filtered[df_filtered['energy_type'] == 'bess']))
 with col5:
     st.metric("⚡ Grid", len(df_filtered[df_filtered['energy_type'] == 'grid']))
-with col6:
-    st.metric("📅 Period", f"{start_date.strftime('%d/%m')} - {end_date.strftime('%d/%m')}")
-
-st.markdown("---")
-
-# Show date range info
-if len(df_filtered) > 0:
-    st.info(f"📅 Showing **{len(df_filtered)}** projects lodged between **{start_date.strftime('%d %B %Y')}** and **{end_date.strftime('%d %B %Y')}**")
-else:
-    st.warning(f"No projects found in this date range. Try expanding the range.")
 
 st.markdown("---")
 
@@ -227,11 +254,10 @@ with col1:
     
     # Add markers
     for _, row in df_filtered.iterrows():
-        # Get coordinates
         lat = row.get('latitude')
         lon = row.get('longitude')
         
-        if lat is None or lon is None or pd.isna(lat):
+        if lat is None or pd.isna(lat):
             county = row.get('county', 'Unknown')
             if county in county_coords:
                 lat, lon = county_coords[county]
@@ -242,21 +268,16 @@ with col1:
         color = energy_colors.get(etype, '#9ca3af')
         icon = energy_icons.get(etype, '❓')
         
-        # Check if coordinates are exact
         has_exact = row.get('latitude') is not None and not pd.isna(row.get('latitude'))
         location_badge = "📍 Exact" if has_exact else "🏢 Approximate"
         
-        # Status emoji
         status = row.get('status', '')
-        if 'granted' in status.lower() or 'approved' in status.lower():
+        if 'granted' in status.lower():
             status_emoji = "✅"
         elif 'pending' in status.lower() or 'lodged' in status.lower():
             status_emoji = "⏳"
         else:
             status_emoji = "📝"
-        
-        # Format date for display
-        date_lodged = row.get('date_lodged', 'N/A')
         
         popup_html = f"""
         <div style="font-family: sans-serif; min-width: 250px;">
@@ -269,7 +290,7 @@ with col1:
                 <b>Ref:</b> {row.get('ref', 'N/A')}<br>
                 <b>County:</b> {row.get('county', 'Unknown')}<br>
                 <b>{status_emoji} Status:</b> {status}<br>
-                <b>📅 Lodged:</b> {date_lodged}<br>
+                <b>📅 Lodged:</b> {row.get('date_lodged', 'N/A')}<br>
                 <a href="{row.get('source_url', '#')}" target="_blank" style="display: inline-block; margin-top: 8px; background: #2563eb; color: white; padding: 4px 12px; text-decoration: none; border-radius: 4px; font-size: 12px;">
                     🔗 View on pleanala.ie →
                 </a>
@@ -290,8 +311,6 @@ with col1:
         ).add_to(marker_cluster)
     
     folium.LayerControl().add_to(m)
-    
-    # Display map
     map_html = m._repr_html_()
     html(map_html, height=500, width=700)
 
@@ -300,21 +319,20 @@ with col2:
     for etype, color in energy_colors.items():
         count = len(df_filtered[df_filtered['energy_type'] == etype])
         icon = energy_icons.get(etype, "❓")
-        if count > 0 or etype in ['wind', 'solar', 'bess', 'grid']:
-            st.markdown(
-                f'<div style="display: flex; align-items: center; margin: 6px 0;">'
-                f'<span style="display: inline-block; width: 16px; height: 16px; background: {color}; border-radius: 50%; margin-right: 8px;"></span>'
-                f'<span>{icon} {etype.title()}: {count}</span>'
-                f'</div>',
-                unsafe_allow_html=True
-            )
+        st.markdown(
+            f'<div style="display: flex; align-items: center; margin: 6px 0;">'
+            f'<span style="display: inline-block; width: 16px; height: 16px; background: {color}; border-radius: 50%; margin-right: 8px;"></span>'
+            f'<span>{icon} {etype.title()}: {count}</span>'
+            f'</div>',
+            unsafe_allow_html=True
+        )
     
     st.markdown("---")
     st.markdown("### 💡 Tips")
     st.markdown("""
     - **Click markers** to see project details
-    - **Use date filters** to see recent applications
-    - **Zoom in/out** for better view
+    - **Change date range** and click 'Fetch Live Data' to explore other periods
+    - **Live scraping** gets the latest data from ACP
     """)
 
 st.markdown("---")
@@ -332,34 +350,24 @@ with col1:
         st.plotly_chart(fig, use_container_width=True)
 
 with col2:
-    st.markdown("#### Applications Over Time")
-    if len(df_filtered) > 0:
-        # Group by date
-        df_filtered['date_week'] = df_filtered['date_parsed'].dt.strftime('%Y-%m-%d')
-        timeline = df_filtered.groupby('date_week').size().reset_index(name='count')
-        timeline = timeline.sort_values('date_week')
-        
-        fig = px.line(timeline, x='date_week', y='count', title='Applications by Date')
-        fig.update_layout(xaxis_title="Date", yaxis_title="Number of Applications")
+    st.markdown("#### Projects by County")
+    county_counts = df_filtered['county'].value_counts().head(10)
+    if len(county_counts) > 0:
+        fig = px.bar(x=county_counts.values, y=county_counts.index, orientation='h')
         st.plotly_chart(fig, use_container_width=True)
-    else:
-        st.info("No data for timeline chart")
 
 st.markdown("---")
 
-# Recent Projects Table
-st.subheader("📋 Recent Projects")
+# Project Table
+st.subheader("📋 Project List")
 
-# Search
 search = st.text_input("🔍 Search projects", placeholder="Search by title, reference, or county...")
 if search:
     mask = (df_filtered['title'].str.contains(search, case=False, na=False) |
             df_filtered['ref'].str.contains(search, case=False, na=False) |
             df_filtered['county'].str.contains(search, case=False, na=False))
     df_filtered = df_filtered[mask]
-    st.caption(f"Found {len(df_filtered)} projects matching '{search}'")
 
-# Display table
 display_cols = ['ref', 'title', 'county', 'energy_type', 'status', 'date_lodged']
 available_cols = [c for c in display_cols if c in df_filtered.columns]
 
@@ -377,39 +385,9 @@ st.dataframe(
     height=400
 )
 
-# Download buttons
+# Download
+csv = df_filtered.to_csv(index=False)
+st.download_button("📥 Download CSV", csv, f"gridwatch_{start_date.strftime('%Y%m%d')}_{end_date.strftime('%Y%m%d')}.csv")
+
 st.markdown("---")
-col1, col2 = st.columns(2)
-
-with col1:
-    csv = df_filtered.to_csv(index=False)
-    st.download_button(
-        label="📥 Download as CSV",
-        data=csv,
-        file_name=f"gridwatch_{start_date.strftime('%Y%m%d')}_{end_date.strftime('%Y%m%d')}.csv",
-        mime="text/csv",
-        use_container_width=True
-    )
-
-with col2:
-    json_str = df_filtered.to_json(orient='records', indent=2)
-    st.download_button(
-        label="📥 Download as JSON",
-        data=json_str,
-        file_name=f"gridwatch_{start_date.strftime('%Y%m%d')}_{end_date.strftime('%Y%m%d')}.json",
-        mime="application/json",
-        use_container_width=True
-    )
-
-# Footer
-st.markdown("---")
-st.markdown(
-    f"""
-    <div style="text-align: center; color: gray; font-size: 12px;">
-        <b>⚡ GridWatch Ireland</b> | Data from An Coimisiún Pleanála<br>
-        Showing {len(df_filtered)} projects from {start_date.strftime('%d %B %Y')} to {end_date.strftime('%d %B %Y')}<br>
-        Built with Streamlit | Data updates weekly
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.caption(f"Showing {len(df_filtered)} projects | Data source: An Coimisiún Pleanála | Live scraping available")
