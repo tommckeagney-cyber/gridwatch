@@ -14,14 +14,13 @@ st.set_page_config(
     layout="wide"
 )
 
-# ============ DARK THEME CSS WITH BETTER CONTRAST ============
+# ============ DARK THEME CSS WITH FIXED SIDEBAR ============
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
     * {
         font-family: 'Inter', sans-serif;
-        color: #f0f0f0 !important;
     }
     
     .stApp {
@@ -133,10 +132,10 @@ st.markdown("""
         box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
     }
     
-    /* Sidebar */
+    /* ============ FIXED SIDEBAR ============ */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0a0a12 0%, #12121c 100%);
-        border-right: 1px solid rgba(255,255,255,0.08);
+        background: linear-gradient(180deg, #0f0f18 0%, #181824 100%);
+        border-right: 1px solid rgba(255,255,255,0.1);
     }
     
     [data-testid="stSidebar"] [data-testid="stMarkdown"] {
@@ -145,17 +144,86 @@ st.markdown("""
     
     [data-testid="stSidebar"] h3 {
         color: #ffffff !important;
+        font-weight: 600;
     }
     
-    /* Select boxes and inputs */
-    .stSelectbox label, .stDateInput label, .stCheckbox label {
+    [data-testid="stSidebar"] p {
         color: #cbd5e1 !important;
     }
     
-    select, input, textarea {
+    /* Sidebar select boxes - FIXED */
+    [data-testid="stSidebar"] .stSelectbox label {
+        color: #ffffff !important;
+        font-weight: 500;
+    }
+    
+    [data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] {
+        background-color: #1e1e2e !important;
+        border: 1px solid #334155 !important;
+        border-radius: 8px !important;
+    }
+    
+    [data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] div {
+        color: #f0f0f0 !important;
+    }
+    
+    /* Sidebar date inputs - FIXED */
+    [data-testid="stSidebar"] .stDateInput label {
+        color: #ffffff !important;
+        font-weight: 500;
+    }
+    
+    [data-testid="stSidebar"] .stDateInput input {
         background-color: #1e1e2e !important;
         color: #f0f0f0 !important;
         border: 1px solid #334155 !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Sidebar checkbox - FIXED */
+    [data-testid="stSidebar"] .stCheckbox label {
+        color: #ffffff !important;
+    }
+    
+    /* Sidebar caption text */
+    [data-testid="stSidebar"] .stCaption {
+        color: #9ca3af !important;
+    }
+    
+    /* Sidebar info/alert boxes */
+    [data-testid="stSidebar"] .stAlert {
+        background-color: #1e1e2e !important;
+        color: #e2e8f0 !important;
+    }
+    
+    /* General select boxes (non-sidebar) */
+    .stSelectbox label {
+        color: #cbd5e1 !important;
+    }
+    
+    .stSelectbox div[data-baseweb="select"] {
+        background-color: #1e1e2e !important;
+        border: 1px solid #334155 !important;
+    }
+    
+    .stSelectbox div[data-baseweb="select"] div {
+        color: #f0f0f0 !important;
+    }
+    
+    /* Date inputs */
+    .stDateInput label {
+        color: #cbd5e1 !important;
+    }
+    
+    .stDateInput input {
+        background-color: #1e1e2e !important;
+        color: #f0f0f0 !important;
+        border: 1px solid #334155 !important;
+    }
+    
+    /* Checkbox */
+    .stCheckbox label {
+        color: #cbd5e1 !important;
     }
     
     /* Info box */
