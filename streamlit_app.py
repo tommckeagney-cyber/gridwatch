@@ -7,25 +7,15 @@ from datetime import datetime, timedelta
 import folium
 from folium import plugins
 from streamlit.components.v1 import html
-import anthropic
-import random
 
-# ============ PAGE CONFIG ============
-st.set_page_config(
-    page_title="GridWatch Ireland",
-    page_icon="⚡",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+st.set_page_config(page_title="GridWatch Ireland", page_icon="⚡", layout="wide")
 
 # ============ MODERN CSS ============
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
-    * {
-        font-family: 'Inter', sans-serif;
-    }
+    * { font-family: 'Inter', sans-serif; }
     
     /* Glassmorphism effect */
     .glass-card {
@@ -43,7 +33,6 @@ st.markdown("""
         box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
     }
     
-    /* Gradient header */
     .gradient-header {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
         -webkit-background-clip: text;
@@ -53,7 +42,6 @@ st.markdown("""
         font-size: 3rem;
     }
     
-    /* Animated gradient border */
     .animated-border {
         background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
         background-size: 200% 200%;
@@ -69,7 +57,6 @@ st.markdown("""
         100% { background-position: 0% 50%; }
     }
     
-    /* Modern metric cards */
     [data-testid="stMetric"] {
         background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%);
         backdrop-filter: blur(10px);
@@ -85,11 +72,6 @@ st.markdown("""
         box-shadow: 0 12px 30px rgba(102, 126, 234, 0.2);
     }
     
-    [data-testid="stMetric"] label {
-        font-weight: 600;
-        color: #1e293b;
-    }
-    
     [data-testid="stMetric"] .stMetricValue {
         font-size: 2.2rem;
         font-weight: 800;
@@ -98,7 +80,6 @@ st.markdown("""
         -webkit-text-fill-color: transparent;
     }
     
-    /* Modern buttons */
     .stButton > button {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
@@ -107,7 +88,6 @@ st.markdown("""
         padding: 0.5rem 1rem;
         font-weight: 600;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
     }
     
     .stButton > button:hover {
@@ -115,7 +95,6 @@ st.markdown("""
         box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
     }
     
-    /* Modern tabs */
     .stTabs [data-baseweb="tab-list"] {
         gap: 12px;
         background: rgba(248, 250, 252, 0.8);
@@ -138,29 +117,6 @@ st.markdown("""
         box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
     }
     
-    /* Modern sidebar */
-    [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-        border-right: 1px solid rgba(0,0,0,0.05);
-    }
-    
-    [data-testid="stSidebar"] [data-testid="stMarkdown"] h3 {
-        font-weight: 700;
-        color: #1e293b;
-    }
-    
-    /* Info box animation */
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateX(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    
     .custom-info {
         background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
         border-left: 4px solid #667eea;
@@ -170,17 +126,11 @@ st.markdown("""
         animation: slideIn 0.5s ease;
     }
     
-    /* Loading animation */
-    @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.5; }
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
     }
     
-    .loading-text {
-        animation: pulse 1.5s ease-in-out infinite;
-    }
-    
-    /* AI insight card */
     .ai-insight {
         background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
         border-radius: 20px;
@@ -192,83 +142,22 @@ st.markdown("""
         color: #5b21b6;
         font-weight: 700;
     }
+    
+    .coming-soon {
+        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        border-radius: 16px;
+        padding: 1rem;
+        text-align: center;
+        font-weight: 500;
+    }
 </style>
 """, unsafe_allow_html=True)
-
-# ============ INITIALIZE AI CLIENT ============
-@st.cache_resource
-def init_ai_client():
-    """Initialize Anthropic client with API key"""
-    try:
-        api_key = st.secrets["ANTHROPIC_API_KEY"]
-        return anthropic.Anthropic(api_key=api_key)
-    except:
-        return None
-
-client = init_ai_client()
-
-# ============ AI FUNCTIONS ============
-def get_ai_summary(project_title, project_description):
-    """Get AI-powered summary of a project"""
-    if not client:
-        return None
-    
-    try:
-        prompt = f"""Provide a brief, professional summary of this energy project in 2-3 sentences:
-        
-Project: {project_title}
-Description: {project_description}
-
-Focus on: project scale, energy type, strategic importance, and current status."""
-        
-        response = client.messages.create(
-            model="claude-3-haiku-20240307",
-            max_tokens=150,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        return response.content[0].text.strip()
-    except Exception as e:
-        return f"✨ Energy project at {project_title[:50]}..."
-
-def get_ai_insights(df):
-    """Get AI-powered insights about the current data"""
-    if not client or len(df) == 0:
-        return None
-    
-    try:
-        # Prepare summary for AI
-        type_summary = df['energy_type'].value_counts().to_dict()
-        county_summary = df['county'].value_counts().head(3).to_dict()
-        recent = df.nlargest(3, 'date_parsed') if 'date_parsed' in df.columns else df.head(3)
-        
-        prompt = f"""As an Irish energy planning analyst, provide 3 key insights about these projects:
-        
-Energy Types: {type_summary}
-Top Counties: {county_summary}
-Total Projects: {len(df)}
-Recent Projects: {', '.join(recent['title'].tolist()[:3])}
-
-Provide insights about:
-1. Trends in energy development
-2. Geographic patterns
-3. Notable observations
-
-Keep response concise, under 100 words."""
-        
-        response = client.messages.create(
-            model="claude-3-haiku-20240307",
-            max_tokens=200,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        return response.content[0].text.strip()
-    except:
-        return None
 
 # ============ HEADER ============
 col1, col2 = st.columns([3, 1])
 with col1:
     st.markdown('<h1 class="gradient-header">⚡ GridWatch Ireland</h1>', unsafe_allow_html=True)
-    st.markdown('<p style="font-size: 1.2rem; color: #4b5563;">🇮🇪 Real-time Energy Planning Intelligence | Powered by AI</p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-size: 1.2rem; color: #4b5563;">🇮🇪 Real-time Energy Planning Intelligence | AI Coming Soon</p>', unsafe_allow_html=True)
 with col2:
     st.image("https://img.icons8.com/color/96/ireland.png", width=100)
 
@@ -322,9 +211,9 @@ with st.sidebar:
     st.markdown("""
     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
                 padding: 1.2rem; border-radius: 20px; color: white; margin-bottom: 1.5rem;">
-        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎯 AI-Powered</div>
-        <div style="font-weight: 600;">Energy Intelligence</div>
-        <div style="font-size: 0.8rem; opacity: 0.9; margin-top: 0.5rem;">Real-time insights & analysis</div>
+        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎯 Coming Soon</div>
+        <div style="font-weight: 600;">AI-Powered Intelligence</div>
+        <div style="font-size: 0.8rem; opacity: 0.9; margin-top: 0.5rem;">Project summaries & insights</div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -401,19 +290,12 @@ with m4:
 with m5:
     st.metric("⚡ Grid", len(df_filtered[df_filtered['energy_type'] == 'grid']))
 
-# AI Insights Panel
-if client and len(df_filtered) > 0:
-    st.markdown("---")
-    with st.spinner("🤖 AI is analyzing project data..."):
-        insights = get_ai_insights(df_filtered)
-    
-    if insights:
-        st.markdown(f"""
-        <div class="ai-insight">
-            <h4>🤖 AI-Powered Insights</h4>
-            <p style="margin-top: 0.5rem;">{insights}</p>
-        </div>
-        """, unsafe_allow_html=True)
+# AI Coming Soon Banner
+st.markdown("""
+<div class="coming-soon">
+    🤖 <strong>AI Features Coming Soon!</strong> Soon you'll get AI-powered project summaries, smart insights, and trend analysis.
+</div>
+""", unsafe_allow_html=True)
 
 # Date range info
 if len(df_filtered) > 0:
@@ -469,7 +351,6 @@ with tab1:
         m = folium.Map(location=[53.4129, -8.2439], zoom_start=7, control_scale=True)
         folium.TileLayer('CartoDB positron', name='Light').add_to(m)
         folium.TileLayer('OpenStreetMap', name='Street').add_to(m)
-        folium.TileLayer('CartoDB dark_matter', name='Dark').add_to(m)
         
         marker_cluster = plugins.MarkerCluster(name='Projects').add_to(m)
         
@@ -488,40 +369,24 @@ with tab1:
             color = energy_colors.get(etype, '#9ca3af')
             icon = energy_icons.get(etype, '❓')
             
-            # Get AI summary if available
-            if client and random.random() < 0.3:  # Sample some projects
-                ai_summary = get_ai_summary(row.get('title', ''), row.get('description', ''))
-            else:
-                ai_summary = None
-            
             popup_html = f"""
-            <div style="font-family: 'Inter', sans-serif; min-width: 300px; max-width: 350px;">
-                <div style="background: {color}; padding: 14px; border-radius: 16px 16px 0 0; color: white;">
-                    <div style="font-size: 18px; font-weight: 700;">{icon} {etype.title()}</div>
+            <div style="font-family: 'Inter', sans-serif; min-width: 280px;">
+                <div style="background: {color}; padding: 12px; border-radius: 12px 12px 0 0; color: white;">
+                    <div style="font-size: 16px; font-weight: 600;">{icon} {etype.title()}</div>
                 </div>
-                <div style="padding: 18px; background: white; border-radius: 0 0 16px 16px;">
-                    <div style="font-weight: 700; font-size: 15px; margin-bottom: 12px;">{row.get('title', 'No Title')[:100]}</div>
-                    <div style="font-size: 13px; color: #4b5563; margin-bottom: 8px;">
-                        <div><strong>📋 Ref:</strong> {row.get('ref', 'N/A')}</div>
-                        <div><strong>📍 County:</strong> {row.get('county', 'Unknown')}</div>
-                        <div><strong>📅 Lodged:</strong> {row.get('date_lodged', 'N/A')}</div>
+                <div style="padding: 16px; background: white; border-radius: 0 0 12px 12px;">
+                    <div style="font-weight: 600; margin-bottom: 8px;">{row.get('title', 'No Title')[:100]}</div>
+                    <div style="font-size: 12px; color: #6b7280;">
+                        <div><strong>Ref:</strong> {row.get('ref', 'N/A')}</div>
+                        <div><strong>County:</strong> {row.get('county', 'Unknown')}</div>
+                        <div><strong>Status:</strong> {row.get('status', 'Unknown')}</div>
+                        <div><strong>Lodged:</strong> {row.get('date_lodged', 'N/A')}</div>
                     </div>
-            """
-            
-            if ai_summary:
-                popup_html += f"""
-                    <div style="background: #f3f4f6; padding: 10px; border-radius: 12px; margin: 10px 0; font-size: 12px;">
-                        <strong>🤖 AI Summary:</strong><br>
-                        {ai_summary[:120]}...
-                    </div>
-                """
-            
-            popup_html += f"""
                     <a href="{row.get('source_url', '#')}" target="_blank" 
-                       style="display: inline-block; margin-top: 10px; 
+                       style="display: inline-block; margin-top: 12px; 
                               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                              color: white; padding: 8px 16px; text-decoration: none; 
-                              border-radius: 12px; font-weight: 500; font-size: 13px;">
+                              color: white; padding: 6px 12px; text-decoration: none; 
+                              border-radius: 8px; font-size: 12px;">
                         🔗 View Details →
                     </a>
                 </div>
@@ -531,7 +396,7 @@ with tab1:
             folium.CircleMarker(
                 location=[lat, lon],
                 radius=8,
-                popup=folium.Popup(popup_html, max_width=400),
+                popup=folium.Popup(popup_html, max_width=350),
                 tooltip=f"{icon} {row.get('title', '')[:50]}",
                 color=color,
                 fill=True,
@@ -542,7 +407,7 @@ with tab1:
         
         folium.LayerControl().add_to(m)
         map_html = m._repr_html_()
-        html(map_html, height=600, width=750)
+        html(map_html, height=550, width=700)
     
     with map_col2:
         st.markdown("### 📍 Legend")
@@ -551,127 +416,46 @@ with tab1:
             icon = energy_icons.get(etype, "❓")
             if count > 0 or etype in ['wind', 'solar', 'bess', 'grid']:
                 st.markdown(
-                    f'<div style="display: flex; align-items: center; margin: 10px 0; padding: 6px; border-radius: 10px; transition: 0.2s;">'
-                    f'<span style="display: inline-block; width: 16px; height: 16px; background: {color}; border-radius: 50%; margin-right: 12px;"></span>'
-                    f'<span style="flex: 1;"><b>{icon} {etype.title()}</b></span>'
-                    f'<span style="background: #f3f4f6; padding: 2px 8px; border-radius: 20px; font-size: 12px;">{count}</span>'
+                    f'<div style="display: flex; align-items: center; margin: 8px 0;">'
+                    f'<span style="display: inline-block; width: 14px; height: 14px; background: {color}; border-radius: 50%; margin-right: 10px;"></span>'
+                    f'<span>{icon} {etype.title()}</span>'
+                    f'<span style="margin-left: auto; background: #f3f4f6; padding: 2px 8px; border-radius: 20px; font-size: 12px;">{count}</span>'
                     f'</div>',
                     unsafe_allow_html=True
                 )
         
         st.markdown("---")
-        st.markdown("### 💡 Map Tips")
-        st.markdown("""
-        - 🖱️ **Click markers** for project details
-        - 🔍 **Zoom in/out** for better view
-        - 🗺️ **Layer control** (top right) to change style
-        - 📍 **Clusters** show multiple projects
-        """)
-        
-        st.markdown("---")
-        st.markdown("### 📊 Quick Stats")
-        st.markdown(f"**📍 Projects:** {len(df_filtered)}")
-        st.markdown(f"**🏙️ Counties:** {df_filtered['county'].nunique()}")
-        st.markdown(f"**⚡ Types:** {df_filtered['energy_type'].nunique()}")
+        st.markdown("### 💡 Tips")
+        st.markdown("- Click markers for details\n- Zoom for better view\n- Use layer control (top right)")
 
 # ============ TAB 2: ANALYTICS ============
 with tab2:
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 🥧 Project Distribution")
+        st.markdown("#### Projects by Type")
         type_counts = df_filtered['energy_type'].value_counts()
         if len(type_counts) > 0:
             fig = go.Figure(data=[go.Pie(
                 labels=type_counts.index,
                 values=type_counts.values,
                 hole=0.4,
-                marker=dict(
-                    colors=[energy_colors.get(t, '#9ca3af') for t in type_counts.index],
-                    line=dict(color='white', width=2)
-                ),
-                textinfo='label+percent',
-                textfont_size=12
+                marker=dict(colors=[energy_colors.get(t, '#9ca3af') for t in type_counts.index])
             )])
-            fig.update_layout(
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)',
-                height=450,
-                showlegend=False
-            )
+            fig.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)')
             st.plotly_chart(fig, use_container_width=True)
     
     with col2:
-        st.markdown("#### 📊 Top Counties")
+        st.markdown("#### Top Counties")
         county_counts = df_filtered['county'].value_counts().head(10)
         if len(county_counts) > 0:
             fig = go.Figure(data=[go.Bar(
                 x=county_counts.values,
                 y=county_counts.index,
                 orientation='h',
-                marker=dict(
-                    color=county_counts.values,
-                    colorscale='Viridis',
-                    line=dict(color='white', width=1)
-                ),
-                text=county_counts.values,
-                textposition='outside'
+                marker=dict(color=county_counts.values, colorscale='Viridis')
             )])
-            fig.update_layout(
-                xaxis_title="Number of Projects",
-                yaxis_title="County",
-                height=450,
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)',
-                yaxis={'categoryorder': 'total ascending'}
-            )
-            st.plotly_chart(fig, use_container_width=True)
-    
-    st.markdown("---")
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.markdown("#### 📈 Applications Over Time")
-        if len(df_filtered) > 0:
-            df_filtered['date_week'] = df_filtered['date_parsed'].dt.strftime('%Y-%m-%d')
-            timeline = df_filtered.groupby('date_week').size().reset_index(name='count')
-            timeline = timeline.sort_values('date_week')
-            
-            fig = go.Figure(data=[go.Scatter(
-                x=timeline['date_week'],
-                y=timeline['count'],
-                mode='lines+markers',
-                line=dict(color='#667eea', width=3),
-                marker=dict(size=8, color='#764ba2'),
-                fill='tozeroy',
-                fillcolor='rgba(102, 126, 234, 0.2)'
-            )])
-            fig.update_layout(
-                xaxis_title="Date",
-                yaxis_title="Applications",
-                height=400,
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)'
-            )
-            st.plotly_chart(fig, use_container_width=True)
-    
-    with col2:
-        st.markdown("#### 📊 Status Overview")
-        status_counts = df_filtered['status'].value_counts()
-        if len(status_counts) > 0:
-            fig = go.Figure(data=[go.Pie(
-                labels=status_counts.index,
-                values=status_counts.values,
-                hole=0.3,
-                marker=dict(line=dict(color='white', width=2)),
-                textinfo='label+percent'
-            )])
-            fig.update_layout(
-                height=400,
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)'
-            )
+            fig.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)')
             st.plotly_chart(fig, use_container_width=True)
 
 # ============ TAB 3: PROJECT DIRECTORY ============
@@ -684,43 +468,22 @@ with tab3:
                 df_display['ref'].str.contains(search, case=False, na=False) |
                 df_display['county'].str.contains(search, case=False, na=False))
         df_display = df_display[mask]
-        st.caption(f"Found {len(df_display)} projects matching '{search}'")
     
     display_cols = ['ref', 'title', 'county', 'energy_type', 'status', 'date_lodged']
     available_cols = [c for c in display_cols if c in df_display.columns]
     
-    st.dataframe(
-        df_display[available_cols],
-        use_container_width=True,
-        column_config={
-            "ref": "Reference",
-            "title": "Project Name",
-            "county": "County",
-            "energy_type": "Type",
-            "status": "Status",
-            "date_lodged": "Lodged Date",
-        },
-        height=500
-    )
+    st.dataframe(df_display[available_cols], use_container_width=True, height=400)
     
-    st.markdown("---")
-    
-    col1, col2 = st.columns(2)
-    with col1:
-        csv = df_display.to_csv(index=False)
-        st.download_button("📥 Download CSV", csv, f"gridwatch_{start_date.strftime('%Y%m%d')}_{end_date.strftime('%Y%m%d')}.csv", use_container_width=True)
-    with col2:
-        json_str = df_display.to_json(orient='records', indent=2)
-        st.download_button("📥 Download JSON", json_str, f"gridwatch_{start_date.strftime('%Y%m%d')}_{end_date.strftime('%Y%m%d')}.json", use_container_width=True)
+    csv = df_display.to_csv(index=False)
+    st.download_button("📥 Download CSV", csv, f"gridwatch_{start_date.strftime('%Y%m%d')}.csv")
 
 # ============ FOOTER ============
 st.markdown("---")
 st.markdown(
     f"""
-    <div style="text-align: center; color: #6b7280; font-size: 12px; padding: 1rem;">
+    <div style="text-align: center; color: #6b7280; font-size: 12px;">
         <b>⚡ GridWatch Ireland</b> | Data from An Coimisiún Pleanála<br>
-        {len(df_filtered)} projects • {start_date.strftime('%d %B %Y')} → {end_date.strftime('%d %B %Y')}<br>
-        🤖 AI-powered insights | 🇮🇪 Powering Ireland's Energy Transition
+        {len(df_filtered)} projects • {start_date.strftime('%d %B %Y')} → {end_date.strftime('%d %B %Y')}
     </div>
     """,
     unsafe_allow_html=True
