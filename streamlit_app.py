@@ -7,12 +7,12 @@ from datetime import datetime, timedelta
 import folium
 from folium import plugins
 from streamlit.components.v1 import html
+import requests
 
 st.set_page_config(
     page_title="GridWatch Ireland",
     page_icon="⚡",
-    layout="wide",
-    initial_sidebar_state="expanded"
+    layout="wide"
 )
 
 # ============ DARK THEME CSS ============
@@ -20,9 +20,7 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
-    * {
-        font-family: 'Inter', sans-serif;
-    }
+    * { font-family: 'Inter', sans-serif; }
     
     .stApp {
         background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
@@ -132,6 +130,18 @@ st.markdown("""
         color: #e2e8f0;
     }
     
+    .ai-insight {
+        background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
+        border-radius: 20px;
+        padding: 1.5rem;
+        border: 1px solid rgba(96, 165, 250, 0.3);
+    }
+    
+    .ai-insight h4 {
+        color: #a78bfa;
+        font-weight: 700;
+    }
+    
     .footer {
         text-align: center;
         color: #475569;
@@ -143,9 +153,67 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# ============ DEEPSEEK AI FUNCTIONS ============
+def get_deepseek_key():
+    """Get DeepSeek API key from secrets"""
+    try:
+        return st.secrets.get("DEEPSEEK_API_KEY")
+    except:
+        return None
+
+def call_deepseek(prompt):
+    """Call DeepSeek API"""
+    api_key = get_deepseek_key()
+    if not api_key:
+        return None
+    
+    try:
+        response = requests.post(
+            "https://api.deepseek.com/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json"
+            },
+            json={
+                "model": "deepseek-chat",
+                "messages": [{"role": "user", "content": prompt}],
+                "max_tokens": 150,
+                "temperature": 0.5
+            },
+            timeout=15
+        )
+        
+        if response.status_code == 200:
+            data = response.json()
+            return data["choices"][0]["message"]["content"].strip()
+        return None
+    except Exception as e:
+        print(f"DeepSeek error: {e}")
+        return None
+
+def get_ai_summary(title, description):
+    """Get AI summary of project"""
+    prompt = f"""Summarize this energy project in 1-2 sentences:
+
+Project: {title}
+Details: {description[:300]}
+
+Summary:"""
+    result = call_deepseek(prompt)
+    return result if result else "Energy infrastructure project under review."
+
+def verify_energy(title, description):
+    """Verify if project is energy-related"""
+    prompt = f"""Is this project related to energy infrastructure (wind, solar, battery storage, grid, substations, power lines)? Answer YES or NO only.
+
+Project: {title}
+Details: {description[:200]}"""
+    result = call_deepseek(prompt)
+    return "YES" in result.upper() if result else None
+
 # ============ HEADER ============
 st.markdown('<h1 class="gradient-header">⚡ GridWatch Ireland</h1>', unsafe_allow_html=True)
-st.markdown('<p class="subtitle">Energy Planning Intelligence Dashboard</p>', unsafe_allow_html=True)
+st.markdown('<p class="subtitle">AI-Powered Energy Planning Intelligence</p>', unsafe_allow_html=True)
 st.markdown('<div class="animated-border"></div>', unsafe_allow_html=True)
 
 # ============ LOAD DATA ============
@@ -160,7 +228,7 @@ def load_data():
 cases = load_data()
 
 if not cases:
-    st.error("No data loaded. Please contact administrator.")
+    st.error("No data loaded.")
     st.stop()
 
 df = pd.DataFrame(cases)
@@ -170,15 +238,12 @@ df['status'] = df['status'].fillna('Unknown')
 df['title'] = df['title'].fillna('No Title')
 
 def parse_date(date_str):
-    if not date_str or date_str == 'Unknown':
+    if not date_str:
         return None
     try:
         return datetime.strptime(date_str, '%d/%m/%Y')
     except:
-        try:
-            return datetime.strptime(date_str, '%Y-%m-%d')
-        except:
-            return None
+        return None
 
 df['date_parsed'] = df['date_lodged'].apply(parse_date)
 
@@ -193,67 +258,46 @@ else:
 default_start = data_max_date - timedelta(days=30)
 default_end = data_max_date
 
+has_deepseek = get_deepseek_key() is not None
+
 # ============ SIDEBAR ============
 with st.sidebar:
-    st.markdown("### 🎯 Dashboard")
-    st.markdown("Monitoring energy planning applications across Ireland.")
-    st.markdown("---")
+    st.markdown("### 🎯 AI-Powered Dashboard")
+    if has_deepseek:
+        st.success("🤖 DeepSeek AI Active")
+    else:
+        st.info("🤖 Add DeepSeek API key to .streamlit/secrets.toml")
     
+    st.markdown("---")
     st.markdown("### 📅 Date Range")
     
-    start_date = st.date_input(
-        "From",
-        value=default_start,
-        min_value=data_min_date,
-        max_value=data_max_date,
-        format="DD/MM/YYYY"
-    )
+    start_date = st.date_input("From", value=default_start, min_value=data_min_date, max_value=data_max_date, format="DD/MM/YYYY")
+    end_date = st.date_input("To", value=default_end, min_value=data_min_date, max_value=data_max_date, format="DD/MM/YYYY")
     
-    end_date = st.date_input(
-        "To",
-        value=default_end,
-        min_value=data_min_date,
-        max_value=data_max_date,
-        format="DD/MM/YYYY"
-    )
-    
-    st.markdown("**Quick Select:**")
-    q1, q2, q3 = st.columns(3)
-    with q1:
-        if st.button("7d", use_container_width=True):
-            start_date = data_max_date - timedelta(days=7)
-            end_date = data_max_date
-            st.rerun()
-    with q2:
-        if st.button("30d", use_container_width=True):
-            start_date = data_max_date - timedelta(days=30)
-            end_date = data_max_date
-            st.rerun()
-    with q3:
-        if st.button("90d", use_container_width=True):
-            start_date = data_max_date - timedelta(days=90)
-            end_date = data_max_date
-            st.rerun()
+    st.markdown("**Quick:**")
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        if st.button("7d"): start_date, end_date = data_max_date - timedelta(days=7), data_max_date; st.rerun()
+    with c2:
+        if st.button("30d"): start_date, end_date = data_max_date - timedelta(days=30), data_max_date; st.rerun()
+    with c3:
+        if st.button("90d"): start_date, end_date = data_max_date - timedelta(days=90), data_max_date; st.rerun()
     
     st.markdown("---")
     st.markdown("### 🔍 Filters")
     
-    selected_type = st.selectbox("Energy Type", ["All"] + sorted(df['energy_type'].unique().tolist()))
+    selected_type = st.selectbox("Type", ["All"] + sorted(df['energy_type'].unique().tolist()))
     selected_county = st.selectbox("County", ["All"] + sorted(df['county'].unique().tolist()))
     selected_status = st.selectbox("Status", ["All"] + sorted(df['status'].unique().tolist()))
     
     st.markdown("---")
-    st.caption(f"📊 Database: {len(df)} total projects")
+    st.caption(f"📊 {len(df)} total projects")
 
 # ============ APPLY FILTERS ============
-start_datetime = datetime.combine(start_date, datetime.min.time())
-end_datetime = datetime.combine(end_date, datetime.max.time())
+start_dt = datetime.combine(start_date, datetime.min.time())
+end_dt = datetime.combine(end_date, datetime.max.time())
 
-df_filtered = df[
-    (df['date_parsed'].notna()) & 
-    (df['date_parsed'] >= start_datetime) & 
-    (df['date_parsed'] <= end_datetime)
-]
+df_filtered = df[(df['date_parsed'].notna()) & (df['date_parsed'] >= start_dt) & (df['date_parsed'] <= end_dt)]
 
 if selected_type != "All":
     df_filtered = df_filtered[df_filtered['energy_type'] == selected_type]
@@ -264,36 +308,25 @@ if selected_status != "All":
 
 df_filtered = df_filtered.sort_values('date_parsed', ascending=False)
 
-# ============ STATS CARDS ============
+# ============ STATS ============
 st.subheader("📊 Key Metrics")
+c1, c2, c3, c4, c5 = st.columns(5)
+with c1: st.metric("Total", len(df_filtered))
+with c2: st.metric("🌬️ Wind", len(df_filtered[df_filtered['energy_type'] == 'wind']))
+with c3: st.metric("☀️ Solar", len(df_filtered[df_filtered['energy_type'] == 'solar']))
+with c4: st.metric("🔋 BESS", len(df_filtered[df_filtered['energy_type'] == 'bess']))
+with c5: st.metric("⚡ Grid", len(df_filtered[df_filtered['energy_type'] == 'grid']))
 
-m1, m2, m3, m4, m5 = st.columns(5)
-
-with m1:
-    st.metric("Total Projects", len(df_filtered))
-with m2:
-    st.metric("🌬️ Wind", len(df_filtered[df_filtered['energy_type'] == 'wind']))
-with m3:
-    st.metric("☀️ Solar", len(df_filtered[df_filtered['energy_type'] == 'solar']))
-with m4:
-    st.metric("🔋 BESS", len(df_filtered[df_filtered['energy_type'] == 'bess']))
-with m5:
-    st.metric("⚡ Grid", len(df_filtered[df_filtered['energy_type'] == 'grid']))
-
-# Date range info
 if len(df_filtered) > 0:
     st.markdown(f"""
     <div class="custom-info">
-        📅 Showing <strong>{len(df_filtered)}</strong> projects lodged between 
-        <strong>{start_date.strftime('%d/%m/%Y')}</strong> and <strong>{end_date.strftime('%d/%m/%Y')}</strong>
+        📅 {len(df_filtered)} projects from {start_date.strftime('%d/%m/%Y')} to {end_date.strftime('%d/%m/%Y')}
     </div>
     """, unsafe_allow_html=True)
-else:
-    st.warning("No projects found in this date range.")
 
 st.markdown("---")
 
-# ============ COUNTY COORDINATES ============
+# ============ MAP DATA ============
 county_coords = {
     "Carlow": [52.8377, -6.9298], "Cavan": [53.9908, -7.3606],
     "Clare": [52.8627, -9.0259], "Cork": [51.8985, -8.4756],
@@ -313,14 +346,12 @@ county_coords = {
 energy_colors = {
     "wind": "#60a5fa", "solar": "#fbbf24", "bess": "#34d399",
     "grid": "#c084fc", "offshore": "#2dd4bf", "biogas": "#fb923c",
-    "hydrogen": "#f472b6", "hydro": "#2dd4bf", "data_centre": "#6b7280",
     "other": "#9ca3af", "unknown": "#6b7280"
 }
 
 energy_icons = {
     "wind": "🌬️", "solar": "☀️", "bess": "🔋", "grid": "⚡",
-    "offshore": "🌊", "biogas": "♻️", "hydrogen": "💧", "hydro": "💦",
-    "data_centre": "🏢", "other": "🏭", "unknown": "❓"
+    "offshore": "🌊", "biogas": "♻️", "other": "🏭", "unknown": "❓"
 }
 
 # ============ TABS ============
@@ -328,14 +359,15 @@ tab1, tab2, tab3 = st.tabs(["🗺️ Interactive Map", "📈 Analytics", "📋 P
 
 # ============ TAB 1: MAP ============
 with tab1:
-    map_col1, map_col2 = st.columns([3, 1])
+    col1, col2 = st.columns([3, 1])
     
-    with map_col1:
-        m = folium.Map(location=[53.4129, -8.2439], zoom_start=7, control_scale=True)
+    with col1:
+        m = folium.Map(location=[53.4129, -8.2439], zoom_start=7)
         folium.TileLayer('CartoDB dark_matter', name='Dark').add_to(m)
         folium.TileLayer('OpenStreetMap', name='Street').add_to(m)
+        marker_cluster = plugins.MarkerCluster().add_to(m)
         
-        marker_cluster = plugins.MarkerCluster(name='Projects').add_to(m)
+        ai_cache = {}
         
         for _, row in df_filtered.iterrows():
             lat = row.get('latitude')
@@ -352,143 +384,99 @@ with tab1:
             color = energy_colors.get(etype, '#6b7280')
             icon = energy_icons.get(etype, '❓')
             
-            popup_html = f"""
-            <div style="font-family: 'Inter', sans-serif; min-width: 280px; background: #1e1e2e; border-radius: 16px; overflow: hidden;">
-                <div style="background: {color}; padding: 12px; color: white;">
-                    <div style="font-size: 16px; font-weight: 600;">{icon} {etype.title()}</div>
-                </div>
-                <div style="padding: 16px;">
-                    <div style="font-weight: 600; color: #e2e8f0; margin-bottom: 8px;">{row.get('title', 'No Title')[:100]}</div>
-                    <div style="font-size: 12px; color: #94a3b8;">
-                        <div><strong>Ref:</strong> {row.get('ref', 'N/A')}</div>
-                        <div><strong>County:</strong> {row.get('county', 'Unknown')}</div>
-                        <div><strong>Status:</strong> {row.get('status', 'Unknown')}</div>
-                        <div><strong>Lodged:</strong> {row.get('date_lodged', 'N/A')}</div>
-                    </div>
-                    <a href="{row.get('source_url', '#')}" target="_blank" 
-                       style="display: inline-block; margin-top: 12px; 
-                              background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%); 
-                              color: white; padding: 6px 12px; text-decoration: none; 
-                              border-radius: 8px; font-size: 12px;">
-                        🔗 View Details →
-                    </a>
-                </div>
-            </div>
+            title = row.get('title', 'No Title')
+            ref = row.get('ref', 'N/A')
+            county = row.get('county', 'Unknown')
+            status = row.get('status', 'Unknown')
+            date_lodged = row.get('date_lodged', 'N/A')
+            url = row.get('source_url', '#')
+            desc = row.get('description', '')
+            
+            ai_summary = None
+            ai_verified = None
+            
+            if has_deepseek:
+                cache_key = ref
+                if cache_key not in ai_cache:
+                    ai_cache[cache_key] = {
+                        'summary': get_ai_summary(title, desc),
+                        'verified': verify_energy(title, desc)
+                    }
+                ai_summary = ai_cache[cache_key]['summary']
+                ai_verified = ai_cache[cache_key]['verified']
+            
+            popup = f"""
+            <div style="min-width:280px; background:#1e1e2e; border-radius:12px; overflow:hidden;">
+                <div style="background:{color}; padding:10px; color:white; font-weight:600;">{icon} {etype.upper()}</div>
+                <div style="padding:12px;">
+                    <b>{title[:80]}</b><br>
+                    <small>📋 {ref} | 📍 {county} | {status} | 📅 {date_lodged}</small>
             """
             
+            if ai_verified is not None:
+                if ai_verified:
+                    popup += '<div style="margin:8px 0;"><span style="background:#22c55e20; color:#22c55e; padding:2px 8px; border-radius:20px; font-size:11px;">✅ Energy Project Verified</span></div>'
+                else:
+                    popup += '<div style="margin:8px 0;"><span style="background:#ef444420; color:#ef4444; padding:2px 8px; border-radius:20px; font-size:11px;">⚠️ Not Energy-Related</span></div>'
+            
+            if ai_summary:
+                popup += f'<div style="background:#60a5fa10; padding:8px; border-radius:8px; margin:8px 0;"><small>🤖 {ai_summary}</small></div>'
+            
+            popup += f'<a href="{url}" target="_blank" style="display:inline-block; margin-top:8px; background:#60a5fa; color:white; padding:4px 12px; border-radius:8px; text-decoration:none; font-size:12px;">🔗 View Details</a></div></div>'
+            
             folium.CircleMarker(
-                location=[lat, lon],
-                radius=8,
-                popup=folium.Popup(popup_html, max_width=380),
-                tooltip=f"{icon} {row.get('title', '')[:50]}",
-                color=color,
-                fill=True,
-                fillColor=color,
-                fillOpacity=0.7,
-                weight=2
+                location=[lat, lon], radius=7, popup=folium.Popup(popup, max_width=380),
+                tooltip=f"{icon} {title[:50]}", color=color, fill=True, fillColor=color, fillOpacity=0.7, weight=2
             ).add_to(marker_cluster)
         
         folium.LayerControl().add_to(m)
-        map_html = m._repr_html_()
-        html(map_html, height=550, width=700)
+        html(m._repr_html_(), height=550, width=700)
     
-    with map_col2:
+    with col2:
         st.markdown("### 📍 Legend")
         for etype, color in energy_colors.items():
             count = len(df_filtered[df_filtered['energy_type'] == etype])
             icon = energy_icons.get(etype, "❓")
-            if count > 0 or etype in ['wind', 'solar', 'bess', 'grid']:
-                st.markdown(
-                    f'<div style="display: flex; align-items: center; margin: 8px 0;">'
-                    f'<span style="display: inline-block; width: 14px; height: 14px; background: {color}; border-radius: 50%; margin-right: 10px;"></span>'
-                    f'<span style="color: #e2e8f0;">{icon} {etype.title()}</span>'
-                    f'<span style="margin-left: auto; background: #2d2d3a; padding: 2px 8px; border-radius: 20px; font-size: 11px; color: #94a3b8;">{count}</span>'
-                    f'</div>',
-                    unsafe_allow_html=True
-                )
+            st.markdown(f'<div><span style="display:inline-block; width:12px; height:12px; background:{color}; border-radius:50%;"></span> {icon} {etype.title()}: {count}</div>', unsafe_allow_html=True)
         
         st.markdown("---")
-        st.markdown("### 💡 Tips")
-        st.markdown("""
-        - 🖱️ **Click markers** for project details
-        - 🔍 **Zoom in/out** with mouse wheel
-        - 🗺️ **Layer control** (top right) to change map style
-        """)
+        st.markdown("### 🤖 AI Features")
+        if has_deepseek:
+            st.markdown("- ✅ Click markers for AI summaries\n- 🔍 Energy verification badges\n- 💡 Smart project insights")
+        else:
+            st.markdown("Add DeepSeek API key to enable AI summaries and verification.")
 
 # ============ TAB 2: ANALYTICS ============
 with tab2:
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 🥧 Projects by Type")
+        st.markdown("#### Projects by Type")
         type_counts = df_filtered['energy_type'].value_counts()
         if len(type_counts) > 0:
-            fig = go.Figure(data=[go.Pie(
-                labels=type_counts.index,
-                values=type_counts.values,
-                hole=0.4,
-                marker=dict(colors=[energy_colors.get(t, '#6b7280') for t in type_counts.index]),
-                textinfo='label+percent',
-                textfont=dict(color='#e2e8f0')
-            )])
-            fig.update_layout(
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)',
-                height=450,
-                font=dict(color='#e2e8f0')
-            )
+            fig = go.Figure(data=[go.Pie(labels=type_counts.index, values=type_counts.values, hole=0.4)])
+            fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', height=400)
             st.plotly_chart(fig, use_container_width=True)
     
     with col2:
-        st.markdown("#### 📊 Top Counties")
+        st.markdown("#### Top Counties")
         county_counts = df_filtered['county'].value_counts().head(10)
         if len(county_counts) > 0:
-            fig = go.Figure(data=[go.Bar(
-                x=county_counts.values,
-                y=county_counts.index,
-                orientation='h',
-                marker=dict(color=county_counts.values, colorscale='Viridis'),
-                text=county_counts.values,
-                textposition='outside'
-            )])
-            fig.update_layout(
-                height=450,
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)',
-                font=dict(color='#e2e8f0'),
-                xaxis_title="Number of Projects",
-                yaxis_title="County"
-            )
+            fig = go.Figure(data=[go.Bar(x=county_counts.values, y=county_counts.index, orientation='h')])
+            fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', height=400)
             st.plotly_chart(fig, use_container_width=True)
 
 # ============ TAB 3: PROJECT DIRECTORY ============
 with tab3:
-    search = st.text_input("🔍 Search projects", placeholder="Search by title, reference, or county...")
+    search = st.text_input("🔍 Search", placeholder="Search by title, ref, or county...")
     df_display = df_filtered.copy()
-    
     if search:
         mask = (df_display['title'].str.contains(search, case=False, na=False) |
                 df_display['ref'].str.contains(search, case=False, na=False) |
                 df_display['county'].str.contains(search, case=False, na=False))
         df_display = df_display[mask]
-        st.caption(f"Found {len(df_display)} projects matching '{search}'")
     
-    display_cols = ['ref', 'title', 'county', 'energy_type', 'status', 'date_lodged']
-    available_cols = [c for c in display_cols if c in df_display.columns]
-    
-    st.dataframe(
-        df_display[available_cols],
-        use_container_width=True,
-        column_config={
-            "ref": "Reference",
-            "title": "Project Name",
-            "county": "County",
-            "energy_type": "Type",
-            "status": "Status",
-            "date_lodged": "Lodged Date",
-        },
-        height=400
-    )
+    st.dataframe(df_display[['ref', 'title', 'county', 'energy_type', 'status', 'date_lodged']], use_container_width=True)
     
     csv = df_display.to_csv(index=False)
     st.download_button("📥 Download CSV", csv, f"gridwatch_{start_date.strftime('%Y%m%d')}.csv")
@@ -496,6 +484,6 @@ with tab3:
 # ============ FOOTER ============
 st.markdown("""
 <div class="footer">
-    ⚡ GridWatch Ireland | Data from An Coimisiún Pleanála
+    ⚡ GridWatch Ireland | Data from An Coimisiún Pleanála | Powered by DeepSeek AI
 </div>
 """, unsafe_allow_html=True)
