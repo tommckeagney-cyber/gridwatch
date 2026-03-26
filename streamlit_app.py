@@ -7,14 +7,7 @@ from datetime import datetime, timedelta
 import folium
 from folium import plugins
 from streamlit.components.v1 import html
-
-# Try to import Anthropic, but fail gracefully if not installed
-try:
-    import anthropic
-    ANTHROPIC_AVAILABLE = True
-except ImportError:
-    ANTHROPIC_AVAILABLE = False
-    print("Anthropic not installed. AI features disabled.")
+import requests
 
 st.set_page_config(
     page_title="GridWatch Ireland",
@@ -196,24 +189,6 @@ st.markdown("""
         color: #cbd5e1;
     }
     
-    /* Coming soon banner */
-    .coming-soon {
-        background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
-        border-radius: 16px;
-        padding: 1rem;
-        text-align: center;
-        font-weight: 500;
-        border: 1px dashed #60a5fa;
-        color: #94a3b8;
-        margin: 1rem 0;
-    }
-    
-    /* Dataframe styling */
-    .stDataFrame {
-        background: rgba(30, 30, 46, 0.6);
-        border-radius: 16px;
-    }
-    
     /* Footer */
     .footer {
         text-align: center;
@@ -226,41 +201,60 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ============ AI FUNCTIONS (with error handling) ============
-def init_ai_client():
-    """Initialize Anthropic client if available"""
-    if not ANTHROPIC_AVAILABLE:
-        return None
+# ============ DEEPSEEK AI FUNCTIONS ============
+def init_deepseek_client():
+    """Initialize DeepSeek API client"""
     try:
-        api_key = st.secrets.get("ANTHROPIC_API_KEY")
+        api_key = st.secrets.get("DEEPSEEK_API_KEY")
         if api_key:
-            return anthropic.Anthropic(api_key=api_key)
+            return api_key
     except:
         pass
     return None
 
-client = init_ai_client()
-
 def get_ai_summary(project_title, project_description):
-    """Get AI-powered summary - returns None if AI not available"""
-    if not client:
+    """Get AI-powered summary using DeepSeek API"""
+    api_key = init_deepseek_client()
+    if not api_key:
         return None
+    
     try:
-        prompt = f"""Provide a brief, professional summary of this energy project in 2 sentences:
+        url = "https://api.deepseek.com/v1/chat/completions"
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
+        
+        prompt = f"""Provide a brief, professional summary of this energy project in 2 short sentences:
+        
 Project: {project_title}
 Description: {project_description[:300]}
-Focus on: project scale, energy type, and current status."""
+
+Focus on: project scale, energy type, and current status.
+Keep it concise and professional."""
+
+        payload = {
+            "model": "deepseek-chat",
+            "messages": [
+                {"role": "user", "content": prompt}
+            ],
+            "max_tokens": 150,
+            "temperature": 0.7
+        }
         
-        response = client.messages.create(
-            model="claude-3-haiku-20240307",
-            max_tokens=100,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        return response.content[0].text.strip()
-    except:
+        response = requests.post(url, json=payload, headers=headers, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            return data["choices"][0]["message"]["content"].strip()
+        else:
+            return None
+            
+    except Exception as e:
+        print(f"DeepSeek API error: {e}")
         return None
 
-# ============ HEADER (No flag) ============
+# ============ HEADER ============
 st.markdown('<h1 class="gradient-header">⚡ GridWatch Ireland</h1>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Real-time Energy Planning Intelligence</p>', unsafe_allow_html=True)
 st.markdown('<div class="animated-border"></div>', unsafe_allow_html=True)
@@ -291,11 +285,9 @@ def parse_date(date_str):
     if not date_str or date_str == 'Unknown':
         return None
     try:
-        # Try dd/mm/yyyy
         return datetime.strptime(date_str, '%d/%m/%Y')
     except:
         try:
-            # Try yyyy-mm-dd
             return datetime.strptime(date_str, '%Y-%m-%d')
         except:
             return None
@@ -315,6 +307,9 @@ else:
 default_start = data_max_date - timedelta(days=30)
 default_end = data_max_date
 
+# Check if DeepSeek API is configured
+deepseek_available = init_deepseek_client() is not None
+
 # ============ SIDEBAR ============
 with st.sidebar:
     st.markdown("### 🎯 Intelligence Dashboard")
@@ -323,7 +318,6 @@ with st.sidebar:
     
     st.markdown("### 📅 Date Range")
     
-    # Format dates for display in dd/mm/yyyy
     start_date = st.date_input(
         "From",
         value=default_start,
@@ -405,17 +399,19 @@ with m5:
     st.metric("⚡ Grid", len(df_filtered[df_filtered['energy_type'] == 'grid']))
 
 # AI Status Banner
-if client:
+if deepseek_available:
     st.markdown("""
     <div class="ai-insight">
-        <h4>🤖 AI Active</h4>
+        <h4>🤖 DeepSeek AI Active</h4>
         <p>Click on map markers for AI-generated project summaries!</p>
     </div>
     """, unsafe_allow_html=True)
 else:
     st.markdown("""
-    <div class="coming-soon">
-        🤖 <strong>AI Features Available!</strong> Add your Anthropic API key to enable AI-powered project summaries and insights.
+    <div class="custom-info">
+        🤖 <strong>DeepSeek AI Ready!</strong> Add your DeepSeek API key to .streamlit/secrets.toml to enable AI summaries.
+        <br><br>
+        Format: <code>DEEPSEEK_API_KEY = "your-key-here"</code>
     </div>
     """, unsafe_allow_html=True)
 
@@ -493,7 +489,7 @@ with tab1:
             
             # Get AI summary if available
             ai_summary = None
-            if client:
+            if deepseek_available:
                 ai_summary = get_ai_summary(row.get('title', ''), row.get('description', ''))
             
             popup_html = f"""
@@ -566,9 +562,9 @@ with tab1:
         st.markdown("### 💡 Tips")
         st.markdown("""
         - 🖱️ **Click markers** for project details
+        - 🤖 **AI summaries** appear when DeepSeek is configured
         - 🔍 **Zoom in/out** with mouse wheel
         - 🗺️ **Layer control** (top right) to change map style
-        - 📍 **Clusters** show multiple projects
         """)
 
 # ============ TAB 2: ANALYTICS ============
@@ -652,6 +648,6 @@ with tab3:
 # ============ FOOTER ============
 st.markdown("""
 <div class="footer">
-    ⚡ GridWatch Ireland | Data from An Coimisiún Pleanála | Powered by Streamlit
+    ⚡ GridWatch Ireland | Data from An Coimisiún Pleanála | Powered by DeepSeek AI
 </div>
 """, unsafe_allow_html=True)
