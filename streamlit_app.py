@@ -14,20 +14,17 @@ st.set_page_config(
     layout="wide"
 )
 
-# ============ DARK THEME CSS WITH FIXED SIDEBAR ============
+# ============ DARK THEME CSS ============
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
-    * {
-        font-family: 'Inter', sans-serif;
-    }
+    * { font-family: 'Inter', sans-serif; }
     
     .stApp {
         background: linear-gradient(135deg, #0a0a12 0%, #14141f 100%);
     }
     
-    /* Headers */
     h1, h2, h3, h4, h5, h6 {
         color: #ffffff !important;
     }
@@ -64,7 +61,6 @@ st.markdown("""
         100% { background-position: 0% 50%; }
     }
     
-    /* Metric cards */
     [data-testid="stMetric"] {
         background: rgba(30, 30, 46, 0.95);
         backdrop-filter: blur(10px);
@@ -92,7 +88,6 @@ st.markdown("""
         -webkit-text-fill-color: transparent;
     }
     
-    /* Buttons */
     .stButton > button {
         background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
         color: white !important;
@@ -102,12 +97,6 @@ st.markdown("""
         transition: all 0.3s ease;
     }
     
-    .stButton > button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(96, 165, 250, 0.4);
-    }
-    
-    /* Tabs */
     .stTabs [data-baseweb="tab-list"] {
         gap: 12px;
         background: rgba(30, 30, 46, 0.8);
@@ -129,104 +118,30 @@ st.markdown("""
     .stTabs [aria-selected="true"] {
         background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
         color: white !important;
-        box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
     }
     
-    /* ============ FIXED SIDEBAR ============ */
     [data-testid="stSidebar"] {
         background: linear-gradient(180deg, #0f0f18 0%, #181824 100%);
         border-right: 1px solid rgba(255,255,255,0.1);
     }
     
-    [data-testid="stSidebar"] [data-testid="stMarkdown"] {
-        color: #e2e8f0 !important;
-    }
-    
     [data-testid="stSidebar"] h3 {
         color: #ffffff !important;
-        font-weight: 600;
     }
     
-    [data-testid="stSidebar"] p {
-        color: #cbd5e1 !important;
-    }
-    
-    /* Sidebar select boxes - FIXED */
-    [data-testid="stSidebar"] .stSelectbox label {
-        color: #ffffff !important;
-        font-weight: 500;
-    }
-    
-    [data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] {
-        background-color: #1e1e2e !important;
-        border: 1px solid #334155 !important;
-        border-radius: 8px !important;
-    }
-    
-    [data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] div {
-        color: #f0f0f0 !important;
-    }
-    
-    /* Sidebar date inputs - FIXED */
-    [data-testid="stSidebar"] .stDateInput label {
-        color: #ffffff !important;
-        font-weight: 500;
-    }
-    
-    [data-testid="stSidebar"] .stDateInput input {
-        background-color: #1e1e2e !important;
-        color: #f0f0f0 !important;
-        border: 1px solid #334155 !important;
-        border-radius: 8px !important;
-    }
-    
-    /* Sidebar checkbox - FIXED */
+    [data-testid="stSidebar"] .stSelectbox label,
+    [data-testid="stSidebar"] .stDateInput label,
     [data-testid="stSidebar"] .stCheckbox label {
         color: #ffffff !important;
     }
     
-    /* Sidebar caption text */
-    [data-testid="stSidebar"] .stCaption {
-        color: #9ca3af !important;
-    }
-    
-    /* Sidebar info/alert boxes */
-    [data-testid="stSidebar"] .stAlert {
-        background-color: #1e1e2e !important;
-        color: #e2e8f0 !important;
-    }
-    
-    /* General select boxes (non-sidebar) */
-    .stSelectbox label {
-        color: #cbd5e1 !important;
-    }
-    
-    .stSelectbox div[data-baseweb="select"] {
-        background-color: #1e1e2e !important;
-        border: 1px solid #334155 !important;
-    }
-    
-    .stSelectbox div[data-baseweb="select"] div {
-        color: #f0f0f0 !important;
-    }
-    
-    /* Date inputs */
-    .stDateInput label {
-        color: #cbd5e1 !important;
-    }
-    
-    .stDateInput input {
+    [data-testid="stSidebar"] select, 
+    [data-testid="stSidebar"] input {
         background-color: #1e1e2e !important;
         color: #f0f0f0 !important;
         border: 1px solid #334155 !important;
     }
     
-    /* Checkbox */
-    .stCheckbox label {
-        color: #cbd5e1 !important;
-    }
-    
-    /* Info box */
     .custom-info {
         background: rgba(30, 30, 46, 0.95);
         border-left: 4px solid #60a5fa;
@@ -236,14 +151,9 @@ st.markdown("""
         color: #e2e8f0 !important;
     }
     
-    /* Dataframe */
     .stDataFrame {
         background: rgba(30, 30, 46, 0.8);
         border-radius: 16px;
-    }
-    
-    .stDataFrame table {
-        color: #e2e8f0 !important;
     }
     
     .stDataFrame th {
@@ -255,7 +165,6 @@ st.markdown("""
         color: #cbd5e1 !important;
     }
     
-    /* Footer */
     .footer {
         text-align: center;
         color: #6b7280 !important;
@@ -263,22 +172,6 @@ st.markdown("""
         padding: 1rem;
         border-top: 1px solid rgba(255,255,255,0.08);
         margin-top: 2rem;
-    }
-    
-    /* Caption and small text */
-    .stCaption, caption {
-        color: #9ca3af !important;
-    }
-    
-    /* Warning and info messages */
-    .stAlert {
-        background-color: rgba(30, 30, 46, 0.95) !important;
-        color: #e2e8f0 !important;
-    }
-    
-    /* Metric delta */
-    [data-testid="stMetricDelta"] {
-        color: #86efac !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -308,6 +201,11 @@ df['energy_type'] = df['energy_type'].fillna('unknown')
 df['county'] = df['county'].fillna('Unknown')
 df['status'] = df['status'].fillna('Unknown')
 df['title'] = df['title'].fillna('No Title')
+
+# ===== PREMIUM DATA FIELDS =====
+df['capacity_mw'] = pd.to_numeric(df.get('capacity_mw', 0), errors='coerce').fillna(0)
+df['developer'] = df.get('developer', 'Unknown')
+df['stage'] = df.get('stage', 'Unknown')
 
 def parse_date(date_str):
     if not date_str or date_str == 'Unknown':
@@ -405,22 +303,46 @@ if selected_status != "All":
 
 df_filtered = df_filtered.sort_values('date_parsed', ascending=False)
 
-# ============ STATS CARDS ============
-st.subheader("📊 Key Metrics")
+# ============ ENHANCED METRICS SECTION ============
+st.subheader("📊 System Overview")
+
+total_capacity = df_filtered['capacity_mw'].sum()
+avg_capacity = df_filtered['capacity_mw'].mean()
+recent_projects = len(df_filtered[df_filtered['date_parsed'] > datetime.now() - timedelta(days=7)])
 
 m1, m2, m3, m4, m5 = st.columns(5)
 
 with m1:
-    st.metric("Total Projects", len(df_filtered))
-with m2:
-    st.metric("🌬️ Wind", len(df_filtered[df_filtered['energy_type'] == 'wind']))
-with m3:
-    st.metric("☀️ Solar", len(df_filtered[df_filtered['energy_type'] == 'solar']))
-with m4:
-    st.metric("🔋 BESS", len(df_filtered[df_filtered['energy_type'] == 'bess']))
-with m5:
-    st.metric("⚡ Grid", len(df_filtered[df_filtered['energy_type'] == 'grid']))
+    st.metric("Projects", len(df_filtered))
 
+with m2:
+    st.metric("⚡ Total Pipeline", f"{total_capacity:.0f} MW")
+
+with m3:
+    st.metric("📊 Avg Size", f"{avg_capacity:.1f} MW")
+
+with m4:
+    st.metric("🔌 Grid Projects", len(df_filtered[df_filtered['energy_type'] == 'grid']))
+
+with m5:
+    st.metric("🆕 Last 7 Days", recent_projects)
+
+# ============ KEY INSIGHTS PANEL ============
+st.markdown("### 🧠 Key Insights")
+
+if len(df_filtered) > 0:
+    top_county = df_filtered['county'].value_counts().idxmax()
+    top_type = df_filtered['energy_type'].value_counts().idxmax()
+    top_dev = df_filtered['developer'].value_counts().idxmax()
+
+    st.info(f"""
+    📍 Most active county: **{top_county}**  
+    ⚡ Dominant tech: **{top_type}**  
+    🏢 Top developer: **{top_dev}**  
+    🔋 Total pipeline: **{total_capacity:.0f} MW**  
+    """)
+
+# Date range info
 if len(df_filtered) > 0:
     st.markdown(f"""
     <div class="custom-info">
@@ -466,7 +388,7 @@ energy_icons = {
 # ============ TABS ============
 tab1, tab2, tab3 = st.tabs(["🗺️ Interactive Map", "📈 Analytics", "📋 Project Directory"])
 
-# ============ TAB 1: MAP ============
+# ============ TAB 1: MAP WITH HEATMAP ============
 with tab1:
     map_col1, map_col2 = st.columns([3, 1])
     
@@ -477,6 +399,7 @@ with tab1:
             folium.TileLayer('OpenStreetMap', name='Street').add_to(m)
             
             marker_cluster = plugins.MarkerCluster(name='Projects').add_to(m)
+            heat_data = []
             
             for _, row in df_filtered.iterrows():
                 lat = row.get('latitude')
@@ -489,21 +412,21 @@ with tab1:
                     else:
                         continue
                 
-                etype = row.get('energy_type', 'unknown')
-                color = energy_colors.get(etype, '#6b7280')
-                icon = energy_icons.get(etype, '❓')
+                capacity = row.get('capacity_mw', 10)
+                radius = min(max(capacity / 5, 6), 25)
+                heat_data.append([lat, lon])
                 
                 popup_html = f"""
                 <div style="font-family: 'Inter', sans-serif; min-width: 260px; background: #1a1a2a; border-radius: 12px; overflow: hidden;">
-                    <div style="background: {color}; padding: 10px; color: white;">
-                        <b>{icon} {row.get('energy_type', 'unknown').title()}</b>
+                    <div style="background: {energy_colors.get(row['energy_type'], '#6b7280')}; padding: 10px; color: white;">
+                        <b>{energy_icons.get(row['energy_type'], '❓')} {row['energy_type'].title()}</b>
                     </div>
                     <div style="padding: 12px;">
-                        <div style="color: #ffffff; font-weight: 600; margin-bottom: 8px;">{row.get('title', 'No Title')[:100]}</div>
+                        <div style="color: #ffffff; font-weight: 600; margin-bottom: 8px;">{row['title'][:100]}</div>
                         <div style="color: #cbd5e1; font-size: 12px;">
-                            📋 {row.get('ref', 'N/A')}<br>
+                            ⚡ {capacity:.0f} MW<br>
+                            🏢 {row.get('developer', 'Unknown')}<br>
                             📍 {row.get('county', 'Unknown')}<br>
-                            📅 {row.get('date_lodged', 'N/A')}<br>
                             📊 {row.get('status', 'Unknown')}
                         </div>
                         <a href="{row.get('source_url', '#')}" target="_blank" 
@@ -519,15 +442,20 @@ with tab1:
                 
                 folium.CircleMarker(
                     location=[lat, lon],
-                    radius=8,
+                    radius=radius,
                     popup=folium.Popup(popup_html, max_width=350),
-                    tooltip=f"{icon} {row.get('title', '')[:50]}",
-                    color=color,
+                    tooltip=f"{energy_icons.get(row['energy_type'], '❓')} {row['title'][:50]}",
+                    color=energy_colors.get(row['energy_type'], '#6b7280'),
                     fill=True,
-                    fillColor=color,
+                    fillColor=energy_colors.get(row['energy_type'], '#6b7280'),
                     fillOpacity=0.7,
                     weight=2
                 ).add_to(marker_cluster)
+            
+            # Add heatmap layer
+            if heat_data:
+                from folium.plugins import HeatMap
+                HeatMap(heat_data, radius=15, blur=10).add_to(m)
             
             folium.LayerControl().add_to(m)
             map_html = m._repr_html_()
@@ -551,17 +479,15 @@ with tab1:
                 )
         
         st.markdown("---")
+        st.markdown("### 🔥 Heatmap")
+        st.markdown("Red areas show project density")
+        st.markdown("---")
         st.markdown("### 💡 Tips")
         st.markdown("""
-        - 🖱️ **Click markers** for project details
-        - 🔍 **Zoom in/out** with mouse wheel
-        - 🗺️ **Layer control** (top right) to change map style
-        - 📍 **Clusters** show multiple projects in same area
+        - 🖱️ **Marker size** = Project capacity (MW)
+        - 🔥 **Heatmap** shows project density
+        - 🖱️ **Click markers** for full details
         """)
-        
-        st.markdown("---")
-        st.markdown(f"**📍 Projects on map:** {len(df_filtered)}")
-        st.markdown(f"**🏙️ Counties:** {df_filtered['county'].nunique()}")
 
 # ============ TAB 2: ANALYTICS ============
 with tab2:
@@ -619,7 +545,8 @@ with tab2:
     with col1:
         st.markdown("#### 📈 Applications Over Time")
         if len(df_filtered) > 0:
-            df_filtered['date_week'] = df_filtered['date_parsed'].dt.strftime('%Y-%m-%d')
+            df_filtered = df_filtered.copy()
+            df_filtered['date_week'] = df_filtered['date_parsed']
             timeline = df_filtered.groupby('date_week').size().reset_index(name='count')
             timeline = timeline.sort_values('date_week')
             
@@ -662,32 +589,71 @@ with tab2:
                 font=dict(color='#ffffff')
             )
             st.plotly_chart(fig, use_container_width=True)
+    
+    st.markdown("---")
+    
+    # Capacity by Energy Type
+    st.markdown("#### ⚡ Capacity by Energy Type")
+    cap_by_type = df_filtered.groupby('energy_type')['capacity_mw'].sum().sort_values()
+    if len(cap_by_type) > 0:
+        fig = px.bar(
+            cap_by_type,
+            orientation='h',
+            labels={'value': 'MW', 'energy_type': 'Type'}
+        )
+        fig.update_layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white'),
+            height=400
+        )
+        st.plotly_chart(fig, use_container_width=True)
+    
+    # Pipeline Funnel
+    st.markdown("#### 🧭 Planning Pipeline")
+    pipeline = df_filtered['status'].value_counts()
+    if len(pipeline) > 0:
+        fig = go.Figure(go.Funnel(
+            y=pipeline.index,
+            x=pipeline.values,
+            marker=dict(color=['#60a5fa', '#34d399', '#fbbf24', '#f472b6'])
+        ))
+        fig.update_layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='white'),
+            height=400
+        )
+        st.plotly_chart(fig, use_container_width=True)
 
 # ============ TAB 3: PROJECT DIRECTORY ============
 with tab3:
-    search = st.text_input("🔍 Search projects", placeholder="Search by title, reference, or county...")
+    search = st.text_input("🔍 Smart search", placeholder="e.g. wind cork 50MW approved")
     df_display = df_filtered.copy()
     
     if search:
-        mask = (df_display['title'].str.contains(search, case=False, na=False) |
-                df_display['ref'].str.contains(search, case=False, na=False) |
-                df_display['county'].str.contains(search, case=False, na=False))
-        df_display = df_display[mask]
+        terms = search.lower().split()
+        for term in terms:
+            df_display = df_display[
+                df_display.apply(lambda row: term in str(row).lower(), axis=1)
+            ]
         st.caption(f"Found {len(df_display)} projects matching '{search}'")
     
-    display_cols = ['ref', 'title', 'county', 'energy_type', 'status', 'date_lodged']
+    display_cols = ['ref', 'title', 'county', 'energy_type', 'capacity_mw', 'developer', 'status', 'date_lodged']
     available_cols = [c for c in display_cols if c in df_display.columns]
     
     st.dataframe(
         df_display[available_cols],
         use_container_width=True,
         column_config={
-            "ref": st.column_config.TextColumn("Reference", width="small"),
-            "title": st.column_config.TextColumn("Project Name", width="large"),
-            "county": st.column_config.TextColumn("County", width="medium"),
-            "energy_type": st.column_config.TextColumn("Type", width="small"),
-            "status": st.column_config.TextColumn("Status", width="medium"),
-            "date_lodged": st.column_config.TextColumn("Lodged", width="small"),
+            "ref": "Reference",
+            "title": "Project Name",
+            "county": "County",
+            "energy_type": "Type",
+            "capacity_mw": st.column_config.NumberColumn("MW", format="%.0f"),
+            "developer": "Developer",
+            "status": "Status",
+            "date_lodged": "Lodged",
         },
         height=400
     )
@@ -695,11 +661,20 @@ with tab3:
     col1, col2 = st.columns(2)
     with col1:
         csv = df_display.to_csv(index=False)
-        st.download_button("📥 Download CSV", csv, f"gridwatch_{start_date.strftime('%Y%m%d')}_{end_date.strftime('%Y%m%d')}.csv", use_container_width=True)
+        st.download_button("📥 Download CSV", csv, f"gridwatch_{start_date.strftime('%Y%m%d')}.csv", use_container_width=True)
     
-    with col2:
-        json_str = df_display.to_json(orient='records', indent=2)
-        st.download_button("📥 Download JSON", json_str, f"gridwatch_{start_date.strftime('%Y%m%d')}_{end_date.strftime('%Y%m%d')}.json", use_container_width=True)
+    # Project Details Expander
+    st.markdown("### 🧾 Project Details")
+    for _, row in df_display.head(50).iterrows():
+        with st.expander(f"{row['title']} ({row['ref']})"):
+            st.write(f"⚡ Capacity: {row.get('capacity_mw', 'N/A')} MW")
+            st.write(f"🏢 Developer: {row.get('developer', 'N/A')}")
+            st.write(f"📍 County: {row.get('county', 'N/A')}")
+            st.write(f"📊 Status: {row.get('status', 'N/A')}")
+            st.write(f"📅 Lodged: {row.get('date_lodged', 'N/A')}")
+            if row.get('description'):
+                st.write(f"📝 Description: {row['description'][:200]}...")
+            st.markdown(f"[🔗 View Source]({row.get('source_url', '#')})")
 
 # ============ FOOTER ============
 st.markdown("""
