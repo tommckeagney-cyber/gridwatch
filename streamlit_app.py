@@ -14,15 +14,23 @@ st.set_page_config(
     layout="wide"
 )
 
-# ============ DARK THEME CSS ============
+# ============ DARK THEME CSS WITH BETTER CONTRAST ============
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
-    * { font-family: 'Inter', sans-serif; }
+    * {
+        font-family: 'Inter', sans-serif;
+        color: #f0f0f0 !important;
+    }
     
     .stApp {
-        background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+        background: linear-gradient(135deg, #0a0a12 0%, #14141f 100%);
+    }
+    
+    /* Headers */
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff !important;
     }
     
     .gradient-header {
@@ -36,7 +44,7 @@ st.markdown("""
     }
     
     .subtitle {
-        color: #94a3b8;
+        color: #cbd5e1 !important;
         font-size: 1.1rem;
         margin-top: 0.5rem;
     }
@@ -57,18 +65,24 @@ st.markdown("""
         100% { background-position: 0% 50%; }
     }
     
+    /* Metric cards */
     [data-testid="stMetric"] {
-        background: rgba(30, 30, 46, 0.9);
+        background: rgba(30, 30, 46, 0.95);
         backdrop-filter: blur(10px);
         padding: 1.5rem;
         border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.1);
         transition: all 0.3s ease;
     }
     
     [data-testid="stMetric"]:hover {
         transform: translateY(-5px);
         border-color: #60a5fa;
+    }
+    
+    [data-testid="stMetric"] label {
+        color: #cbd5e1 !important;
+        font-weight: 600;
     }
     
     [data-testid="stMetric"] .stMetricValue {
@@ -79,9 +93,10 @@ st.markdown("""
         -webkit-text-fill-color: transparent;
     }
     
+    /* Buttons */
     .stButton > button {
         background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
-        color: white;
+        color: white !important;
         border: none;
         border-radius: 12px;
         font-weight: 600;
@@ -93,49 +108,109 @@ st.markdown("""
         box-shadow: 0 8px 24px rgba(96, 165, 250, 0.4);
     }
     
+    /* Tabs */
     .stTabs [data-baseweb="tab-list"] {
         gap: 12px;
-        background: rgba(30, 30, 46, 0.6);
+        background: rgba(30, 30, 46, 0.8);
         backdrop-filter: blur(10px);
         padding: 8px;
         border-radius: 60px;
         margin-bottom: 20px;
-        border: 1px solid rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.1);
     }
     
     .stTabs [data-baseweb="tab"] {
         border-radius: 40px;
         padding: 10px 28px;
         font-weight: 600;
-        color: #94a3b8;
+        color: #cbd5e1 !important;
+        transition: all 0.3s ease;
     }
     
     .stTabs [aria-selected="true"] {
         background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
-        color: white;
+        color: white !important;
+        box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
     }
     
+    /* Sidebar */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+        background: linear-gradient(180deg, #0a0a12 0%, #12121c 100%);
         border-right: 1px solid rgba(255,255,255,0.08);
     }
     
+    [data-testid="stSidebar"] [data-testid="stMarkdown"] {
+        color: #e2e8f0 !important;
+    }
+    
+    [data-testid="stSidebar"] h3 {
+        color: #ffffff !important;
+    }
+    
+    /* Select boxes and inputs */
+    .stSelectbox label, .stDateInput label, .stCheckbox label {
+        color: #cbd5e1 !important;
+    }
+    
+    select, input, textarea {
+        background-color: #1e1e2e !important;
+        color: #f0f0f0 !important;
+        border: 1px solid #334155 !important;
+    }
+    
+    /* Info box */
     .custom-info {
-        background: rgba(30, 30, 46, 0.9);
+        background: rgba(30, 30, 46, 0.95);
         border-left: 4px solid #60a5fa;
         padding: 16px 20px;
         border-radius: 16px;
         margin: 20px 0;
-        color: #e2e8f0;
+        color: #e2e8f0 !important;
     }
     
+    /* Dataframe */
+    .stDataFrame {
+        background: rgba(30, 30, 46, 0.8);
+        border-radius: 16px;
+    }
+    
+    .stDataFrame table {
+        color: #e2e8f0 !important;
+    }
+    
+    .stDataFrame th {
+        background-color: #1e1e2e !important;
+        color: #ffffff !important;
+    }
+    
+    .stDataFrame td {
+        color: #cbd5e1 !important;
+    }
+    
+    /* Footer */
     .footer {
         text-align: center;
-        color: #475569;
+        color: #6b7280 !important;
         font-size: 12px;
         padding: 1rem;
         border-top: 1px solid rgba(255,255,255,0.08);
         margin-top: 2rem;
+    }
+    
+    /* Caption and small text */
+    .stCaption, caption {
+        color: #9ca3af !important;
+    }
+    
+    /* Warning and info messages */
+    .stAlert {
+        background-color: rgba(30, 30, 46, 0.95) !important;
+        color: #e2e8f0 !important;
+    }
+    
+    /* Metric delta */
+    [data-testid="stMetricDelta"] {
+        color: #86efac !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -351,20 +426,22 @@ with tab1:
                 icon = energy_icons.get(etype, '❓')
                 
                 popup_html = f"""
-                <div style="font-family: 'Inter', sans-serif; min-width: 260px; background: #1e1e2e; border-radius: 12px; overflow: hidden;">
+                <div style="font-family: 'Inter', sans-serif; min-width: 260px; background: #1a1a2a; border-radius: 12px; overflow: hidden;">
                     <div style="background: {color}; padding: 10px; color: white;">
                         <b>{icon} {row.get('energy_type', 'unknown').title()}</b>
                     </div>
                     <div style="padding: 12px;">
-                        <b>{row.get('title', 'No Title')[:100]}</b><br>
-                        <small>📋 {row.get('ref', 'N/A')}</small><br>
-                        <small>📍 {row.get('county', 'Unknown')}</small><br>
-                        <small>📅 {row.get('date_lodged', 'N/A')}</small><br>
-                        <small>📊 {row.get('status', 'Unknown')}</small><br>
+                        <div style="color: #ffffff; font-weight: 600; margin-bottom: 8px;">{row.get('title', 'No Title')[:100]}</div>
+                        <div style="color: #cbd5e1; font-size: 12px;">
+                            📋 {row.get('ref', 'N/A')}<br>
+                            📍 {row.get('county', 'Unknown')}<br>
+                            📅 {row.get('date_lodged', 'N/A')}<br>
+                            📊 {row.get('status', 'Unknown')}
+                        </div>
                         <a href="{row.get('source_url', '#')}" target="_blank" 
-                           style="display: inline-block; margin-top: 8px; 
+                           style="display: inline-block; margin-top: 10px; 
                                   background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%); 
-                                  color: white; padding: 4px 12px; text-decoration: none; 
+                                  color: white; padding: 5px 12px; text-decoration: none; 
                                   border-radius: 6px; font-size: 12px;">
                             🔗 View Details →
                         </a>
@@ -432,13 +509,13 @@ with tab2:
                 hole=0.4,
                 marker=dict(colors=[energy_colors.get(t, '#6b7280') for t in type_counts.index]),
                 textinfo='label+percent',
-                textfont=dict(color='#e2e8f0')
+                textfont=dict(color='#ffffff', size=12)
             )])
             fig.update_layout(
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(0,0,0,0)',
                 height=450,
-                font=dict(color='#e2e8f0')
+                font=dict(color='#ffffff')
             )
             st.plotly_chart(fig, use_container_width=True)
     
@@ -452,16 +529,18 @@ with tab2:
                 orientation='h',
                 marker=dict(color=county_counts.values, colorscale='Viridis'),
                 text=county_counts.values,
-                textposition='outside'
+                textposition='outside',
+                textfont=dict(color='#ffffff')
             )])
             fig.update_layout(
                 height=450,
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(0,0,0,0)',
-                font=dict(color='#e2e8f0'),
+                font=dict(color='#ffffff'),
                 xaxis_title="Number of Projects",
                 yaxis_title="County",
-                yaxis={'categoryorder': 'total ascending'}
+                xaxis=dict(tickfont=dict(color='#ffffff')),
+                yaxis=dict(tickfont=dict(color='#ffffff'))
             )
             st.plotly_chart(fig, use_container_width=True)
     
@@ -491,7 +570,9 @@ with tab2:
                 height=400,
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(0,0,0,0)',
-                font=dict(color='#e2e8f0')
+                font=dict(color='#ffffff'),
+                xaxis=dict(tickfont=dict(color='#ffffff')),
+                yaxis=dict(tickfont=dict(color='#ffffff'))
             )
             st.plotly_chart(fig, use_container_width=True)
     
@@ -504,13 +585,13 @@ with tab2:
                 values=status_counts.values,
                 hole=0.3,
                 textinfo='label+percent',
-                textfont=dict(color='#e2e8f0')
+                textfont=dict(color='#ffffff', size=12)
             )])
             fig.update_layout(
                 height=400,
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(0,0,0,0)',
-                font=dict(color='#e2e8f0')
+                font=dict(color='#ffffff')
             )
             st.plotly_chart(fig, use_container_width=True)
 
@@ -533,12 +614,12 @@ with tab3:
         df_display[available_cols],
         use_container_width=True,
         column_config={
-            "ref": "Reference",
-            "title": "Project Name",
-            "county": "County",
-            "energy_type": "Type",
-            "status": "Status",
-            "date_lodged": "Lodged Date",
+            "ref": st.column_config.TextColumn("Reference", width="small"),
+            "title": st.column_config.TextColumn("Project Name", width="large"),
+            "county": st.column_config.TextColumn("County", width="medium"),
+            "energy_type": st.column_config.TextColumn("Type", width="small"),
+            "status": st.column_config.TextColumn("Status", width="medium"),
+            "date_lodged": st.column_config.TextColumn("Lodged", width="small"),
         },
         height=400
     )
