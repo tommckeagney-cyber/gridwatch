@@ -197,15 +197,34 @@ if not cases:
     st.stop()
 
 df = pd.DataFrame(cases)
+
+# ===== FIXED: Handle missing columns safely =====
+# Ensure required columns exist
+required_cols = ['energy_type', 'county', 'status', 'title', 'date_lodged']
+for col in required_cols:
+    if col not in df.columns:
+        df[col] = 'Unknown'
+
 df['energy_type'] = df['energy_type'].fillna('unknown')
 df['county'] = df['county'].fillna('Unknown')
 df['status'] = df['status'].fillna('Unknown')
 df['title'] = df['title'].fillna('No Title')
 
-# ===== PREMIUM DATA FIELDS =====
-df['capacity_mw'] = pd.to_numeric(df.get('capacity_mw', 0), errors='coerce').fillna(0)
-df['developer'] = df.get('developer', 'Unknown')
-df['stage'] = df.get('stage', 'Unknown')
+# ===== PREMIUM DATA FIELDS (safe handling) =====
+if 'capacity_mw' in df.columns:
+    df['capacity_mw'] = pd.to_numeric(df['capacity_mw'], errors='coerce').fillna(0)
+else:
+    df['capacity_mw'] = 0
+
+if 'developer' in df.columns:
+    df['developer'] = df['developer'].fillna('Unknown')
+else:
+    df['developer'] = 'Unknown'
+
+if 'stage' in df.columns:
+    df['stage'] = df['stage'].fillna('Unknown')
+else:
+    df['stage'] = 'Unknown'
 
 def parse_date(date_str):
     if not date_str or date_str == 'Unknown':
@@ -306,8 +325,8 @@ df_filtered = df_filtered.sort_values('date_parsed', ascending=False)
 # ============ ENHANCED METRICS SECTION ============
 st.subheader("📊 System Overview")
 
-total_capacity = df_filtered['capacity_mw'].sum()
-avg_capacity = df_filtered['capacity_mw'].mean()
+total_capacity = df_filtered['capacity_mw'].sum() if 'capacity_mw' in df_filtered.columns else 0
+avg_capacity = df_filtered['capacity_mw'].mean() if 'capacity_mw' in df_filtered.columns else 0
 recent_projects = len(df_filtered[df_filtered['date_parsed'] > datetime.now() - timedelta(days=7)])
 
 m1, m2, m3, m4, m5 = st.columns(5)
@@ -333,7 +352,12 @@ st.markdown("### 🧠 Key Insights")
 if len(df_filtered) > 0:
     top_county = df_filtered['county'].value_counts().idxmax()
     top_type = df_filtered['energy_type'].value_counts().idxmax()
-    top_dev = df_filtered['developer'].value_counts().idxmax()
+    
+    # Safely get top developer
+    if 'developer' in df_filtered.columns and len(df_filtered['developer'].value_counts()) > 0:
+        top_dev = df_filtered['developer'].value_counts().idxmax()
+    else:
+        top_dev = "N/A"
 
     st.info(f"""
     📍 Most active county: **{top_county}**  
