@@ -8,47 +8,76 @@ import folium
 from folium import plugins
 from streamlit.components.v1 import html
 
-st.set_page_config(page_title="GridWatch Ireland", page_icon="⚡", layout="wide")
+# Try to import Anthropic, but fail gracefully if not installed
+try:
+    import anthropic
+    ANTHROPIC_AVAILABLE = True
+except ImportError:
+    ANTHROPIC_AVAILABLE = False
+    print("Anthropic not installed. AI features disabled.")
 
-# ============ MODERN CSS ============
+st.set_page_config(
+    page_title="GridWatch Ireland",
+    page_icon="⚡",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# ============ DARK THEME CSS ============
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     
-    * { font-family: 'Inter', sans-serif; }
+    * {
+        font-family: 'Inter', sans-serif;
+    }
     
-    /* Glassmorphism effect */
+    /* Dark theme background */
+    .stApp {
+        background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+    }
+    
+    /* Glassmorphism dark cards */
     .glass-card {
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(30, 30, 46, 0.8);
         backdrop-filter: blur(10px);
         border-radius: 24px;
         padding: 1.5rem;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         transition: all 0.3s ease;
     }
     
     .glass-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+        border-color: rgba(102, 126, 234, 0.3);
     }
     
+    /* Gradient header */
     .gradient-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         font-weight: 800;
         font-size: 3rem;
+        margin-bottom: 0;
+    }
+    
+    .subtitle {
+        color: #94a3b8;
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
     }
     
     .animated-border {
-        background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+        background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
         background-size: 200% 200%;
         animation: gradient 3s ease infinite;
         height: 3px;
         width: 100%;
         border-radius: 3px;
+        margin: 1rem 0;
     }
     
     @keyframes gradient {
@@ -57,31 +86,39 @@ st.markdown("""
         100% { background-position: 0% 50%; }
     }
     
+    /* Metric cards - dark theme */
     [data-testid="stMetric"] {
-        background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%);
+        background: rgba(30, 30, 46, 0.9);
         backdrop-filter: blur(10px);
         padding: 1.5rem;
         border-radius: 20px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        border: 1px solid rgba(255,255,255,0.3);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        border: 1px solid rgba(255,255,255,0.08);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     [data-testid="stMetric"]:hover {
-        transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 12px 30px rgba(102, 126, 234, 0.2);
+        transform: translateY(-5px);
+        border-color: #60a5fa;
+        box-shadow: 0 12px 30px rgba(96, 165, 250, 0.2);
+    }
+    
+    [data-testid="stMetric"] label {
+        font-weight: 600;
+        color: #94a3b8;
     }
     
     [data-testid="stMetric"] .stMetricValue {
         font-size: 2.2rem;
         font-weight: 800;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     
+    /* Buttons */
     .stButton > button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
         color: white;
         border: none;
         border-radius: 12px;
@@ -92,77 +129,141 @@ st.markdown("""
     
     .stButton > button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 8px 24px rgba(96, 165, 250, 0.4);
     }
     
+    /* Tabs - dark theme */
     .stTabs [data-baseweb="tab-list"] {
         gap: 12px;
-        background: rgba(248, 250, 252, 0.8);
+        background: rgba(30, 30, 46, 0.6);
         backdrop-filter: blur(10px);
         padding: 8px;
         border-radius: 60px;
         margin-bottom: 20px;
+        border: 1px solid rgba(255,255,255,0.08);
     }
     
     .stTabs [data-baseweb="tab"] {
         border-radius: 40px;
         padding: 10px 28px;
         font-weight: 600;
+        color: #94a3b8;
         transition: all 0.3s ease;
     }
     
     .stTabs [aria-selected="true"] {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
         color: white;
-        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
     }
     
+    /* Sidebar - dark theme */
+    [data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+        border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    
+    [data-testid="stSidebar"] [data-testid="stMarkdown"] h3 {
+        font-weight: 700;
+        color: #e2e8f0;
+    }
+    
+    /* Info box */
     .custom-info {
-        background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
-        border-left: 4px solid #667eea;
+        background: rgba(30, 30, 46, 0.9);
+        border-left: 4px solid #60a5fa;
         padding: 16px 20px;
         border-radius: 16px;
         margin: 20px 0;
-        animation: slideIn 0.5s ease;
+        color: #e2e8f0;
     }
     
-    @keyframes slideIn {
-        from { opacity: 0; transform: translateX(-20px); }
-        to { opacity: 1; transform: translateX(0); }
-    }
-    
+    /* AI insight card */
     .ai-insight {
-        background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+        background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
         border-radius: 20px;
         padding: 1.5rem;
-        border: 1px solid #c4b5fd;
+        border: 1px solid rgba(96, 165, 250, 0.3);
     }
     
     .ai-insight h4 {
-        color: #5b21b6;
+        color: #a78bfa;
         font-weight: 700;
+        margin-bottom: 0.5rem;
     }
     
+    .ai-insight p {
+        color: #cbd5e1;
+    }
+    
+    /* Coming soon banner */
     .coming-soon {
-        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
         border-radius: 16px;
         padding: 1rem;
         text-align: center;
         font-weight: 500;
+        border: 1px dashed #60a5fa;
+        color: #94a3b8;
+        margin: 1rem 0;
+    }
+    
+    /* Dataframe styling */
+    .stDataFrame {
+        background: rgba(30, 30, 46, 0.6);
+        border-radius: 16px;
+    }
+    
+    /* Footer */
+    .footer {
+        text-align: center;
+        color: #475569;
+        font-size: 12px;
+        padding: 1rem;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        margin-top: 2rem;
     }
 </style>
 """, unsafe_allow_html=True)
 
-# ============ HEADER ============
-col1, col2 = st.columns([3, 1])
-with col1:
-    st.markdown('<h1 class="gradient-header">⚡ GridWatch Ireland</h1>', unsafe_allow_html=True)
-    st.markdown('<p style="font-size: 1.2rem; color: #4b5563;">🇮🇪 Real-time Energy Planning Intelligence | AI Coming Soon</p>', unsafe_allow_html=True)
-with col2:
-    st.image("https://img.icons8.com/color/96/ireland.png", width=100)
+# ============ AI FUNCTIONS (with error handling) ============
+def init_ai_client():
+    """Initialize Anthropic client if available"""
+    if not ANTHROPIC_AVAILABLE:
+        return None
+    try:
+        api_key = st.secrets.get("ANTHROPIC_API_KEY")
+        if api_key:
+            return anthropic.Anthropic(api_key=api_key)
+    except:
+        pass
+    return None
 
+client = init_ai_client()
+
+def get_ai_summary(project_title, project_description):
+    """Get AI-powered summary - returns None if AI not available"""
+    if not client:
+        return None
+    try:
+        prompt = f"""Provide a brief, professional summary of this energy project in 2 sentences:
+Project: {project_title}
+Description: {project_description[:300]}
+Focus on: project scale, energy type, and current status."""
+        
+        response = client.messages.create(
+            model="claude-3-haiku-20240307",
+            max_tokens=100,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response.content[0].text.strip()
+    except:
+        return None
+
+# ============ HEADER (No flag) ============
+st.markdown('<h1 class="gradient-header">⚡ GridWatch Ireland</h1>', unsafe_allow_html=True)
+st.markdown('<p class="subtitle">Real-time Energy Planning Intelligence</p>', unsafe_allow_html=True)
 st.markdown('<div class="animated-border"></div>', unsafe_allow_html=True)
-st.markdown("")
 
 # ============ LOAD DATA ============
 @st.cache_data(ttl=3600)
@@ -186,64 +287,76 @@ df['status'] = df['status'].fillna('Unknown')
 df['title'] = df['title'].fillna('No Title')
 
 def parse_date(date_str):
+    """Parse dd/mm/yyyy format"""
     if not date_str or date_str == 'Unknown':
         return None
     try:
+        # Try dd/mm/yyyy
         return datetime.strptime(date_str, '%d/%m/%Y')
     except:
         try:
+            # Try yyyy-mm-dd
             return datetime.strptime(date_str, '%Y-%m-%d')
         except:
             return None
 
 df['date_parsed'] = df['date_lodged'].apply(parse_date)
 
+# Get actual date range from data
 valid_dates = df[df['date_parsed'].notna()]['date_parsed']
 if len(valid_dates) > 0:
-    min_date = valid_dates.min()
-    max_date = valid_dates.max()
+    data_min_date = valid_dates.min()
+    data_max_date = valid_dates.max()
 else:
-    min_date = datetime.now() - timedelta(days=365)
-    max_date = datetime.now()
+    data_min_date = datetime.now() - timedelta(days=365)
+    data_max_date = datetime.now()
+
+# Default to showing last 30 days of data
+default_start = data_max_date - timedelta(days=30)
+default_end = data_max_date
 
 # ============ SIDEBAR ============
 with st.sidebar:
-    st.markdown("""
-    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                padding: 1.2rem; border-radius: 20px; color: white; margin-bottom: 1.5rem;">
-        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎯 Coming Soon</div>
-        <div style="font-weight: 600;">AI-Powered Intelligence</div>
-        <div style="font-size: 0.8rem; opacity: 0.9; margin-top: 0.5rem;">Project summaries & insights</div>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("### 🎯 Intelligence Dashboard")
+    st.markdown("Monitoring energy planning applications across Ireland.")
+    st.markdown("---")
     
     st.markdown("### 📅 Date Range")
     
-    start_date = st.date_input("From", value=min_date, min_value=min_date, max_value=max_date)
-    end_date = st.date_input("To", value=max_date, min_value=min_date, max_value=max_date)
+    # Format dates for display in dd/mm/yyyy
+    start_date = st.date_input(
+        "From",
+        value=default_start,
+        min_value=data_min_date,
+        max_value=data_max_date,
+        format="DD/MM/YYYY"
+    )
     
-    st.markdown("**⚡ Quick Select:**")
+    end_date = st.date_input(
+        "To",
+        value=default_end,
+        min_value=data_min_date,
+        max_value=data_max_date,
+        format="DD/MM/YYYY"
+    )
+    
+    st.markdown("**Quick Select:**")
     q1, q2, q3 = st.columns(3)
     with q1:
         if st.button("7d", use_container_width=True):
-            start_date = max_date - timedelta(days=7)
-            end_date = max_date
+            start_date = data_max_date - timedelta(days=7)
+            end_date = data_max_date
             st.rerun()
     with q2:
         if st.button("30d", use_container_width=True):
-            start_date = max_date - timedelta(days=30)
-            end_date = max_date
+            start_date = data_max_date - timedelta(days=30)
+            end_date = data_max_date
             st.rerun()
     with q3:
         if st.button("90d", use_container_width=True):
-            start_date = max_date - timedelta(days=90)
-            end_date = max_date
+            start_date = data_max_date - timedelta(days=90)
+            end_date = data_max_date
             st.rerun()
-    
-    show_recent = st.checkbox("📅 Last 30 days", value=True)
-    if show_recent:
-        start_date = max_date - timedelta(days=30)
-        end_date = max_date
     
     st.markdown("---")
     st.markdown("### 🔍 Filters")
@@ -253,7 +366,8 @@ with st.sidebar:
     selected_status = st.selectbox("Status", ["All"] + sorted(df['status'].unique().tolist()))
     
     st.markdown("---")
-    st.caption(f"📊 {len(df)} total projects in database")
+    st.caption(f"📊 Database: {len(df)} total projects")
+    st.caption(f"📅 Data range: {data_min_date.strftime('%d/%m/%Y')} - {data_max_date.strftime('%d/%m/%Y')}")
 
 # ============ APPLY FILTERS ============
 start_datetime = datetime.combine(start_date, datetime.min.time())
@@ -280,7 +394,7 @@ st.subheader("📊 Key Metrics")
 m1, m2, m3, m4, m5 = st.columns(5)
 
 with m1:
-    st.metric("Total Projects", len(df_filtered), delta=None)
+    st.metric("Total Projects", len(df_filtered))
 with m2:
     st.metric("🌬️ Wind", len(df_filtered[df_filtered['energy_type'] == 'wind']))
 with m3:
@@ -290,28 +404,33 @@ with m4:
 with m5:
     st.metric("⚡ Grid", len(df_filtered[df_filtered['energy_type'] == 'grid']))
 
-# AI Coming Soon Banner
-st.markdown("""
-<div class="coming-soon">
-    🤖 <strong>AI Features Coming Soon!</strong> Soon you'll get AI-powered project summaries, smart insights, and trend analysis.
-</div>
-""", unsafe_allow_html=True)
+# AI Status Banner
+if client:
+    st.markdown("""
+    <div class="ai-insight">
+        <h4>🤖 AI Active</h4>
+        <p>Click on map markers for AI-generated project summaries!</p>
+    </div>
+    """, unsafe_allow_html=True)
+else:
+    st.markdown("""
+    <div class="coming-soon">
+        🤖 <strong>AI Features Available!</strong> Add your Anthropic API key to enable AI-powered project summaries and insights.
+    </div>
+    """, unsafe_allow_html=True)
 
 # Date range info
 if len(df_filtered) > 0:
     st.markdown(f"""
     <div class="custom-info">
-        📅 Showing <strong>{len(df_filtered)}</strong> projects from 
-        <strong>{start_date.strftime('%d %B %Y')}</strong> to <strong>{end_date.strftime('%d %B %Y')}</strong>
+        📅 Showing <strong>{len(df_filtered)}</strong> projects lodged between 
+        <strong>{start_date.strftime('%d/%m/%Y')}</strong> and <strong>{end_date.strftime('%d/%m/%Y')}</strong>
     </div>
     """, unsafe_allow_html=True)
 else:
-    st.warning("No projects found in this date range.")
+    st.warning("No projects found in this date range. Try expanding the range.")
 
 st.markdown("---")
-
-# ============ TABS ============
-tab1, tab2, tab3 = st.tabs(["🗺️ Interactive Map", "📈 Analytics", "📋 Project Directory"])
 
 # ============ COUNTY COORDINATES ============
 county_coords = {
@@ -331,10 +450,10 @@ county_coords = {
 }
 
 energy_colors = {
-    "wind": "#3b82f6", "solar": "#eab308", "bess": "#22c55e",
-    "grid": "#a855f7", "offshore": "#06b6d4", "biogas": "#f97316",
-    "hydrogen": "#ec489a", "hydro": "#14b8a6", "data_centre": "#6b7280",
-    "other": "#9ca3af", "unknown": "#9ca3af"
+    "wind": "#60a5fa", "solar": "#fbbf24", "bess": "#34d399",
+    "grid": "#c084fc", "offshore": "#2dd4bf", "biogas": "#fb923c",
+    "hydrogen": "#f472b6", "hydro": "#2dd4bf", "data_centre": "#6b7280",
+    "other": "#9ca3af", "unknown": "#6b7280"
 }
 
 energy_icons = {
@@ -343,13 +462,16 @@ energy_icons = {
     "data_centre": "🏢", "other": "🏭", "unknown": "❓"
 }
 
+# ============ TABS ============
+tab1, tab2, tab3 = st.tabs(["🗺️ Interactive Map", "📈 Analytics", "📋 Project Directory"])
+
 # ============ TAB 1: MAP ============
 with tab1:
     map_col1, map_col2 = st.columns([3, 1])
     
     with map_col1:
         m = folium.Map(location=[53.4129, -8.2439], zoom_start=7, control_scale=True)
-        folium.TileLayer('CartoDB positron', name='Light').add_to(m)
+        folium.TileLayer('CartoDB dark_matter', name='Dark').add_to(m)
         folium.TileLayer('OpenStreetMap', name='Street').add_to(m)
         
         marker_cluster = plugins.MarkerCluster(name='Projects').add_to(m)
@@ -366,25 +488,41 @@ with tab1:
                     continue
             
             etype = row.get('energy_type', 'unknown')
-            color = energy_colors.get(etype, '#9ca3af')
+            color = energy_colors.get(etype, '#6b7280')
             icon = energy_icons.get(etype, '❓')
             
+            # Get AI summary if available
+            ai_summary = None
+            if client:
+                ai_summary = get_ai_summary(row.get('title', ''), row.get('description', ''))
+            
             popup_html = f"""
-            <div style="font-family: 'Inter', sans-serif; min-width: 280px;">
-                <div style="background: {color}; padding: 12px; border-radius: 12px 12px 0 0; color: white;">
+            <div style="font-family: 'Inter', sans-serif; min-width: 280px; background: #1e1e2e; border-radius: 16px; overflow: hidden;">
+                <div style="background: {color}; padding: 12px; color: white;">
                     <div style="font-size: 16px; font-weight: 600;">{icon} {etype.title()}</div>
                 </div>
-                <div style="padding: 16px; background: white; border-radius: 0 0 12px 12px;">
-                    <div style="font-weight: 600; margin-bottom: 8px;">{row.get('title', 'No Title')[:100]}</div>
-                    <div style="font-size: 12px; color: #6b7280;">
+                <div style="padding: 16px;">
+                    <div style="font-weight: 600; color: #e2e8f0; margin-bottom: 8px;">{row.get('title', 'No Title')[:100]}</div>
+                    <div style="font-size: 12px; color: #94a3b8;">
                         <div><strong>Ref:</strong> {row.get('ref', 'N/A')}</div>
                         <div><strong>County:</strong> {row.get('county', 'Unknown')}</div>
                         <div><strong>Status:</strong> {row.get('status', 'Unknown')}</div>
                         <div><strong>Lodged:</strong> {row.get('date_lodged', 'N/A')}</div>
                     </div>
+            """
+            
+            if ai_summary:
+                popup_html += f"""
+                    <div style="background: rgba(96, 165, 250, 0.1); padding: 10px; border-radius: 8px; margin: 10px 0; border-left: 3px solid {color};">
+                        <div style="font-size: 11px; color: #a78bfa;">🤖 AI Summary</div>
+                        <div style="font-size: 12px; color: #cbd5e1;">{ai_summary}</div>
+                    </div>
+                """
+            
+            popup_html += f"""
                     <a href="{row.get('source_url', '#')}" target="_blank" 
-                       style="display: inline-block; margin-top: 12px; 
-                              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+                       style="display: inline-block; margin-top: 8px; 
+                              background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%); 
                               color: white; padding: 6px 12px; text-decoration: none; 
                               border-radius: 8px; font-size: 12px;">
                         🔗 View Details →
@@ -396,7 +534,7 @@ with tab1:
             folium.CircleMarker(
                 location=[lat, lon],
                 radius=8,
-                popup=folium.Popup(popup_html, max_width=350),
+                popup=folium.Popup(popup_html, max_width=380),
                 tooltip=f"{icon} {row.get('title', '')[:50]}",
                 color=color,
                 fill=True,
@@ -418,44 +556,65 @@ with tab1:
                 st.markdown(
                     f'<div style="display: flex; align-items: center; margin: 8px 0;">'
                     f'<span style="display: inline-block; width: 14px; height: 14px; background: {color}; border-radius: 50%; margin-right: 10px;"></span>'
-                    f'<span>{icon} {etype.title()}</span>'
-                    f'<span style="margin-left: auto; background: #f3f4f6; padding: 2px 8px; border-radius: 20px; font-size: 12px;">{count}</span>'
+                    f'<span style="color: #e2e8f0;">{icon} {etype.title()}</span>'
+                    f'<span style="margin-left: auto; background: #2d2d3a; padding: 2px 8px; border-radius: 20px; font-size: 11px; color: #94a3b8;">{count}</span>'
                     f'</div>',
                     unsafe_allow_html=True
                 )
         
         st.markdown("---")
         st.markdown("### 💡 Tips")
-        st.markdown("- Click markers for details\n- Zoom for better view\n- Use layer control (top right)")
+        st.markdown("""
+        - 🖱️ **Click markers** for project details
+        - 🔍 **Zoom in/out** with mouse wheel
+        - 🗺️ **Layer control** (top right) to change map style
+        - 📍 **Clusters** show multiple projects
+        """)
 
 # ============ TAB 2: ANALYTICS ============
 with tab2:
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### Projects by Type")
+        st.markdown("#### 🥧 Projects by Type")
         type_counts = df_filtered['energy_type'].value_counts()
         if len(type_counts) > 0:
             fig = go.Figure(data=[go.Pie(
                 labels=type_counts.index,
                 values=type_counts.values,
                 hole=0.4,
-                marker=dict(colors=[energy_colors.get(t, '#9ca3af') for t in type_counts.index])
+                marker=dict(colors=[energy_colors.get(t, '#6b7280') for t in type_counts.index]),
+                textinfo='label+percent',
+                textfont=dict(color='#e2e8f0')
             )])
-            fig.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)')
+            fig.update_layout(
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
+                height=450,
+                font=dict(color='#e2e8f0')
+            )
             st.plotly_chart(fig, use_container_width=True)
     
     with col2:
-        st.markdown("#### Top Counties")
+        st.markdown("#### 📊 Top Counties")
         county_counts = df_filtered['county'].value_counts().head(10)
         if len(county_counts) > 0:
             fig = go.Figure(data=[go.Bar(
                 x=county_counts.values,
                 y=county_counts.index,
                 orientation='h',
-                marker=dict(color=county_counts.values, colorscale='Viridis')
+                marker=dict(color=county_counts.values, colorscale='Viridis'),
+                text=county_counts.values,
+                textposition='outside'
             )])
-            fig.update_layout(height=400, paper_bgcolor='rgba(0,0,0,0)')
+            fig.update_layout(
+                height=450,
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
+                font=dict(color='#e2e8f0'),
+                xaxis_title="Number of Projects",
+                yaxis_title="County"
+            )
             st.plotly_chart(fig, use_container_width=True)
 
 # ============ TAB 3: PROJECT DIRECTORY ============
@@ -468,23 +627,31 @@ with tab3:
                 df_display['ref'].str.contains(search, case=False, na=False) |
                 df_display['county'].str.contains(search, case=False, na=False))
         df_display = df_display[mask]
+        st.caption(f"Found {len(df_display)} projects matching '{search}'")
     
     display_cols = ['ref', 'title', 'county', 'energy_type', 'status', 'date_lodged']
     available_cols = [c for c in display_cols if c in df_display.columns]
     
-    st.dataframe(df_display[available_cols], use_container_width=True, height=400)
+    st.dataframe(
+        df_display[available_cols],
+        use_container_width=True,
+        column_config={
+            "ref": "Reference",
+            "title": "Project Name",
+            "county": "County",
+            "energy_type": "Type",
+            "status": "Status",
+            "date_lodged": "Lodged Date",
+        },
+        height=400
+    )
     
     csv = df_display.to_csv(index=False)
     st.download_button("📥 Download CSV", csv, f"gridwatch_{start_date.strftime('%Y%m%d')}.csv")
 
 # ============ FOOTER ============
-st.markdown("---")
-st.markdown(
-    f"""
-    <div style="text-align: center; color: #6b7280; font-size: 12px;">
-        <b>⚡ GridWatch Ireland</b> | Data from An Coimisiún Pleanála<br>
-        {len(df_filtered)} projects • {start_date.strftime('%d %B %Y')} → {end_date.strftime('%d %B %Y')}
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.markdown("""
+<div class="footer">
+    ⚡ GridWatch Ireland | Data from An Coimisiún Pleanála | Powered by Streamlit
+</div>
+""", unsafe_allow_html=True)
