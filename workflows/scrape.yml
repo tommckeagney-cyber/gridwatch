@@ -20,7 +20,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4 lxml
+        pip install requests beautifulsoup4 lxml pandas
     
     - name: Run scraper with geocoding
       run: |
@@ -220,9 +220,111 @@ print(f'📍 Exact coordinates: {exact_count} projects')
 print(f'🏢 Approximate (county center): {approx_count} projects')
 "
 
+    - name: Generate GIS files for QGIS
+      run: |
+        python -c "
+import json
+import pandas as pd
+from pathlib import Path
+
+# Load the cases
+with open('data/cases.json', 'r') as f:
+    cases = json.load(f)
+
+print(f'📊 Loaded {len(cases)} cases for GIS export')
+
+# County centroids for fallback
+county_coords = {
+    'Carlow': [52.8377, -6.9298], 'Cavan': [53.9908, -7.3606],
+    'Clare': [52.8627, -9.0259], 'Cork': [51.8985, -8.4756],
+    'Donegal': [54.6549, -8.1109], 'Dublin': [53.3498, -6.2603],
+    'Galway': [53.2707, -9.0568], 'Kerry': [52.1546, -9.5231],
+    'Kildare': [53.1584, -6.9028], 'Kilkenny': [52.6538, -7.2493],
+    'Laois': [53.0000, -7.3000], 'Leitrim': [54.0000, -8.0000],
+    'Limerick': [52.6638, -8.6267], 'Longford': [53.7277, -7.7997],
+    'Louth': [53.9257, -6.4827], 'Mayo': [53.8378, -9.4001],
+    'Meath': [53.6046, -6.6567], 'Monaghan': [54.2500, -7.0000],
+    'Offaly': [53.1000, -7.5000], 'Roscommon': [53.6291, -8.1868],
+    'Sligo': [54.2693, -8.4693], 'Tipperary': [52.6807, -7.8246],
+    'Waterford': [52.2593, -7.1101], 'Westmeath': [53.5000, -7.5000],
+    'Wexford': [52.4798, -6.4576], 'Wicklow': [52.9915, -6.3647],
+}
+
+# Energy type names
+energy_names = {
+    'wind': 'Wind Farm',
+    'solar': 'Solar Farm',
+    'bess': 'Battery Storage',
+    'grid': 'Grid Infrastructure',
+    'offshore': 'Offshore Wind',
+    'biogas': 'Biogas',
+    'hydrogen': 'Hydrogen',
+    'hydro': 'Hydroelectric',
+    'data_centre': 'Data Centre',
+    'other': 'Other Energy'
+}
+
+# Build GeoJSON
+geojson = {
+    'type': 'FeatureCollection',
+    'name': 'GridWatch Ireland',
+    'crs': {'type': 'name', 'properties': {'name': 'urn:ogc:def:crs:OGC:1.3:CRS84'}},
+    'features': []
+}
+
+for case in cases:
+    # Get coordinates
+    lat = case.get('latitude')
+    lon = case.get('longitude')
+    
+    if lat is None or pd.isna(lat):
+        county = case.get('county', 'Unknown')
+        if county in county_coords:
+            lat, lon = county_coords[county]
+        else:
+            continue
+    
+    etype = case.get('energy_type', 'other')
+    energy_name = energy_names.get(etype, 'Energy Project')
+    
+    feature = {
+        'type': 'Feature',
+        'geometry': {
+            'type': 'Point',
+            'coordinates': [lon, lat]
+        },
+        'properties': {
+            'ref': case.get('ref', 'N/A'),
+            'title': case.get('title', 'Unknown')[:100],
+            'county': case.get('county', 'Unknown'),
+            'energy_type': etype,
+            'energy_name': energy_name,
+            'capacity_mw': case.get('capacity_mw', 0),
+            'status': case.get('status', 'Unknown'),
+            'date_lodged': case.get('date_lodged', 'Unknown'),
+            'source_url': case.get('source_url', '#')
+        }
+    }
+    geojson['features'].append(feature)
+
+# Save GeoJSON
+with open('data/gridwatch.geojson', 'w') as f:
+    json.dump(geojson, f, indent=2)
+
+print(f'✅ GeoJSON created: data/gridwatch.geojson')
+print(f'   {len(geojson[\"features\"])} features')
+
+# Also create CSV for QGIS
+df = pd.DataFrame([f['properties'] for f in geojson['features']])
+df['longitude'] = [f['geometry']['coordinates'][0] for f in geojson['features']]
+df['latitude'] = [f['geometry']['coordinates'][1] for f in geojson['features']]
+df.to_csv('data/gridwatch_gis.csv', index=False)
+print(f'✅ CSV created: data/gridwatch_gis.csv')
+"
+
     - name: Commit and push updates
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
         git add data/
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: Weekly data scrape with coordinates" && git push)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: Weekly data scrape with coordinates and GIS export" && git push)
