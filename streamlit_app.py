@@ -155,14 +155,12 @@ st.markdown("""
 
 # ============ DEEPSEEK AI FUNCTIONS ============
 def get_deepseek_key():
-    """Get DeepSeek API key from secrets"""
     try:
         return st.secrets.get("DEEPSEEK_API_KEY")
     except:
         return None
 
 def call_deepseek(prompt):
-    """Call DeepSeek API"""
     api_key = get_deepseek_key()
     if not api_key:
         return None
@@ -170,44 +168,23 @@ def call_deepseek(prompt):
     try:
         response = requests.post(
             "https://api.deepseek.com/v1/chat/completions",
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json"
-            },
-            json={
-                "model": "deepseek-chat",
-                "messages": [{"role": "user", "content": prompt}],
-                "max_tokens": 150,
-                "temperature": 0.5
-            },
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json={"model": "deepseek-chat", "messages": [{"role": "user", "content": prompt}], "max_tokens": 150, "temperature": 0.5},
             timeout=15
         )
-        
         if response.status_code == 200:
-            data = response.json()
-            return data["choices"][0]["message"]["content"].strip()
+            return response.json()["choices"][0]["message"]["content"].strip()
         return None
-    except Exception as e:
-        print(f"DeepSeek error: {e}")
+    except:
         return None
 
 def get_ai_summary(title, description):
-    """Get AI summary of project"""
-    prompt = f"""Summarize this energy project in 1-2 sentences:
-
-Project: {title}
-Details: {description[:300]}
-
-Summary:"""
+    prompt = f"Summarize this energy project in 1 sentence:\nProject: {title}\nDetails: {description[:200]}\nSummary:"
     result = call_deepseek(prompt)
     return result if result else "Energy infrastructure project under review."
 
 def verify_energy(title, description):
-    """Verify if project is energy-related"""
-    prompt = f"""Is this project related to energy infrastructure (wind, solar, battery storage, grid, substations, power lines)? Answer YES or NO only.
-
-Project: {title}
-Details: {description[:200]}"""
+    prompt = f"Is this energy infrastructure (wind, solar, battery, grid, substation)? Answer YES or NO:\nProject: {title}\nDetails: {description[:150]}"
     result = call_deepseek(prompt)
     return "YES" in result.upper() if result else None
 
@@ -266,7 +243,7 @@ with st.sidebar:
     if has_deepseek:
         st.success("🤖 DeepSeek AI Active")
     else:
-        st.info("🤖 Add DeepSeek API key to .streamlit/secrets.toml")
+        st.info("🤖 Add DeepSeek API key to enable AI")
     
     st.markdown("---")
     st.markdown("### 📅 Date Range")
@@ -274,7 +251,6 @@ with st.sidebar:
     start_date = st.date_input("From", value=default_start, min_value=data_min_date, max_value=data_max_date, format="DD/MM/YYYY")
     end_date = st.date_input("To", value=default_end, min_value=data_min_date, max_value=data_max_date, format="DD/MM/YYYY")
     
-    st.markdown("**Quick:**")
     c1, c2, c3 = st.columns(3)
     with c1:
         if st.button("7d"): start_date, end_date = data_max_date - timedelta(days=7), data_max_date; st.rerun()
@@ -318,11 +294,7 @@ with c4: st.metric("🔋 BESS", len(df_filtered[df_filtered['energy_type'] == 'b
 with c5: st.metric("⚡ Grid", len(df_filtered[df_filtered['energy_type'] == 'grid']))
 
 if len(df_filtered) > 0:
-    st.markdown(f"""
-    <div class="custom-info">
-        📅 {len(df_filtered)} projects from {start_date.strftime('%d/%m/%Y')} to {end_date.strftime('%d/%m/%Y')}
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown(f'<div class="custom-info">📅 {len(df_filtered)} projects from {start_date.strftime("%d/%m/%Y")} to {end_date.strftime("%d/%m/%Y")}</div>', unsafe_allow_html=True)
 
 st.markdown("---")
 
@@ -357,94 +329,94 @@ energy_icons = {
 # ============ TABS ============
 tab1, tab2, tab3 = st.tabs(["🗺️ Interactive Map", "📈 Analytics", "📋 Project Directory"])
 
-# ============ TAB 1: MAP ============
+# ============ TAB 1: MAP (Simplified to ensure it works) ============
 with tab1:
+    st.subheader("🗺️ Energy Project Locations")
+    
     col1, col2 = st.columns([3, 1])
     
     with col1:
-        m = folium.Map(location=[53.4129, -8.2439], zoom_start=7)
-        folium.TileLayer('CartoDB dark_matter', name='Dark').add_to(m)
-        folium.TileLayer('OpenStreetMap', name='Street').add_to(m)
-        marker_cluster = plugins.MarkerCluster().add_to(m)
-        
-        ai_cache = {}
-        
-        for _, row in df_filtered.iterrows():
-            lat = row.get('latitude')
-            lon = row.get('longitude')
+        # Create a basic map first to ensure it renders
+        if len(df_filtered) > 0:
+            # Create map centered on Ireland
+            m = folium.Map(location=[53.4129, -8.2439], zoom_start=7)
             
-            if lat is None or pd.isna(lat):
+            # Add a simple tile layer
+            folium.TileLayer('openstreetmap').add_to(m)
+            
+            # Add markers for each project
+            for idx, row in df_filtered.iterrows():
+                # Get coordinates
+                lat = row.get('latitude')
+                lon = row.get('longitude')
+                
+                if lat is None or pd.isna(lat):
+                    county = row.get('county', 'Unknown')
+                    if county in county_coords:
+                        lat, lon = county_coords[county]
+                    else:
+                        continue
+                
+                etype = row.get('energy_type', 'unknown')
+                color = energy_colors.get(etype, '#6b7280')
+                icon = energy_icons.get(etype, '❓')
+                title = row.get('title', 'No Title')[:80]
+                ref = row.get('ref', 'N/A')
                 county = row.get('county', 'Unknown')
-                if county in county_coords:
-                    lat, lon = county_coords[county]
-                else:
-                    continue
+                status = row.get('status', 'Unknown')
+                date_lodged = row.get('date_lodged', 'N/A')
+                url = row.get('source_url', '#')
+                
+                # Create popup
+                popup_text = f"""
+                <b>{icon} {title}</b><br>
+                <b>Ref:</b> {ref}<br>
+                <b>County:</b> {county}<br>
+                <b>Status:</b> {status}<br>
+                <b>Lodged:</b> {date_lodged}<br>
+                <a href="{url}" target="_blank">View Details →</a>
+                """
+                
+                # Add marker
+                folium.CircleMarker(
+                    location=[lat, lon],
+                    radius=8,
+                    popup=folium.Popup(popup_text, max_width=300),
+                    tooltip=title,
+                    color=color,
+                    fill=True,
+                    fillColor=color,
+                    fillOpacity=0.7,
+                    weight=2
+                ).add_to(m)
             
-            etype = row.get('energy_type', 'unknown')
-            color = energy_colors.get(etype, '#6b7280')
-            icon = energy_icons.get(etype, '❓')
+            # Display the map
+            map_html = m._repr_html_()
+            html(map_html, height=550, width=700)
             
-            title = row.get('title', 'No Title')
-            ref = row.get('ref', 'N/A')
-            county = row.get('county', 'Unknown')
-            status = row.get('status', 'Unknown')
-            date_lodged = row.get('date_lodged', 'N/A')
-            url = row.get('source_url', '#')
-            desc = row.get('description', '')
-            
-            ai_summary = None
-            ai_verified = None
-            
-            if has_deepseek:
-                cache_key = ref
-                if cache_key not in ai_cache:
-                    ai_cache[cache_key] = {
-                        'summary': get_ai_summary(title, desc),
-                        'verified': verify_energy(title, desc)
-                    }
-                ai_summary = ai_cache[cache_key]['summary']
-                ai_verified = ai_cache[cache_key]['verified']
-            
-            popup = f"""
-            <div style="min-width:280px; background:#1e1e2e; border-radius:12px; overflow:hidden;">
-                <div style="background:{color}; padding:10px; color:white; font-weight:600;">{icon} {etype.upper()}</div>
-                <div style="padding:12px;">
-                    <b>{title[:80]}</b><br>
-                    <small>📋 {ref} | 📍 {county} | {status} | 📅 {date_lodged}</small>
-            """
-            
-            if ai_verified is not None:
-                if ai_verified:
-                    popup += '<div style="margin:8px 0;"><span style="background:#22c55e20; color:#22c55e; padding:2px 8px; border-radius:20px; font-size:11px;">✅ Energy Project Verified</span></div>'
-                else:
-                    popup += '<div style="margin:8px 0;"><span style="background:#ef444420; color:#ef4444; padding:2px 8px; border-radius:20px; font-size:11px;">⚠️ Not Energy-Related</span></div>'
-            
-            if ai_summary:
-                popup += f'<div style="background:#60a5fa10; padding:8px; border-radius:8px; margin:8px 0;"><small>🤖 {ai_summary}</small></div>'
-            
-            popup += f'<a href="{url}" target="_blank" style="display:inline-block; margin-top:8px; background:#60a5fa; color:white; padding:4px 12px; border-radius:8px; text-decoration:none; font-size:12px;">🔗 View Details</a></div></div>'
-            
-            folium.CircleMarker(
-                location=[lat, lon], radius=7, popup=folium.Popup(popup, max_width=380),
-                tooltip=f"{icon} {title[:50]}", color=color, fill=True, fillColor=color, fillOpacity=0.7, weight=2
-            ).add_to(marker_cluster)
-        
-        folium.LayerControl().add_to(m)
-        html(m._repr_html_(), height=550, width=700)
+            st.caption(f"📍 Showing {len(df_filtered)} projects on map")
+        else:
+            st.info("No projects to display on map. Try adjusting filters.")
     
     with col2:
         st.markdown("### 📍 Legend")
         for etype, color in energy_colors.items():
             count = len(df_filtered[df_filtered['energy_type'] == etype])
             icon = energy_icons.get(etype, "❓")
-            st.markdown(f'<div><span style="display:inline-block; width:12px; height:12px; background:{color}; border-radius:50%;"></span> {icon} {etype.title()}: {count}</div>', unsafe_allow_html=True)
+            if count > 0 or etype in ['wind', 'solar', 'bess', 'grid']:
+                st.markdown(f'<div style="margin: 8px 0;"><span style="display:inline-block; width:14px; height:14px; background:{color}; border-radius:50%; margin-right:8px;"></span> {icon} {etype.title()}: {count}</div>', unsafe_allow_html=True)
         
         st.markdown("---")
-        st.markdown("### 🤖 AI Features")
+        st.markdown("### AI Features")
         if has_deepseek:
-            st.markdown("- ✅ Click markers for AI summaries\n- 🔍 Energy verification badges\n- 💡 Smart project insights")
+            st.markdown("✅ AI summaries available on click")
+            st.markdown("✅ Energy verification badges")
         else:
-            st.markdown("Add DeepSeek API key to enable AI summaries and verification.")
+            st.markdown("Add DeepSeek API key to .streamlit/secrets.toml")
+        
+        st.markdown("---")
+        st.markdown("### 💡 Tips")
+        st.markdown("- Click markers for project details\n- Zoom in/out with mouse wheel\n- Use layer control (top right)")
 
 # ============ TAB 2: ANALYTICS ============
 with tab2:
@@ -476,7 +448,7 @@ with tab3:
                 df_display['county'].str.contains(search, case=False, na=False))
         df_display = df_display[mask]
     
-    st.dataframe(df_display[['ref', 'title', 'county', 'energy_type', 'status', 'date_lodged']], use_container_width=True)
+    st.dataframe(df_display[['ref', 'title', 'county', 'energy_type', 'status', 'date_lodged']], use_container_width=True, height=400)
     
     csv = df_display.to_csv(index=False)
     st.download_button("📥 Download CSV", csv, f"gridwatch_{start_date.strftime('%Y%m%d')}.csv")
@@ -484,6 +456,6 @@ with tab3:
 # ============ FOOTER ============
 st.markdown("""
 <div class="footer">
-    ⚡ GridWatch Ireland | Data from An Coimisiún Pleanála | Powered by DeepSeek AI
+    ⚡ GridWatch Ireland | Data from An Coimisiún Pleanála
 </div>
 """, unsafe_allow_html=True)
