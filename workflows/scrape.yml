@@ -31,38 +31,64 @@ import re, time, json
 from datetime import datetime, timedelta
 import sys
 
-# Import your geocoder
-sys.path.append('.')
-try:
-    from geocoder import IrishGeocoder
-    geocoder = IrishGeocoder()
-    print('✅ Using geocoder from geocoder.py')
-except:
-    # Fallback geocoder if file not found
-    class IrishGeocoder:
-        COUNTY_CENTROIDS = {
-            'Carlow': (52.8377, -6.9298), 'Cavan': (53.9908, -7.3606),
-            'Clare': (52.8627, -9.0259), 'Cork': (51.8985, -8.4756),
-            'Donegal': (54.6549, -8.1109), 'Dublin': (53.3498, -6.2603),
-            'Galway': (53.2707, -9.0568), 'Kerry': (52.1546, -9.5231),
-            'Kildare': (53.1584, -6.9028), 'Kilkenny': (52.6538, -7.2493),
-            'Laois': (53.0000, -7.3000), 'Leitrim': (54.0000, -8.0000),
-            'Limerick': (52.6638, -8.6267), 'Longford': (53.7277, -7.7997),
-            'Louth': (53.9257, -6.4827), 'Mayo': (53.8378, -9.4001),
-            'Meath': (53.6046, -6.6567), 'Monaghan': (54.2500, -7.0000),
-            'Offaly': (53.1000, -7.5000), 'Roscommon': (53.6291, -8.1868),
-            'Sligo': (54.2693, -8.4693), 'Tipperary': (52.6807, -7.8246),
-            'Waterford': (52.2593, -7.1101), 'Westmeath': (53.5000, -7.5000),
-            'Wexford': (52.4798, -6.4576), 'Wicklow': (52.9915, -6.3647),
-        }
-        
-        def geocode_project(self, title, description, county):
-            print(f'  Using county centroid for {county}')
-            return self.COUNTY_CENTROIDS.get(county, (53.4129, -8.2439))
+# ============ GEOCODER ============
+class IrishGeocoder:
+    COUNTY_CENTROIDS = {
+        'Carlow': (52.8377, -6.9298), 'Cavan': (53.9908, -7.3606),
+        'Clare': (52.8627, -9.0259), 'Cork': (51.8985, -8.4756),
+        'Donegal': (54.6549, -8.1109), 'Dublin': (53.3498, -6.2603),
+        'Galway': (53.2707, -9.0568), 'Kerry': (52.1546, -9.5231),
+        'Kildare': (53.1584, -6.9028), 'Kilkenny': (52.6538, -7.2493),
+        'Laois': (53.0000, -7.3000), 'Leitrim': (54.0000, -8.0000),
+        'Limerick': (52.6638, -8.6267), 'Longford': (53.7277, -7.7997),
+        'Louth': (53.9257, -6.4827), 'Mayo': (53.8378, -9.4001),
+        'Meath': (53.6046, -6.6567), 'Monaghan': (54.2500, -7.0000),
+        'Offaly': (53.1000, -7.5000), 'Roscommon': (53.6291, -8.1868),
+        'Sligo': (54.2693, -8.4693), 'Tipperary': (52.6807, -7.8246),
+        'Waterford': (52.2593, -7.1101), 'Westmeath': (53.5000, -7.5000),
+        'Wexford': (52.4798, -6.4576), 'Wicklow': (52.9915, -6.3647),
+    }
     
-    geocoder = IrishGeocoder()
-    print('✅ Using fallback geocoder')
+    TOWN_PATTERNS = [
+        r'at\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)',
+        r'near\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)',
+        r'land\s+at\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)',
+    ]
+    
+    def __init__(self):
+        self.session = requests.Session()
+        self.session.headers.update({'User-Agent': 'GridWatch/1.0'})
+    
+    def geocode_project(self, title, description, county):
+        full_text = f\"{title} {description}\".lower()
+        
+        # Try to find town name
+        for pattern in self.TOWN_PATTERNS:
+            match = re.search(pattern, full_text, re.IGNORECASE)
+            if match:
+                town = match.group(1)
+                try:
+                    time.sleep(0.5)
+                    resp = self.session.get(
+                        'https://nominatim.openstreetmap.org/search',
+                        params={'q': f\"{town}, {county}, Ireland\", 'format': 'json', 'limit': 1},
+                        timeout=10
+                    )
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        if data:
+                            print(f'    Found coordinates for {town}, {county}')
+                            return (float(data[0]['lat']), float(data[0]['lon']))
+                except:
+                    pass
+        
+        # Fallback to county centroid
+        print(f'    Using county centroid for {county}')
+        return self.COUNTY_CENTROIDS.get(county, (53.4129, -8.2439))
 
+geocoder = IrishGeocoder()
+
+# ============ SCRAPER ============
 BASE_URL = 'https://www.pleanala.ie'
 LISTS_URL = f'{BASE_URL}/en-ie/lists/cases'
 CASE_URL = f'{BASE_URL}/en-ie/case'
@@ -220,20 +246,19 @@ print(f'📍 Exact coordinates: {exact_count} projects')
 print(f'🏢 Approximate (county center): {approx_count} projects')
 "
 
-    - name: Generate GIS files for QGIS
+    - name: Generate GIS files and KML
       run: |
         python -c "
 import json
 import pandas as pd
-from pathlib import Path
 
 # Load the cases
 with open('data/cases.json', 'r') as f:
     cases = json.load(f)
 
-print(f'📊 Loaded {len(cases)} cases for GIS export')
+print(f'📊 Loaded {len(cases)} cases for export')
 
-# County centroids for fallback
+# County centroids
 county_coords = {
     'Carlow': [52.8377, -6.9298], 'Cavan': [53.9908, -7.3606],
     'Clare': [52.8627, -9.0259], 'Cork': [51.8985, -8.4756],
@@ -250,30 +275,13 @@ county_coords = {
     'Wexford': [52.4798, -6.4576], 'Wicklow': [52.9915, -6.3647],
 }
 
-# Energy type names
-energy_names = {
-    'wind': 'Wind Farm',
-    'solar': 'Solar Farm',
-    'bess': 'Battery Storage',
-    'grid': 'Grid Infrastructure',
-    'offshore': 'Offshore Wind',
-    'biogas': 'Biogas',
-    'hydrogen': 'Hydrogen',
-    'hydro': 'Hydroelectric',
-    'data_centre': 'Data Centre',
-    'other': 'Other Energy'
-}
-
-# Build GeoJSON
+# ============ GEOJSON for QGIS ============
 geojson = {
     'type': 'FeatureCollection',
-    'name': 'GridWatch Ireland',
-    'crs': {'type': 'name', 'properties': {'name': 'urn:ogc:def:crs:OGC:1.3:CRS84'}},
     'features': []
 }
 
 for case in cases:
-    # Get coordinates
     lat = case.get('latitude')
     lon = case.get('longitude')
     
@@ -284,115 +292,53 @@ for case in cases:
         else:
             continue
     
-    etype = case.get('energy_type', 'other')
-    energy_name = energy_names.get(etype, 'Energy Project')
-    
-    feature = {
+    geojson['features'].append({
         'type': 'Feature',
-        'geometry': {
-            'type': 'Point',
-            'coordinates': [lon, lat]
-        },
+        'geometry': {'type': 'Point', 'coordinates': [lon, lat]},
         'properties': {
             'ref': case.get('ref', 'N/A'),
             'title': case.get('title', 'Unknown')[:100],
             'county': case.get('county', 'Unknown'),
-            'energy_type': etype,
-            'energy_name': energy_name,
-            'capacity_mw': case.get('capacity_mw', 0),
+            'energy_type': case.get('energy_type', 'other'),
             'status': case.get('status', 'Unknown'),
             'date_lodged': case.get('date_lodged', 'Unknown'),
             'source_url': case.get('source_url', '#')
         }
-    }
-    geojson['features'].append(feature)
+    })
 
-# Save GeoJSON
 with open('data/gridwatch.geojson', 'w') as f:
     json.dump(geojson, f, indent=2)
 
-print(f'✅ GeoJSON created: data/gridwatch.geojson')
-print(f'   {len(geojson[\"features\"])} features')
+print(f'✅ GeoJSON created: data/gridwatch.geojson ({len(geojson[\"features\"])} features)')
 
-# Also create CSV for QGIS
-df = pd.DataFrame([f['properties'] for f in geojson['features']])
-df['longitude'] = [f['geometry']['coordinates'][0] for f in geojson['features']]
-df['latitude'] = [f['geometry']['coordinates'][1] for f in geojson['features']]
-df.to_csv('data/gridwatch_gis.csv', index=False)
-print(f'✅ CSV created: data/gridwatch_gis.csv')
-"
-
-    - name: Generate KML for Google Earth
-      run: |
-        python -c "
-import json
-from pathlib import Path
-
-# Load the cases
-with open('data/cases.json', 'r') as f:
-    cases = json.load(f)
-
-print(f'📊 Loaded {len(cases)} cases for KML export')
-
-# County centroids for fallback
-county_coords = {
-    'Carlow': [52.8377, -6.9298], 'Cavan': [53.9908, -7.3606],
-    'Clare': [52.8627, -9.0259], 'Cork': [51.8985, -8.4756],
-    'Donegal': [54.6549, -8.1109], 'Dublin': [53.3498, -6.2603],
-    'Galway': [53.2707, -9.0568], 'Kerry': [52.1546, -9.5231],
-    'Kildare': [53.1584, -6.9028], 'Kilkenny': [52.6538, -7.2493],
-    'Laois': [53.0000, -7.3000], 'Leitrim': [54.0000, -8.0000],
-    'Limerick': [52.6638, -8.6267], 'Longford': [53.7277, -7.7997],
-    'Louth': [53.9257, -6.4827], 'Mayo': [53.8378, -9.4001],
-    'Meath': [53.6046, -6.6567], 'Monaghan': [54.2500, -7.0000],
-    'Offaly': [53.1000, -7.5000], 'Roscommon': [53.6291, -8.1868],
-    'Sligo': [54.2693, -8.4693], 'Tipperary': [52.6807, -7.8246],
-    'Waterford': [52.2593, -7.1101], 'Westmeath': [53.5000, -7.5000],
-    'Wexford': [52.4798, -6.4576], 'Wicklow': [52.9915, -6.3647],
-}
-
-# Color mapping for markers (ARGB format for KML)
+# ============ KML for Google Earth ============
 energy_colors = {
-    'wind': 'ff4285f4',
-    'solar': 'fff4b842',
-    'bess': 'ff34a853',
-    'grid': 'ffaa46ff',
-    'offshore': 'ff1cb5e0',
-    'biogas': 'ffff7043',
-    'hydrogen': 'ffe91e63',
-    'hydro': 'ff00acc1',
-    'data_centre': 'ff6b7280',
+    'wind': 'ff4285f4', 'solar': 'fff4b842', 'bess': 'ff34a853',
+    'grid': 'ffaa46ff', 'offshore': 'ff1cb5e0', 'biogas': 'ffff7043',
     'other': 'ff9e9e9e'
 }
 
-# KML Header
-kml_header = '''<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2">
+kml_header = '''<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<kml xmlns=\"http://www.opengis.net/kml/2.2\">
 <Document>
     <name>GridWatch Ireland - Energy Projects</name>
     <open>1</open>
-    <description>Real-time energy planning applications in Ireland. Updated weekly. Data from An Coimisiún Pleanála.</description>
+    <description>Real-time energy planning applications in Ireland. Updated weekly.</description>
 '''
 
-# Create styles
 styles = ''
 for etype, color in energy_colors.items():
     styles += f'''
-    <Style id="style_{etype}">
+    <Style id=\"style_{etype}\">
         <IconStyle>
             <scale>1.2</scale>
             <Icon>
                 <href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
             </Icon>
         </IconStyle>
-        <LabelStyle>
-            <color>ffffffff</color>
-            <scale>0.9</scale>
-        </LabelStyle>
     </Style>
 '''
 
-# Build placemarks
 placemarks = ''
 for case in cases:
     lat = case.get('latitude')
@@ -418,13 +364,13 @@ for case in cases:
         <styleUrl>#style_{etype}</styleUrl>
         <description>
             <![CDATA[
-            <div style="font-family: Arial, sans-serif; max-width: 320px;">
-                <h3>{title}</h3>
-                <p><b>Reference:</b> {ref}<br>
+            <div style=\"font-family: Arial; max-width: 300px;\">
+                <b>{title}</b><br>
+                <b>Ref:</b> {ref}<br>
                 <b>Type:</b> {etype.upper()}<br>
                 <b>Status:</b> {status}<br>
                 <b>Lodged:</b> {date_lodged}<br>
-                <a href="{url}" target="_blank">🔗 View on pleanala.ie →</a></p>
+                <a href=\"{url}\" target=\"_blank\">View Details →</a>
             </div>
             ]]>
         </description>
@@ -434,17 +380,21 @@ for case in cases:
     </Placemark>
 '''
 
-# KML Footer
 kml_footer = '''
 </Document>
 </kml>'''
 
-# Write KML file
 with open('data/gridwatch.kml', 'w') as f:
     f.write(kml_header + styles + placemarks + kml_footer)
 
-print(f'✅ KML created: data/gridwatch.kml')
-print(f'   {len(cases)} projects exported for Google Earth')
+print(f'✅ KML created: data/gridwatch.kml ({len(cases)} projects)')
+
+# ============ CSV Backup ============
+df = pd.DataFrame([f['properties'] for f in geojson['features']])
+df['longitude'] = [f['geometry']['coordinates'][0] for f in geojson['features']]
+df['latitude'] = [f['geometry']['coordinates'][1] for f in geojson['features']]
+df.to_csv('data/gridwatch_gis.csv', index=False)
+print(f'✅ CSV created: data/gridwatch_gis.csv')
 "
 
     - name: Commit and push updates
