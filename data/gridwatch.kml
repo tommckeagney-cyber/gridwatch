@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+    <name>GridWatch Ireland - Energy Projects</name>
+    <open>1</open>
+    <description>Real-time energy planning applications in Ireland. Updated weekly.</description>
+
+    <Style id="style_wind">
+        <IconStyle>
+            <scale>1.2</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    <Style id="style_solar">
+        <IconStyle>
+            <scale>1.2</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    <Style id="style_bess">
+        <IconStyle>
+            <scale>1.2</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    <Style id="style_grid">
+        <IconStyle>
+            <scale>1.2</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    <Style id="style_offshore">
+        <IconStyle>
+            <scale>1.2</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    <Style id="style_biogas">
+        <IconStyle>
+            <scale>1.2</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    <Style id="style_other">
+        <IconStyle>
+            <scale>1.2</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+            </Icon>
+        </IconStyle>
+    </Style>
+
+    <Placemark>
+        <name>Appeal - LRDBessborough, Ballinure, Blackrock, CorkCase reference:324153Status:C</name>
+        <styleUrl>#style_bess</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Appeal - LRDBessborough, Ballinure, Blackrock, CorkCase reference:324153Status:C</b><br>
+                <b>Ref:</b> 324153<br>
+                <b>Type:</b> BESS<br>
+                <b>Status:</b> Case is due to be decided by 09/07/2026 Description: Permission for a Large-Scale Residential Development (LRD): Demolit<br>
+                <b>Lodged:</b> 20/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324153" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>ReferralKilcash, Co. Roscommon.Case reference:324146Status:Case is due to be dec</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>ReferralKilcash, Co. Roscommon.Case reference:324146Status:Case is due to be dec</b><br>
+                <b>Ref:</b> 324146<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 22/07/2026 Description: Whether the construction of a 20kV cable route to connect the permi<br>
+                <b>Lodged:</b> 19/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324146" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.1868,53.6291,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Pre-applicationTownlands of Glendine North, Fahanlu</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Pre-applicationTownlands of Glendine North, Fahanlu</b><br>
+                <b>Ref:</b> 321892<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of 9 wind turbines and all associated development works.<br>
+                <b>Lodged:</b> 14/02/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/321892" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0259,52.8627,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealAn Spidéal Thiar, West of LS397 Baile Eamoinn, Co. GalwayCase ref</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealAn Spidéal Thiar, West of LS397 Baile Eamoinn, Co. GalwayCase ref</b><br>
+                <b>Ref:</b> 323407<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Grant permission with revised conditions Description: Construction of discount foodstore (to include off licence), ESB s<br>
+                <b>Lodged:</b> 18/08/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323407" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0568,53.2707,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Pre-applicationin the townlands of Ballymurphy, Bal</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Pre-applicationin the townlands of Ballymurphy, Bal</b><br>
+                <b>Ref:</b> 323906<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Is a Strat. Infrast. Dev. Description: The construction of up to 16 no. wind turbines (Tirawley Wind Farm), including a <br>
+                <b>Lodged:</b> 24/11/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323906" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.4001,53.8378,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Pre-applicationin the townlands of Carrowkeale, Sca</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Pre-applicationin the townlands of Carrowkeale, Sca</b><br>
+                <b>Ref:</b> 320843<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of up to 13 no. wind turbines and associated infrastructure<br>
+                <b>Lodged:</b> 18/09/2024<br>
+                <a href="https://www.pleanala.ie/en-ie/case/320843" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.8246,52.6807,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Pre-applicationlocated in Aughrim, Mucklagh, Gortoo</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Pre-applicationlocated in Aughrim, Mucklagh, Gortoo</b><br>
+                <b>Ref:</b> 324136<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 14/07/2026 Description: Proposed repowering of a Wind Farm and all associated development w<br>
+                <b>Lodged:</b> 11/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324136" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Amendment to decision on Electricity Developmentlocated within the townlands of </name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Amendment to decision on Electricity Developmentlocated within the townlands of </b><br>
+                <b>Ref:</b> 324130<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case is due to be decided by 13/07/2026 Description: Proposed alteration to the permitted Ballinrea 110kV Substation and<br>
+                <b>Lodged:</b> 09/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324130" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>REDIII Amendment - Private Developmentlocated in County Cork and County Waterfor</name>
+        <styleUrl>#style_bess</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>REDIII Amendment - Private Developmentlocated in County Cork and County Waterfor</b><br>
+                <b>Ref:</b> 324138<br>
+                <b>Type:</b> BESS<br>
+                <b>Status:</b> Case is due to be decided by 16/07/2026 Description: Request to alter the layout of the previously permitted Battery Ene<br>
+                <b>Lodged:</b> 13/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324138" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>REDIII Amendment - Private DevelopmentLocated within the townlands of Castlecosk</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>REDIII Amendment - Private DevelopmentLocated within the townlands of Castlecosk</b><br>
+                <b>Ref:</b> 324135<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by Description: Request to alter the terms of the previously permitted Castlebanny Wind Farm (<br>
+                <b>Lodged:</b> 09/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324135" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.2493,52.6538,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealIn the townlands of Atateemore or Blackneys Ballyhobuck Ballyraha</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealIn the townlands of Atateemore or Blackneys Ballyhobuck Ballyraha</b><br>
+                <b>Ref:</b> 500967<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case due to be decided by 14-07-2026 Description: 10 Year Planning Permission for a solar farm and all site works. A Nat<br>
+                <b>Lodged:</b> 11/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/500967" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.2493,52.6538,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestin the townland of Wallingstown, Little Isla</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestin the townland of Wallingstown, Little Isla</b><br>
+                <b>Ref:</b> 323959<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Is a Strat. Infrast. Dev. Description: The proposed development consists of a distribution 110kV/38kV/MV substation<br>
+                <b>Lodged:</b> 16/12/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323959" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestlocated in the townlands of Ballincrossig, G</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestlocated in the townlands of Ballincrossig, G</b><br>
+                <b>Ref:</b> 323974<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of a 110/20 KV substation and ancillary works<br>
+                <b>Lodged:</b> 19/12/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323974" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealBallinrea, Carrigaline, Co.CorkCase reference:500898Status:Case d</name>
+        <styleUrl>#style_bess</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealBallinrea, Carrigaline, Co.CorkCase reference:500898Status:Case d</b><br>
+                <b>Ref:</b> 500898<br>
+                <b>Type:</b> BESS<br>
+                <b>Status:</b> Case due to be decided by 07-07-2026 Description: Construction of a Battery Energy Storage System with associated infras<br>
+                <b>Lodged:</b> 04/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/500898" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestlocated at Derryiron, Clonin, Co. OffalyCase</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestlocated at Derryiron, Clonin, Co. OffalyCase</b><br>
+                <b>Ref:</b> 324051<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Is not Strat. Infrast. Dev. Description: Proposed Extension of Derryiron 110kV AIS Substation<br>
+                <b>Lodged:</b> 29/01/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324051" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.5,53.1,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealBetween the existing Cahir Substation in the townland of Ballyhen</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealBetween the existing Cahir Substation in the townland of Ballyhen</b><br>
+                <b>Ref:</b> 500122<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Grant permission Description: Refurbishment works to 24.3 km of overhead line, 9 no. steel towers and 121 no. wooden pol<br>
+                <b>Lodged:</b> 21/10/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/500122" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.8246,52.6807,0</coordinates>
+        </Point>
+    </Placemark>
+
+</Document>
+</kml>
