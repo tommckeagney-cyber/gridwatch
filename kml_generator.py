@@ -4,17 +4,20 @@ import pandas as pd
 print("🗺️ Generating KML for Google Earth...")
 print()
 
-# Load data
-with open("data/cases.json", "r") as f:
-    cases = json.load(f)
-
-print(f"📊 Loaded {len(cases)} projects")
+# Load the data
+try:
+    with open("data/cases.json", "r") as f:
+        cases = json.load(f)
+    print(f"📊 Loaded {len(cases)} projects")
+except:
+    print("❌ No data found. Run scraper first.")
+    exit()
 
 if not cases:
     print("⚠️ No projects to export")
     exit()
 
-# County coordinates
+# County coordinates for fallback
 county_coords = {
     "Carlow": [52.8377, -6.9298], "Cavan": [53.9908, -7.3606],
     "Clare": [52.8627, -9.0259], "Cork": [51.8985, -8.4756],
@@ -31,14 +34,18 @@ county_coords = {
     "Wexford": [52.4798, -6.4576], "Wicklow": [52.9915, -6.3647],
 }
 
-# Colors for energy types
+# Colors for different energy types (ARGB format)
 energy_colors = {
-    "wind": "ff4285f4", "solar": "fff4b842", "bess": "ff34a853",
-    "grid": "ffaa46ff", "offshore": "ff1cb5e0", "biogas": "ffff7043",
+    "wind": "ff4285f4",
+    "solar": "fff4b842",
+    "bess": "ff34a853",
+    "grid": "ffaa46ff",
+    "offshore": "ff1cb5e0",
+    "biogas": "ffff7043",
     "other": "ff9e9e9e"
 }
 
-# Build KML
+# Start building KML
 kml = '''<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
@@ -47,7 +54,7 @@ kml = '''<?xml version="1.0" encoding="UTF-8"?>
     <description>Real-time energy planning applications in Ireland. Updated weekly.</description>
 '''
 
-# Add styles
+# Add styles for each energy type
 for etype, color in energy_colors.items():
     kml += f'''
     <Style id="style_{etype}">
@@ -60,11 +67,12 @@ for etype, color in energy_colors.items():
     </Style>
 '''
 
-# Add placemarks
+# Add each project as a placemark
 for case in cases:
     lat = case.get("latitude")
     lon = case.get("longitude")
     
+    # If no coordinates, use county centroid
     if lat is None:
         county = case.get("county", "Unknown")
         if county in county_coords:
@@ -101,18 +109,19 @@ for case in cases:
     </Placemark>
 '''
 
+# Close KML
 kml += '''
 </Document>
 </kml>'''
 
-# Save KML
+# Save the KML file
 with open("data/gridwatch.kml", "w") as f:
     f.write(kml)
 
 print(f"✅ KML created: data/gridwatch.kml")
 print(f"   {len(cases)} projects exported")
 
-# Also create CSV
+# Also create a CSV backup
 df = pd.DataFrame(cases)
 df.to_csv("data/gridwatch_export.csv", index=False)
 print(f"✅ CSV created: data/gridwatch_export.csv")
