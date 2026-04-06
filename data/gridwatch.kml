@@ -69,6 +69,226 @@
     </Style>
 
     <Placemark>
+        <name>Filter</name>
+        <styleUrl>#style_bess</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Filter</b><br>
+                <b>Ref:</b> 501034<br>
+                <b>Type:</b> BESS<br>
+                <b>Status:</b> Case due to be decided by 27-07-2026 Description: 10 year permission for a Battery Energy Storage System internal access<br>
+                <b>Lodged:</b> 24/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501034" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.9298,52.8377,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationlocated in the townlands of Cahermurphy,</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationlocated in the townlands of Cahermurphy,</b><br>
+                <b>Ref:</b> 324155<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 22/03/2027 Description: 10 year planning permission for Cahermurphy Wind Farm consisting of<br>
+                <b>Lodged:</b> 23/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324155" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0259,52.8627,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Electricity Development Applicationlocated in the townlands of Cahermurphy, Cloo</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development Applicationlocated in the townlands of Cahermurphy, Cloo</b><br>
+                <b>Ref:</b> 324156<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 21/09/2026 Description: 10 year planning permission for a 110kV grid connection to the nati<br>
+                <b>Lodged:</b> 23/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324156" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.0,54.0,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Electricity Development Applicationlocated in the townlands of Rathmorrissy, Pol</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development Applicationlocated in the townlands of Rathmorrissy, Pol</b><br>
+                <b>Ref:</b> 324162<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 28/09/2026 Description: Planning permission for a 220kV Substation and 220kV underground el<br>
+                <b>Lodged:</b> 27/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324162" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0568,53.2707,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Electricity Development Applicationlocated in townland of Ballydonagh, Kiltormer</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development Applicationlocated in townland of Ballydonagh, Kiltormer</b><br>
+                <b>Ref:</b> 324163<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 22/09/2026 Description: 10 year planning permission for 110kV air insulated substation and <br>
+                <b>Lodged:</b> 27/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324163" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0568,53.2707,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationin the townlands of Carrow, Moheragh, Go</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationin the townlands of Carrow, Moheragh, Go</b><br>
+                <b>Ref:</b> 324164<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 25/03/2027 Description: A renewable energy development including 14 wind turbines, 110kV un<br>
+                <b>Lodged:</b> 27/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324164" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0259,52.8627,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationat Lemanaghan and surrounding townlands,</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationat Lemanaghan and surrounding townlands,</b><br>
+                <b>Ref:</b> 324161<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 25/03/2027 Description: Proposed development of 15 no. wind turbines, a permanent 220kV on-<br>
+                <b>Lodged:</b> 27/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324161" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.5,53.1,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Filter</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Filter</b><br>
+                <b>Ref:</b> 323427<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Grant Permissions with Conditions Description: 10 year planning permission for Solar PV energy development, battery ener<br>
+                <b>Lodged:</b> 19/08/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323427" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.9298,52.8377,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Amendment to decision on Electricity DevelopmentLands at Kilshane Road, Kilshane</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Amendment to decision on Electricity DevelopmentLands at Kilshane Road, Kilshane</b><br>
+                <b>Ref:</b> 323812<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Alter decision - Not a material Alteration (No EIAR) Description: Request to alter the terms of the previously permitted<br>
+                <b>Lodged:</b> 17/10/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323812" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.2603,53.3498,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Flexibility OpinionLocated in the townlands of Ballyglass, Crowagh, or D</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Flexibility OpinionLocated in the townlands of Ballyglass, Crowagh, or D</b><br>
+                <b>Ref:</b> 323811<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Consultations Closed Description: Design Flexibility Request for the Proposed Wind Farm Repowering of the existing Dunne<br>
+                <b>Lodged:</b> 17/10/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323811" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Pre-applicationLittleton Wind Farm, Co. Tipperary.C</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Pre-applicationLittleton Wind Farm, Co. Tipperary.C</b><br>
+                <b>Ref:</b> 311587<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of between 14 and 18 no. wind turbines, 110kV on-site substa<br>
+                <b>Lodged:</b> 07/10/2021<br>
+                <a href="https://www.pleanala.ie/en-ie/case/311587" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.8246,52.6807,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Appeal - LRDBessborough, Ballinure, Blackrock, CorkCase reference:324153Status:C</name>
         <styleUrl>#style_bess</styleUrl>
         <description>
@@ -325,66 +545,6 @@
         </description>
         <Point>
             <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealBallinrea, Carrigaline, Co.CorkCase reference:500898Status:Case d</name>
-        <styleUrl>#style_bess</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealBallinrea, Carrigaline, Co.CorkCase reference:500898Status:Case d</b><br>
-                <b>Ref:</b> 500898<br>
-                <b>Type:</b> BESS<br>
-                <b>Status:</b> Case due to be decided by 07-07-2026 Description: Construction of a Battery Energy Storage System with associated infras<br>
-                <b>Lodged:</b> 04/03/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/500898" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestlocated at Derryiron, Clonin, Co. OffalyCase</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestlocated at Derryiron, Clonin, Co. OffalyCase</b><br>
-                <b>Ref:</b> 324051<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Is not Strat. Infrast. Dev. Description: Proposed Extension of Derryiron 110kV AIS Substation<br>
-                <b>Lodged:</b> 29/01/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324051" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.5,53.1,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealBetween the existing Cahir Substation in the townland of Ballyhen</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealBetween the existing Cahir Substation in the townland of Ballyhen</b><br>
-                <b>Ref:</b> 500122<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Grant permission Description: Refurbishment works to 24.3 km of overhead line, 9 no. steel towers and 121 no. wooden pol<br>
-                <b>Lodged:</b> 21/10/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/500122" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.8246,52.6807,0</coordinates>
         </Point>
     </Placemark>
 
