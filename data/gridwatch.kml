@@ -69,6 +69,146 @@
     </Style>
 
     <Placemark>
+        <name>Building Control - Fire Safety CertificateQuarry Road, Hunstown, Co. DublinCase </name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Building Control - Fire Safety CertificateQuarry Road, Hunstown, Co. DublinCase </b><br>
+                <b>Ref:</b> 324201<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 06/08/2026 Description: Fire Safety Certificate for erection of 2 storey steel portal frame<br>
+                <b>Lodged:</b> 07/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324201" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.2603,53.3498,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestlocated in the townland of Boyhill, County G</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestlocated in the townland of Boyhill, County G</b><br>
+                <b>Ref:</b> 324202<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 12/08/2026 Description: Proposed Development of 110kv Substation and all associated works<br>
+                <b>Lodged:</b> 09/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324202" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0568,53.2707,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Flexibility Opinionlocated in Raheenakeeran, Enaghan, Clonsast Upper, Cl</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Flexibility Opinionlocated in Raheenakeeran, Enaghan, Clonsast Upper, Cl</b><br>
+                <b>Ref:</b> 324190<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 10/08/2026 Description: Design Flexibility Request for the proposed development of 11 no. t<br>
+                <b>Lodged:</b> 07/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324190" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Amendment to decision on Electricity Developmentin the townlands of The Sheehys,</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Amendment to decision on Electricity Developmentin the townlands of The Sheehys,</b><br>
+                <b>Ref:</b> 324199<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 11/08/2026 Description: Request to alter the previously permitted 110kV Loop-in substation,<br>
+                <b>Lodged:</b> 08/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324199" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.8246,52.6807,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealIDA Business & Technology Park, Rosslare Road, Co. Wexford, Y35 V</name>
+        <styleUrl>#style_bess</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealIDA Business & Technology Park, Rosslare Road, Co. Wexford, Y35 V</b><br>
+                <b>Ref:</b> 500346<br>
+                <b>Type:</b> BESS<br>
+                <b>Status:</b> Grant permission with conditions Description: Permission for the development consisting of a Battery Energy Storage Syst<br>
+                <b>Lodged:</b> 26/11/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/500346" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.4576,52.4798,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationlocated in Ardrah, Maughanaclea, Ballyna</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationlocated in Ardrah, Maughanaclea, Ballyna</b><br>
+                <b>Ref:</b> 324165<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Unknown<br>
+                <b>Lodged:</b> 30/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324165" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealKillappoge, Croghan, Boyle, Co. RoscommonCase reference:501116Des</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealKillappoge, Croghan, Boyle, Co. RoscommonCase reference:501116Des</b><br>
+                <b>Ref:</b> 501116<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Unknown<br>
+                <b>Lodged:</b> 02/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501116" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.1868,53.6291,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Planning AppealTawlaght & Srabragan, Lough Allen, Co. RoscommonCase reference:32</name>
         <styleUrl>#style_bess</styleUrl>
         <description>
@@ -340,126 +480,6 @@
                 <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of between 14 and 18 no. wind turbines, 110kV on-site substa<br>
                 <b>Lodged:</b> 07/10/2021<br>
                 <a href="https://www.pleanala.ie/en-ie/case/311587" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.8246,52.6807,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Appeal - LRDBessborough, Ballinure, Blackrock, CorkCase reference:324153Status:C</name>
-        <styleUrl>#style_bess</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Appeal - LRDBessborough, Ballinure, Blackrock, CorkCase reference:324153Status:C</b><br>
-                <b>Ref:</b> 324153<br>
-                <b>Type:</b> BESS<br>
-                <b>Status:</b> Case is due to be decided by 09/07/2026 Description: Permission for a Large-Scale Residential Development (LRD): Demolit<br>
-                <b>Lodged:</b> 20/03/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324153" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>ReferralKilcash, Co. Roscommon.Case reference:324146Status:Case is due to be dec</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>ReferralKilcash, Co. Roscommon.Case reference:324146Status:Case is due to be dec</b><br>
-                <b>Ref:</b> 324146<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 22/07/2026 Description: Whether the construction of a 20kV cable route to connect the permi<br>
-                <b>Lodged:</b> 19/03/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324146" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.1868,53.6291,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Pre-applicationTownlands of Glendine North, Fahanlu</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Pre-applicationTownlands of Glendine North, Fahanlu</b><br>
-                <b>Ref:</b> 321892<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of 9 wind turbines and all associated development works.<br>
-                <b>Lodged:</b> 14/02/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/321892" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.0259,52.8627,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealAn Spidéal Thiar, West of LS397 Baile Eamoinn, Co. GalwayCase ref</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealAn Spidéal Thiar, West of LS397 Baile Eamoinn, Co. GalwayCase ref</b><br>
-                <b>Ref:</b> 323407<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Grant permission with revised conditions Description: Construction of discount foodstore (to include off licence), ESB s<br>
-                <b>Lodged:</b> 18/08/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323407" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.0568,53.2707,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Pre-applicationin the townlands of Ballymurphy, Bal</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Pre-applicationin the townlands of Ballymurphy, Bal</b><br>
-                <b>Ref:</b> 323906<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Is a Strat. Infrast. Dev. Description: The construction of up to 16 no. wind turbines (Tirawley Wind Farm), including a <br>
-                <b>Lodged:</b> 24/11/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323906" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.4001,53.8378,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Pre-applicationin the townlands of Carrowkeale, Sca</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Pre-applicationin the townlands of Carrowkeale, Sca</b><br>
-                <b>Ref:</b> 320843<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of up to 13 no. wind turbines and associated infrastructure<br>
-                <b>Lodged:</b> 18/09/2024<br>
-                <a href="https://www.pleanala.ie/en-ie/case/320843" target="_blank">View Details →</a>
             </div>
             ]]>
         </description>
