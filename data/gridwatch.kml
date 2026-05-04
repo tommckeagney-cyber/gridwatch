@@ -69,6 +69,186 @@
     </Style>
 
     <Placemark>
+        <name>Filter</name>
+        <styleUrl>#style_biogas</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Filter</b><br>
+                <b>Ref:</b> 324227<br>
+                <b>Type:</b> BIOGAS<br>
+                <b>Status:</b> Case is due to be decided by 24/08/2026 Description: The proposed alterations to the approved Renewable Biogas Plant (Co<br>
+                <b>Lodged:</b> 20/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324227" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.9298,52.8377,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultationat Bay Lane, Piperstown, Finglas, Dublin 11.Case ref</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultationat Bay Lane, Piperstown, Finglas, Dublin 11.Case ref</b><br>
+                <b>Ref:</b> 324225<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 24/08/2026 Description: Proposed development of a 380MW Open Cycle Gas-Fired Turbine (OCGT)<br>
+                <b>Lodged:</b> 21/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324225" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.2603,53.3498,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning Appealwithin the townlands of Ballynisky Graigoor Ballyegny More Kilbra</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning Appealwithin the townlands of Ballynisky Graigoor Ballyegny More Kilbra</b><br>
+                <b>Ref:</b> 501216<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case due to be decided by 25-08-2026 Description: Construction of 6 wind turbines, substation, and associated site works<br>
+                <b>Lodged:</b> 22/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501216" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.6267,52.6638,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestat Scardaun West, County Mayo.Case reference</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestat Scardaun West, County Mayo.Case reference</b><br>
+                <b>Ref:</b> 324244<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case is due to be decided by 25/08/2026 Description: Proposed development of a 110kV substation to serve a proposed Sola<br>
+                <b>Lodged:</b> 22/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324244" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.4001,53.8378,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationlocated within the townlands of Cloonahe</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationlocated within the townlands of Cloonahe</b><br>
+                <b>Ref:</b> 324246<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 22/04/2027 Description: 10-year permission for the proposed construction of the Ballincor W<br>
+                <b>Lodged:</b> 24/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324246" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.5,53.1,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Pre-applicationlocated approximetly 3km Northeast o</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Pre-applicationlocated approximetly 3km Northeast o</b><br>
+                <b>Ref:</b> 323048<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of Lissinagroagh Wind Farm consisting of 14 wind turbines an<br>
+                <b>Lodged:</b> 14/07/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323048" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.0,54.0,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Amendment to decision on Electricity DevelopmentSrah, Coolcor and Clonin, Rhode,</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Amendment to decision on Electricity DevelopmentSrah, Coolcor and Clonin, Rhode,</b><br>
+                <b>Ref:</b> 323215<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Alter decision - Is a Material Alteration (No EIAR) Description: Request to alter the terms of the previously permitted <br>
+                <b>Lodged:</b> 25/07/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323215" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.5,53.1,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealDerrane & Roxborough, Roscommon, Co. Roscommon, F42 T274Case refe</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealDerrane & Roxborough, Roscommon, Co. Roscommon, F42 T274Case refe</b><br>
+                <b>Ref:</b> 322604<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Grant Permissions with Conditions Description: Construction of two wind turbines, control room and an ESB MV station. Re<br>
+                <b>Lodged:</b> 26/05/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/322604" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.1868,53.6291,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationlocated within the townlands of Cloonahe</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationlocated within the townlands of Cloonahe</b><br>
+                <b>Ref:</b> 324220<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Withdrawn Description: 10-year permission for the proposed construction of the Ballincor Wind Farm and all associated in<br>
+                <b>Lodged:</b> 17/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324220" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.5,53.1,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Planning AppealWithin the townlands of Woodpark TD and Leitrim TD, near Bridgeto</name>
         <styleUrl>#style_bess</styleUrl>
         <description>
@@ -85,26 +265,6 @@
         </description>
         <Point>
             <coordinates>-9.0259,52.8627,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationlocated within the townlands of Cloonahe</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationlocated within the townlands of Cloonahe</b><br>
-                <b>Ref:</b> 324220<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 15/04/2027 Description: 10-year permission for the proposed construction of the Ballincor W<br>
-                <b>Lodged:</b> 17/04/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324220" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.5,53.1,0</coordinates>
         </Point>
     </Placemark>
 
@@ -265,86 +425,6 @@
         </description>
         <Point>
             <coordinates>-6.4576,52.4798,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationlocated in Ardrah, Maughanaclea, Ballyna</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationlocated in Ardrah, Maughanaclea, Ballyna</b><br>
-                <b>Ref:</b> 324165<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Unknown<br>
-                <b>Lodged:</b> 30/03/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324165" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealKillappoge, Croghan, Boyle, Co. RoscommonCase reference:501116Des</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealKillappoge, Croghan, Boyle, Co. RoscommonCase reference:501116Des</b><br>
-                <b>Ref:</b> 501116<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Unknown<br>
-                <b>Lodged:</b> 02/04/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501116" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.1868,53.6291,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealTawlaght & Srabragan, Lough Allen, Co. RoscommonCase reference:32</name>
-        <styleUrl>#style_bess</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealTawlaght & Srabragan, Lough Allen, Co. RoscommonCase reference:32</b><br>
-                <b>Ref:</b> 321420<br>
-                <b>Type:</b> BESS<br>
-                <b>Status:</b> Grant permission with revised conditions Description: Battery Energy Storage System (BESS), 56 battery containers, power<br>
-                <b>Lodged:</b> 06/12/2024<br>
-                <a href="https://www.pleanala.ie/en-ie/case/321420" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.1868,53.6291,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - Applicationwithin the townlands of Brittas, Rossestown, Cl</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - Applicationwithin the townlands of Brittas, Rossestown, Cl</b><br>
-                <b>Ref:</b> 321454<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Grant Perm. w   Conditions Description: Proposed development of 10 Wind Turbines, 110kV Electrical Substation and ancill<br>
-                <b>Lodged:</b> 12/12/2024<br>
-                <a href="https://www.pleanala.ie/en-ie/case/321454" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.8246,52.6807,0</coordinates>
         </Point>
     </Placemark>
 
