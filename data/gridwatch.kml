@@ -69,6 +69,66 @@
     </Style>
 
     <Placemark>
+        <name>Private Development - REDIII Applicationlocated within the townlands of Muingmor</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationlocated within the townlands of Muingmor</b><br>
+                <b>Ref:</b> 324308<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 20/05/2027 Description: The proposed development consists of 13 wind turbines, a 110kV subs<br>
+                <b>Lodged:</b> 22/05/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324308" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Pre-applicationLocated in the townlands of Castlecr</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Pre-applicationLocated in the townlands of Castlecr</b><br>
+                <b>Ref:</b> 324318<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 24/09/2026 Description: The proposed hydroelectric pumped storage power project, inclusive <br>
+                <b>Lodged:</b> 22/05/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324318" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealPolnareagha, Ardskeagh, Tullacondra, Croughta, Kilmaclenine, Ball</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealPolnareagha, Ardskeagh, Tullacondra, Croughta, Kilmaclenine, Ball</b><br>
+                <b>Ref:</b> 322787<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Grant permission with revised conditions Description: Construction and decommissioning of 9 wind turbines and all associ<br>
+                <b>Lodged:</b> 17/06/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/322787" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Planning AppealLackareagh and Garranereagh, Lissarda and Barnadivane (Kneeves) T</name>
         <styleUrl>#style_wind</styleUrl>
         <description>
@@ -307,206 +367,6 @@ accessed off the L</b><br>
         </description>
         <Point>
             <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Pre-applicationLocated within the townlands of Ball</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Pre-applicationLocated within the townlands of Ball</b><br>
-                <b>Ref:</b> 324267<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 02/09/2026 Description: Proposed development for 13 no. wind turbines and all associated wo<br>
-                <b>Lodged:</b> 30/04/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324267" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealDereenacreenig West Wind Farm Ltd., Dreenacreenig West, Drimoleag</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealDereenacreenig West Wind Farm Ltd., Dreenacreenig West, Drimoleag</b><br>
-                <b>Ref:</b> 501243<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Unknown<br>
-                <b>Lodged:</b> 27/04/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501243" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealCarrigogna, Midleton, Co. Cork.Case reference:501288Status:Case d</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealCarrigogna, Midleton, Co. Cork.Case reference:501288Status:Case d</b><br>
-                <b>Ref:</b> 501288<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case due to be decided by 03-09-2026 Description: 10-year permission for a solar farm. This development is covered by th<br>
-                <b>Lodged:</b> 01/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501288" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestlocated in Drumskellan, County DonegalCase r</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestlocated in Drumskellan, County DonegalCase r</b><br>
-                <b>Ref:</b> 324253<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Unknown<br>
-                <b>Lodged:</b> 27/04/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324253" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.1109,54.6549,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationlocated within the townlands of Ballymur</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationlocated within the townlands of Ballymur</b><br>
-                <b>Ref:</b> 324258<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 28/04/2027 Description: The proposed development consists of up to 16 no. wind turbines (Ti<br>
-                <b>Lodged:</b> 30/04/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324258" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Pre-applicationlocated in Clydagh and adjacent town</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Pre-applicationlocated in Clydagh and adjacent town</b><br>
-                <b>Ref:</b> 324260<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 01/09/2026 Description: The proposed development will comprise of up to 22 no. wind turbine<br>
-                <b>Lodged:</b> 29/04/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324260" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.4001,53.8378,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealCorrin, Kill Saint Anne North, Clykeel North, Ballinvarrig East, </name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealCorrin, Kill Saint Anne North, Clykeel North, Ballinvarrig East, </b><br>
-                <b>Ref:</b> 323301<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Grant permission with revised conditions Description: 10 year permission for solar farm and associated site works. A Nat<br>
-                <b>Lodged:</b> 08/08/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323301" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Appeal - LRDLands at Rivers Road, Ballyclogh Townland, Castletroy, Co. LimerickC</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Appeal - LRDLands at Rivers Road, Ballyclogh Townland, Castletroy, Co. LimerickC</b><br>
-                <b>Ref:</b> 323916<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Refuse Permission Description: LRD: provision of 107 residential units, ESB substation and associated site works. A Natu<br>
-                <b>Lodged:</b> 04/12/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323916" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.6267,52.6638,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - Applicationon land within the townlands Knockdrin, Derrygr</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - Applicationon land within the townlands Knockdrin, Derrygr</b><br>
-                <b>Ref:</b> 319023<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Grant Perm. w   Conditions Description: Combined Cycle Gas Turbine and Open Cycle Gas Turbine Thermal Power Plant, Elect<br>
-                <b>Lodged:</b> 09/02/2024<br>
-                <a href="https://www.pleanala.ie/en-ie/case/319023" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.5,53.1,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestat Derrinlough Wind Farm and Surrounding Tow</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestat Derrinlough Wind Farm and Surrounding Tow</b><br>
-                <b>Ref:</b> 324001<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Is not Strat. Infrast. Dev. Description: Proposed Grid Connection for the development of a Battery Energy Storage System<br>
-                <b>Lodged:</b> 19/12/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324001" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.5,53.1,0</coordinates>
         </Point>
     </Placemark>
 
