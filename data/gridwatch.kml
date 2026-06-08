@@ -69,6 +69,126 @@
     </Style>
 
     <Placemark>
+        <name>Appeal - LRDBarrysparks and Crowscastle (lands generally bound by the R132 to th</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Appeal - LRDBarrysparks and Crowscastle (lands generally bound by the R132 to th</b><br>
+                <b>Ref:</b> 324331<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 17/09/2026 Description: 10 year permission for construction of 530 residential units, Crech<br>
+                <b>Lodged:</b> 29/05/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324331" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestlocated at Cloon, County GalwayCase referenc</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestlocated at Cloon, County GalwayCase referenc</b><br>
+                <b>Ref:</b> 324336<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 30/09/2026 Description: Proposed development of a 110kV on site intake substation and assoc<br>
+                <b>Lodged:</b> 28/05/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324336" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0568,53.2707,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestlocated in the townlands of Ardee, Derrycamm</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestlocated in the townlands of Ardee, Derrycamm</b><br>
+                <b>Ref:</b> 324339<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 01/10/2026 Description: Proposed development of a 110kV substation, cable, 2 no. cable end <br>
+                <b>Lodged:</b> 29/05/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324339" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.4827,53.9257,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Electricity Development ApplicationLocated on Roches Avenue, Raheen Business Par</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development ApplicationLocated on Roches Avenue, Raheen Business Par</b><br>
+                <b>Ref:</b> 323893<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Approve with Conditions Description: Proposed construction of a new 110 kV substation<br>
+                <b>Lodged:</b> 20/11/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323893" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.6267,52.6638,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Electricity Development Applicationlocated in the townlands of Clonmore and Stro</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development Applicationlocated in the townlands of Clonmore and Stro</b><br>
+                <b>Ref:</b> 323821<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Approve with Conditions Description: 10 year planning permission for a 110kV AIS substation, 110kV underground cabling a<br>
+                <b>Lodged:</b> 23/10/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323821" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.8246,52.6807,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealIn the townlands of Kilcandra,, Kilnamanagh Beg, Ballynagran, and</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealIn the townlands of Kilcandra,, Kilnamanagh Beg, Ballynagran, and</b><br>
+                <b>Ref:</b> 500687<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Grant permission Description: RED III Category 3 Development-Construction of a solar PV energy development with an opera<br>
+                <b>Lodged:</b> 26/01/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/500687" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Private Development - REDIII Applicationlocated within the townlands of Muingmor</name>
         <styleUrl>#style_wind</styleUrl>
         <description>
@@ -247,126 +367,6 @@ accessed off the L</b><br>
         </description>
         <Point>
             <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationwithin the townlands of Tooreen, Fahanlu</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationwithin the townlands of Tooreen, Fahanlu</b><br>
-                <b>Ref:</b> 324270<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 03/05/2027 Description: Proposed development of  9 no. wind turbines, a permanent extension<br>
-                <b>Lodged:</b> 05/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324270" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Electricity Development ApplicationLocated in the townlands of Lackendarragh Nor</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Electricity Development ApplicationLocated in the townlands of Lackendarragh Nor</b><br>
-                <b>Ref:</b> 324274<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by Description: Proposed development of a 110kV onsite substation and 110kV Underground Cable <br>
-                <b>Lodged:</b> 07/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324274" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealTullyneasky West, Clonakilty, Co. CorkCase reference:501307Status</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealTullyneasky West, Clonakilty, Co. CorkCase reference:501307Status</b><br>
-                <b>Ref:</b> 501307<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case due to be decided by 10-09-2026 Description: Demolition of 2 existing buildings. Construction of cable landing stat<br>
-                <b>Lodged:</b> 08/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501307" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Electricity Development Applicationin Belmayne, Clonsaugh, Dublin 17. (www.belma</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Electricity Development Applicationin Belmayne, Clonsaugh, Dublin 17. (www.belma</b><br>
-                <b>Ref:</b> 324276<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 05/11/2026 Description: Proposed development of a 110kV/38kV MV substation and associated w<br>
-                <b>Lodged:</b> 08/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324276" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationlocated within the townlands of located </name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationlocated within the townlands of located </b><br>
-                <b>Ref:</b> 324279<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 06/05/2027 Description: 10 year planning permission for the proposed development of Ballinc<br>
-                <b>Lodged:</b> 08/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324279" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.8246,52.6807,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - Applicationlocated in the townlands of Glenora, Altderg, K</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - Applicationlocated in the townlands of Glenora, Altderg, K</b><br>
-                <b>Ref:</b> 318701<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Grant Perm. w   Conditions Description: 10 year planning permission for the proposed wind energy development consisting <br>
-                <b>Lodged:</b> 14/12/2023<br>
-                <a href="https://www.pleanala.ie/en-ie/case/318701" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
         </Point>
     </Placemark>
 
