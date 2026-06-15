@@ -69,6 +69,126 @@
     </Style>
 
     <Placemark>
+        <name>Planning AppealNewtown , Pallasgreen , Co. Limerick.Case reference:501452Status:</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealNewtown , Pallasgreen , Co. Limerick.Case reference:501452Status:</b><br>
+                <b>Ref:</b> 501452<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case due to be decided by 05-10-2026 Description: Construction of a two storey dwelling house, detached domestic garage,<br>
+                <b>Lodged:</b> 02/06/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501452" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.6267,52.6638,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealTirlickeen Td, Cartronbrack Td, Clogh Td,  Corryena Td, Lismacmor</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealTirlickeen Td, Cartronbrack Td, Clogh Td,  Corryena Td, Lismacmor</b><br>
+                <b>Ref:</b> 501476<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case due to be decided by 07-10-2026 Description: 10 year permission for a solar farm and energy storage compound with a<br>
+                <b>Lodged:</b> 04/06/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501476" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.7997,53.7277,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestlocated in Fleenstown Great, Kilrue, Grange,</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestlocated in Fleenstown Great, Kilrue, Grange,</b><br>
+                <b>Ref:</b> 324348<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 06/10/2026 Description: Proposed development of 2 no. 220kV central transformers and intern<br>
+                <b>Lodged:</b> 03/06/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324348" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.6567,53.6046,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealBallynaclashy, Ballyrichard Beg, Curragh and Lysaghtstown, Co. Co</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealBallynaclashy, Ballyrichard Beg, Curragh and Lysaghtstown, Co. Co</b><br>
+                <b>Ref:</b> 500343<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Grant permission Description: 10 year planning permission for an underground electricity interconnector cable and all as<br>
+                <b>Lodged:</b> 26/11/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/500343" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealGorteennahilla , County , LaoisCase reference:500836Status:Grant </name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealGorteennahilla , County , LaoisCase reference:500836Status:Grant </b><br>
+                <b>Ref:</b> 500836<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Grant permission Description: Continued operation of meteorological mast and associated site works. The meteorological m<br>
+                <b>Lodged:</b> 18/02/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/500836" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.9298,52.8377,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestlocated at the Oweninny Wind Farm and surrou</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestlocated at the Oweninny Wind Farm and surrou</b><br>
+                <b>Ref:</b> 324122<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Is not Strat. Infrast. Dev. Description: The proposed grid connection for the proposed Oweninny Battery Energy Storage S<br>
+                <b>Lodged:</b> 27/02/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324122" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.4001,53.8378,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Appeal - LRDBarrysparks and Crowscastle (lands generally bound by the R132 to th</name>
         <styleUrl>#style_grid</styleUrl>
         <description>
@@ -245,128 +365,6 @@
         </description>
         <Point>
             <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealLackareagh and Garranereagh, Lissarda and Barnadivane (Kneeves) T</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealLackareagh and Garranereagh, Lissarda and Barnadivane (Kneeves) T</b><br>
-                <b>Ref:</b> 324289<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 17/09/2026 Description: Construction of 6 wind turbines and all associated works. This appl<br>
-                <b>Lodged:</b> 15/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324289" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealBarnadivane , Kneeves, Terelton, Co. CorkCase reference:324293Sta</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealBarnadivane , Kneeves, Terelton, Co. CorkCase reference:324293Sta</b><br>
-                <b>Ref:</b> 324293<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 17/09/2026 Description: Construct electricity substation compound, to replace substation al<br>
-                <b>Lodged:</b> 15/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324293" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationlocated in the townlands of Boleyboy, Ca</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationlocated in the townlands of Boleyboy, Ca</b><br>
-                <b>Ref:</b> 324290<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 12/05/2027 Description: 10 year planning permission for Lissinagroagh Wind Farm consisting <br>
-                <b>Lodged:</b> 14/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324290" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealTownlands of Commons, Carranstown and Platin,
-accessed off the L</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealTownlands of Commons, Carranstown and Platin,
-accessed off the L</b><br>
-                <b>Ref:</b> 501323<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case due to be decided by 14-09-2026 Description: RED III - Erection of a 19.48 MWp ground-mounted Solar Photovoltaic (P<br>
-                <b>Lodged:</b> 11/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501323" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.6567,53.6046,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealAglish, Currahaly, Farnanes, Farran, Knockavullig, Knocknagoul, K</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealAglish, Currahaly, Farnanes, Farran, Knockavullig, Knocknagoul, K</b><br>
-                <b>Ref:</b> 323402<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Grant Permissions with Conditions Description: A 10 year permission is sought for a solar farm with a total area of circ<br>
-                <b>Lodged:</b> 15/08/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323402" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealCountry Crest, Collinstown, Lusk, Co. DublinCase reference:322098</name>
-        <styleUrl>#style_biogas</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealCountry Crest, Collinstown, Lusk, Co. DublinCase reference:322098</b><br>
-                <b>Ref:</b> 322098<br>
-                <b>Type:</b> BIOGAS<br>
-                <b>Status:</b> Grant Permissions with Conditions Description: Construction of an Anaerobic Digestion facility along with all associated<br>
-                <b>Lodged:</b> 19/03/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/322098" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
         </Point>
     </Placemark>
 
