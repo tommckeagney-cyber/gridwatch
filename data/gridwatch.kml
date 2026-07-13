@@ -69,6 +69,106 @@
     </Style>
 
     <Placemark>
+        <name>REDIII Amendment - Private Developmentlocated in the townlands of Ballydonaghan,</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>REDIII Amendment - Private Developmentlocated in the townlands of Ballydonaghan,</b><br>
+                <b>Ref:</b> 324411<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 02/11/2026 Description: Request to alter the conditions of the already permitted Carrownago<br>
+                <b>Lodged:</b> 30/06/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324411" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0259,52.8627,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestin the townland of Hedgestown, County Dublin</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestin the townland of Hedgestown, County Dublin</b><br>
+                <b>Ref:</b> 324418<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 05/11/2026 Description: Proposed development of the Courtlough 110kV/38kV/MV Distribution S<br>
+                <b>Lodged:</b> 03/07/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324418" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.2603,53.3498,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>REDIII Amendment - Private DevelopmentIn the townlands of Ballyline West, Coolke</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>REDIII Amendment - Private DevelopmentIn the townlands of Ballyline West, Coolke</b><br>
+                <b>Ref:</b> 324421<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 03/11/2026 Description: Request to alter the terms of the previously permitted Shronowen Wi<br>
+                <b>Lodged:</b> 01/07/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324421" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.5231,52.1546,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Electricity Development Applicationlocated in the townlands of Gneevebane, Farth</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development Applicationlocated in the townlands of Gneevebane, Farth</b><br>
+                <b>Ref:</b> 324417<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by Description: Proposed 220kV Independent Power Producer (IPP) GIS substation, High Voltage L<br>
+                <b>Lodged:</b> 03/07/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324417" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealCloonagh/Ballygarvan/Nash, DunmainCase reference:501636Status:Cas</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealCloonagh/Ballygarvan/Nash, DunmainCase reference:501636Status:Cas</b><br>
+                <b>Ref:</b> 501636<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case due to be decided by 02-11-2026 Description: Construction of a 40 year operational life solar farm and battery ener<br>
+                <b>Lodged:</b> 30/06/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501636" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.4576,52.4798,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Planning AppealN13 Listillion, Letterkenny, Co. DonegalCase reference:501599Stat</name>
         <styleUrl>#style_bess</styleUrl>
         <description>
@@ -285,86 +385,6 @@
         </description>
         <Point>
             <coordinates>-6.4576,52.4798,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestlocated to the southeast of the existing Mil</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestlocated to the southeast of the existing Mil</b><br>
-                <b>Ref:</b> 324369<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 14/10/2026 Description: The proposed Milane Hill Green Energy Project comprises of the deco<br>
-                <b>Lodged:</b> 11/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324369" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>REDIII Amendment - Private DevelopmentLocated in County KilkennyCase reference:3</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>REDIII Amendment - Private DevelopmentLocated in County KilkennyCase reference:3</b><br>
-                <b>Ref:</b> 324363<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 14/10/2026 Description: Section 146B Request to amend permission for the approved Castleban<br>
-                <b>Lodged:</b> 11/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324363" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.2493,52.6538,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning Appeal2 Temple Villas, Arbour Hill, Dublin 7, D07 N2F4Case reference:50</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning Appeal2 Temple Villas, Arbour Hill, Dublin 7, D07 N2F4Case reference:50</b><br>
-                <b>Ref:</b> 500755<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Grant permission Description: PERMISSION & RETENTION: Attic conversion with installation of solar PV panels. Retention o<br>
-                <b>Lodged:</b> 10/02/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/500755" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationlocated within the townlands of Muingmor</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationlocated within the townlands of Muingmor</b><br>
-                <b>Ref:</b> 324308<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Withdrawn Description: The proposed development consists of 13 wind turbines, a 110kV substation, battery energy storage<br>
-                <b>Lodged:</b> 22/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324308" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
         </Point>
     </Placemark>
 
