@@ -69,6 +69,86 @@
     </Style>
 
     <Placemark>
+        <name>Electricity Development Applicationin the townland of Cloonbaul, County Mayo (cu</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development Applicationin the townland of Cloonbaul, County Mayo (cu</b><br>
+                <b>Ref:</b> 324429<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 04/01/2027 Description: Proposed Development which consists of a 110kV onsite electrical su<br>
+                <b>Lodged:</b> 07/07/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324429" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.4001,53.8378,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - ApplicationTownlands of Ballymacmague North, Ballymacmague</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - ApplicationTownlands of Ballymacmague North, Ballymacmague</b><br>
+                <b>Ref:</b> 324420<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 09/11/2026 Description: Construction of Dyrick Hill Windfarm comprising 12 no. wind turbine<br>
+                <b>Lodged:</b> 07/07/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324420" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.1101,52.2593,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Appeal - LRDBessborough, Ballinure, Blackrock, CorkCase reference:324153Status:G</name>
+        <styleUrl>#style_bess</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Appeal - LRDBessborough, Ballinure, Blackrock, CorkCase reference:324153Status:G</b><br>
+                <b>Ref:</b> 324153<br>
+                <b>Type:</b> BESS<br>
+                <b>Status:</b> Grant permission with revised conditions Description: Permission for a Large-Scale Residential Development (LRD): Demoli<br>
+                <b>Lodged:</b> 20/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324153" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Amendment to decision on Electricity Developmentin the townlands of The Sheehys,</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Amendment to decision on Electricity Developmentin the townlands of The Sheehys,</b><br>
+                <b>Ref:</b> 324199<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> No Board jurisdiction Description: Request to alter the previously permitted 110kV Loop-in substation, Overhead lines an<br>
+                <b>Lodged:</b> 08/04/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324199" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.8246,52.6807,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>REDIII Amendment - Private Developmentlocated in the townlands of Ballydonaghan,</name>
         <styleUrl>#style_wind</styleUrl>
         <description>
@@ -137,7 +217,7 @@
                 <b>Electricity Development Applicationlocated in the townlands of Gneevebane, Farth</b><br>
                 <b>Ref:</b> 324417<br>
                 <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by Description: Proposed 220kV Independent Power Producer (IPP) GIS substation, High Voltage L<br>
+                <b>Status:</b> Case is due to be decided by 24/12/2026 Description: Proposed 220kV Independent Power Producer (IPP) GIS substation, Hig<br>
                 <b>Lodged:</b> 03/07/2026<br>
                 <a href="https://www.pleanala.ie/en-ie/case/324417" target="_blank">View Details →</a>
             </div>
@@ -245,146 +325,6 @@
         </description>
         <Point>
             <coordinates>-6.3647,52.9915,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestin the townland of Forrest Great, Swords, Co</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestin the townland of Forrest Great, Swords, Co</b><br>
-                <b>Ref:</b> 324386<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 21/10/2026 Description: The proposed development Ridgewood 110V/MV Gas Insulated Switchgear<br>
-                <b>Lodged:</b> 18/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324386" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Amendment to decision on Electricity Developmentwithin the townlands of Milltown</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Amendment to decision on Electricity Developmentwithin the townlands of Milltown</b><br>
-                <b>Ref:</b> 324388<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 20/10/2026 Description: Request to alter the terms of the previously permitted 110kV Gas In<br>
-                <b>Lodged:</b> 17/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324388" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationlocated within the townlands of Muingmor</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationlocated within the townlands of Muingmor</b><br>
-                <b>Ref:</b> 324387<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 17/06/2027 Description: The proposed development consists of 13 wind turbines, a 110kV subs<br>
-                <b>Lodged:</b> 19/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324387" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.4001,53.8378,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>REDIII Amendment - Private Developmentlocated at Cush, Galros West, Boolinarig B</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>REDIII Amendment - Private Developmentlocated at Cush, Galros West, Boolinarig B</b><br>
-                <b>Ref:</b> 324405<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 21/10/2026 Description: Request to alter the terms of the previously permitted Cush Wind Fa<br>
-                <b>Lodged:</b> 18/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324405" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.5,53.1,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationlocated in the townlands of Longfordpass</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationlocated in the townlands of Longfordpass</b><br>
-                <b>Ref:</b> 324370<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Unknown<br>
-                <b>Lodged:</b> 15/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324370" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>REDIII Amendment - Private Developmentlocated in County Cork and County Waterfor</name>
-        <styleUrl>#style_bess</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>REDIII Amendment - Private Developmentlocated in County Cork and County Waterfor</b><br>
-                <b>Ref:</b> 324138<br>
-                <b>Type:</b> BESS<br>
-                <b>Status:</b> Withdrawn Description: Request to alter the layout of the previously permitted Battery Energy Storage System (BESS) form<br>
-                <b>Lodged:</b> 13/03/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324138" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Flexibility Opinionwithin the townlands of Mountebo, Kilmichael Hill, Ly</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Flexibility Opinionwithin the townlands of Mountebo, Kilmichael Hill, Ly</b><br>
-                <b>Ref:</b> 324307<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Withdrawn Description: Design flexibility request for the proposed development of Kilmichael Wind Farm, associated 110kV<br>
-                <b>Lodged:</b> 13/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324307" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.4576,52.4798,0</coordinates>
         </Point>
     </Placemark>
 
