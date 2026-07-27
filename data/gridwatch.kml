@@ -69,6 +69,46 @@
     </Style>
 
     <Placemark>
+        <name>REDIII Amendment - Private DevelopmentLocated in Clonmellon, Kilrush Upper, Kilr</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>REDIII Amendment - Private DevelopmentLocated in Clonmellon, Kilrush Upper, Kilr</b><br>
+                <b>Ref:</b> 324440<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 17/11/2026 Description: Section 146B Request to alter permission for the approved Knockanar<br>
+                <b>Lodged:</b> 15/07/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324440" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestat Glenaree, County Kildare.Case reference:3</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestat Glenaree, County Kildare.Case reference:3</b><br>
+                <b>Ref:</b> 324058<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of a 110kV Loop-in substation, grid connection and ancillary<br>
+                <b>Lodged:</b> 03/02/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324058" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.9028,53.1584,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Electricity Development Applicationin the townland of Cloonbaul, County Mayo (cu</name>
         <styleUrl>#style_grid</styleUrl>
         <description>
@@ -245,86 +285,6 @@
         </description>
         <Point>
             <coordinates>-6.4576,52.4798,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealN13 Listillion, Letterkenny, Co. DonegalCase reference:501599Stat</name>
-        <styleUrl>#style_bess</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealN13 Listillion, Letterkenny, Co. DonegalCase reference:501599Stat</b><br>
-                <b>Ref:</b> 501599<br>
-                <b>Type:</b> BESS<br>
-                <b>Status:</b> Case due to be decided by 27-10-2026 Description: Construction of an electricity storage facility comprising of a batter<br>
-                <b>Lodged:</b> 23/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501599" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.1109,54.6549,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Leave to Appeal S37(6)Bunnyconnellan East, Ballina, Co. Mayo.Case reference:5016</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Leave to Appeal S37(6)Bunnyconnellan East, Ballina, Co. Mayo.Case reference:5016</b><br>
-                <b>Ref:</b> 501612<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Invalid - Grounds S.37(6)(b) Description: An amendment to the previously granted wind turbine (P21/881) to increase the <br>
-                <b>Lodged:</b> 23/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501612" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.4001,53.8378,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestlocated in the townlands of Loughlinstown an</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestlocated in the townlands of Loughlinstown an</b><br>
-                <b>Ref:</b> 324402<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 26/10/2026 Description: Proposed 110kV substation and a double circuit underground cable (a<br>
-                <b>Lodged:</b> 23/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324402" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.6567,53.6046,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealBray Waterfront, Strand Road, Bray, Co. Wicklow,, Site includes t</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealBray Waterfront, Strand Road, Bray, Co. Wicklow,, Site includes t</b><br>
-                <b>Ref:</b> 500809<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Grant permission Description: 99 no. unit residential development, ESB substation, upgrade to existing junction along St<br>
-                <b>Lodged:</b> 17/02/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/500809" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.3647,52.9915,0</coordinates>
         </Point>
     </Placemark>
 
