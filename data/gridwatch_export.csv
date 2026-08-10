@@ -1,5 +1,16 @@
 ref,title,description,county,status,date_lodged,date_signed,list_type,source_url,energy_type,week_ending,latitude,longitude
-324452,Filter,"Request to alter the already permitted White Hill Wind Farm (ABP-315365-21 & ABP-319903-24),",Carlow,Unknown,22/07/2026,,N,https://www.pleanala.ie/en-ie/case/324452,wind,24/07/2026,52.8377,-6.9298
+324485,Filter,Permission for the construction of 7 wind turbines and all associated works. A 10 year planning permission and 35 y...,Carlow,Invalid-fee Description: Permission for the construction of 7 wind turbines and all associated works. A 10 year planning,29/07/2026,,N,https://www.pleanala.ie/en-ie/case/324485,wind,31/07/2026,52.8377,-6.9298
+324411,Filter,"Request to alter the conditions of the already permitted Carrownagowan Wind Farm (ABP-308799-20),",Carlow,Incomplete Application Description: Request to alter the conditions of the already permitted Carrownagowan Wind Farm (AB,30/06/2026,,D,https://www.pleanala.ie/en-ie/case/324411,wind,31/07/2026,52.8377,-6.9298
+500591,"Planning AppealBerrings, Near Berrings, Co. Cork.Case reference:500591Status:Grant permissionDescription:The development and operation of a c. 13.8MW solar photovoltaic (PV) farm and all associated site enabling and site...Date lodged:08/01/2026
+					;Signed: 30/07/2026EIAR:NoNIS:NoPartiesENGIE Developments Ireland Limited
+								(Applicant)ENGIE Developments Ireland Limited
+								(1st Party Appellant)
+															(Active)",The development and operation of a c. 13.8MW solar photovoltaic (PV) farm and all associated site enabling and site...,Cork,Grant permission Description: The development and operation of a c. 13.8MW solar photovoltaic (PV) farm and all associat,08/01/2026,,D,https://www.pleanala.ie/en-ie/case/500591,solar,31/07/2026,51.8985,-8.4756
+324163,"Electricity Development Applicationlocated in townland of Ballydonagh, Kiltormer, County Galway (www.gortnalugsid110kv.ie)Case reference:324163Status:Approve with ConditionsDescription:10 year planning permission for 110kV air insulated substation and associated grid connection infrastructureDate lodged:27/03/2026
+					;Signed: 29/07/2026EIAR:NoNIS:NoPartiesBallydonagh Solar Limited
+								(Applicant)Ballydonagh Solar Limited
+															(Active)",10 year planning permission for 110kV air insulated substation and associated grid connection infrastructure,Galway,Approve with Conditions Description: 10 year planning permission for 110kV air insulated substation and associated grid ,27/03/2026,,D,https://www.pleanala.ie/en-ie/case/324163,grid,31/07/2026,53.2707,-9.0568
+324452,Filter,"Request to alter the already permitted White Hill Wind Farm (ABP-315365-21 & ABP-319903-24),",Carlow,Case due to be decided by 26-11-2026 Description: The construction of a single storey building for the storage of electr,22/07/2026,,N,https://www.pleanala.ie/en-ie/case/324452,wind,24/07/2026,52.8377,-6.9298
 501735,"Planning AppealTooreen, Slievenalicka, Drumbaun & Lackamore, Co. Clare.Case reference:501735Description:10-year planning permission, along with a 35-year operational life for the construction of 1 wind turbine and assoc...Date lodged:20/07/2026EIAR:YesNIS:NoPartiesSlievenalicka Locally Owned Turbine Limited
 								(Applicant)Bridget Ginnity
 								(3rd Party Appellant)
@@ -11,15 +22,15 @@ ref,title,description,county,status,date_lodged,date_signed,list_type,source_url
 															(Active)","10-year planning permission, along with a 35-year operational life for the construction of 1 wind turbine and assoc...",Clare,Unknown,20/07/2026,,N,https://www.pleanala.ie/en-ie/case/501735,wind,24/07/2026,52.8627,-9.0259
 324454,"Pre-Application Consultation Requestlocated in the townlands of Cuilnacappy, Park, and Moneenroe, near Creggs village, County Galwa...Case reference:324454Description:Proposed 110kV substation and grid connection to serve a permitted solar farm (Galway County Council Reg Ref. 23/60...Date lodged:23/07/2026EIAR:NoNIS:NoPartiesElgin Energy Services Limited
 								(Applicant)Elgin Energy Services Limited
-															(Active)",Proposed 110kV substation and grid connection to serve a permitted solar farm (Galway County Council Reg Ref. 23/60...,Galway,Unknown,23/07/2026,,N,https://www.pleanala.ie/en-ie/case/324454,solar,24/07/2026,53.2707,-9.0568
-501764,"Planning AppealMackney Brackernagh(Clancarty) , Site A involves lands to the north east of Junction 15 on the ...Case reference:501764Description:Provision of electric vehicle charging hub for 36 vehicles including solar panels, 4 EV HGV charging spaces, constr...Date lodged:24/07/2026EIAR:NoNIS:YesPartiesPetrogas Group Ltd
+															(Active)",Proposed 110kV substation and grid connection to serve a permitted solar farm (Galway County Council Reg Ref. 23/60...,Galway,Case due to be decided by 26-11-2026 Description: Provision of electric vehicle charging hub for 36 vehicles including s,23/07/2026,,N,https://www.pleanala.ie/en-ie/case/324454,solar,24/07/2026,53.2707,-9.0568
+501764,"Planning AppealMackney Brackernagh(Clancarty) , Site A involves lands to the north east of Junction 15 on the ...Case reference:501764Status:Case due to be decided by 26-11-2026Description:Provision of electric vehicle charging hub for 36 vehicles including solar panels, 4 EV HGV charging spaces, constr...Date lodged:24/07/2026EIAR:NoNIS:YesPartiesPetrogas Group Ltd
 								(Applicant)Daniel & Mary Buckley
 								(3rd Party Appellant)
 															(Active)Petrogas Group Ltd
 								(Applicant For Development)
 															(Active)Galway County Council
 								(Planning Authority)
-															(Active)","Provision of electric vehicle charging hub for 36 vehicles including solar panels, 4 EV HGV charging spaces, constr...",Galway,Unknown,24/07/2026,,N,https://www.pleanala.ie/en-ie/case/501764,solar,24/07/2026,53.2707,-9.0568
+															(Active)","Provision of electric vehicle charging hub for 36 vehicles including solar panels, 4 EV HGV charging spaces, constr...",Galway,Case due to be decided by 26-11-2026 Description: Provision of electric vehicle charging hub for 36 vehicles including s,24/07/2026,,N,https://www.pleanala.ie/en-ie/case/501764,solar,24/07/2026,53.2707,-9.0568
 324455,"Electricity Development Applicationat a site north of the Drogheda Business and Technology Park, Donore Road, within the townland ...Case reference:324455Description:Proposed 110 kV/ 38kV/Medium voltage (MV) electrical substation and all associated infrastructureDate lodged:21/07/2026EIAR:NoNIS:NoPartiesElectricity Supply Board
 								(Applicant)Electricity Supply Board
 															(Active)",Proposed 110 kV/ 38kV/Medium voltage (MV) electrical substation and all associated infrastructure,Unknown,Unknown,21/07/2026,,N,https://www.pleanala.ie/en-ie/case/324455,grid,24/07/2026,53.4129,-8.2439
@@ -65,24 +76,3 @@ ref,title,description,county,status,date_lodged,date_signed,list_type,source_url
 					;Signed: 13/07/2026EIAR:NoNIS:NoPartiesGP Joule Ireland Limited
 								(Applicant)GP Joule Ireland Limited
 															(Active)","Proposed development of a 110kV Loop-in substation, grid connection and ancillary development",Kildare,"Is a Strat. Infrast. Dev. Description: Proposed development of a 110kV Loop-in substation, grid connection and ancillary",03/02/2026,,D,https://www.pleanala.ie/en-ie/case/324058,grid,17/07/2026,53.1584,-6.9028
-324429,"Electricity Development Applicationin the townland of Cloonbaul, County Mayo (cunlaghfaddagreenenergyplanning.ie)Case reference:324429Status:Case is due to be decided by 04/01/2027Description:Proposed Development which consists of a 110kV onsite electrical substation, loop-in grid connection, and associate...Date lodged:07/07/2026EIAR:YesNIS:YesPartiesCunlaghfadda Green Energy Limited
-								(Applicant)Cunlaghfadda Green Energy Limited
-															(Active)","Proposed Development which consists of a 110kV onsite electrical substation, loop-in grid connection, and associate...",Mayo,Case is due to be decided by 04/01/2027 Description: Proposed Development which consists of a 110kV onsite electrical su,07/07/2026,,N,https://www.pleanala.ie/en-ie/case/324429,grid,10/07/2026,53.8378,-9.4001
-324420,"Private Development - ApplicationTownlands of Ballymacmague North, Ballymacmague South, Ballynaguilkee Lower, Ballynaguilkee Upp...Case reference:324420Status:Case is due to be decided by 09/11/2026Description:Construction of Dyrick Hill Windfarm comprising 12 no. wind turbines and related works.Date lodged:07/07/2026EIAR:YesNIS:YesPartiesDyrick Hill Wind Farm Limited
-								(Applicant)Dyrick Hill Wind Farm Limited
-															(Active)",Construction of Dyrick Hill Windfarm comprising 12 no. wind turbines and related works.,Waterford,Case is due to be decided by 09/11/2026 Description: Construction of Dyrick Hill Windfarm comprising 12 no. wind turbine,07/07/2026,,N,https://www.pleanala.ie/en-ie/case/324420,wind,10/07/2026,52.2593,-7.1101
-324153,"Appeal - LRDBessborough, Ballinure, Blackrock, CorkCase reference:324153Status:Grant permission with revised conditionsDescription:Permission for a Large-Scale Residential Development (LRD): Demolition of 10 agricultural buildings /sheds  and the...Date lodged:20/03/2026
-					;Signed: 08/07/2026EIAR:YesNIS:YesPartiesPeter Horgan
-								(3rd Party Appellant)
-															(Active)Bessborbo Mother and Baby Home Support Group
-								(3rd Party Appellant)
-															(Active)Estuary View Enterprises 2020 Limited
-								(1st Party Appellant)
-															(Active)Bessboro Mother and Baby Home Support Group
-								(3rd Party Appellant)
-															(Active)Oliver Donoghue
-															(Invalid)",Permission for a Large-Scale Residential Development (LRD): Demolition of 10 agricultural buildings /sheds  and the...,Cork,Grant permission with revised conditions Description: Permission for a Large-Scale Residential Development (LRD): Demoli,20/03/2026,,D,https://www.pleanala.ie/en-ie/case/324153,bess,10/07/2026,51.8985,-8.4756
-324199,"Amendment to decision on Electricity Developmentin the townlands of The Sheehys, Monaincha, Corville and Roscrea, County Tipperary.Case reference:324199Status:No Board jurisdictionDescription:Request to alter the previously permitted 110kV Loop-in substation, Overhead lines and associated works (ABP-314024...Date lodged:08/04/2026
-					;Signed: 10/07/2026EIAR:NoNIS:NoPartiesSoleire Renewables SPV Alpha 2 Limited
-								(Applicant)Soleire Renewables SPV Alpha 2 Limited
-															(Active)","Request to alter the previously permitted 110kV Loop-in substation, Overhead lines and associated works (ABP-314024...",Tipperary,"No Board jurisdiction Description: Request to alter the previously permitted 110kV Loop-in substation, Overhead lines an",08/04/2026,,D,https://www.pleanala.ie/en-ie/case/324199,grid,10/07/2026,52.6807,-7.8246
