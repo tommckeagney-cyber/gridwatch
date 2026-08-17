@@ -1,6 +1,25 @@
 ref,title,description,county,status,date_lodged,date_signed,list_type,source_url,energy_type,week_ending,latitude,longitude
+324499,Filter,Permission for the construction of 7 wind turbines and all associated works. A 10 year planning permission and 35 y...,Carlow,Case is due to be decided by 08/12/2026 Description: Permission for the construction of 7 wind turbines and all associat,05/08/2026,,N,https://www.pleanala.ie/en-ie/case/324499,wind,07/08/2026,52.8377,-6.9298
+501825,"Planning AppealLands to the West of Mannok Cement WorksBallyconnell County Cavan. , In the Townlands of Muckla...Case reference:501825Status:Invalid - no acknowledgement of local submission S.127(1)eDescription:40 year operation for development comprising ground mounted solar panels, mounted on steel support structures, unde...Date lodged:05/08/2026
+					;Signed: 05/08/2026EIAR:NoNIS:NoPartiesMannok Cement Ltd
+								(Applicant)Thomas McManus
+								(3rd Party Appellant)
+															(Invalid)Mannok Cement Ltd
+								(Applicant For Development)
+															(Active)Cavan County Council
+								(Planning Authority)
+															(Active)","40 year operation for development comprising ground mounted solar panels, mounted on steel support structures, unde...",Cavan,Invalid - no acknowledgement of local submission S.127(1)e Description: 40 year operation for development comprising gro,05/08/2026,,N,https://www.pleanala.ie/en-ie/case/501825,solar,07/08/2026,53.9908,-7.3606
+324491,"Electricity Development Applicationat Ballyglass, Blackwater, Castlebank, Lakyle, Mountcatherine, Oakfield, Parkroe, Reanabrone, R...Case reference:324491Status:Case is due to be decided byDescription:10 year planning permission for a 110kV substation, underground grid connection and associated infrastructureDate lodged:04/08/2026EIAR:NoNIS:YesPartiesReeve Wave Ltd
+								(Applicant)Reeve Wave Ltd
+															(Active)","10 year planning permission for a 110kV substation, underground grid connection and associated infrastructure",Clare,"Case is due to be decided by Description: 10 year planning permission for a 110kV substation, underground grid connectio",04/08/2026,,N,https://www.pleanala.ie/en-ie/case/324491,grid,07/08/2026,52.8627,-9.0259
+324561,"Private Development - REDIII Applicationlocated in the townlands of Crowagh or Dunneill Mountain, Ballyglass, Tawnadremira, Doonbeakin,...Case reference:324561Status:Case is due to be decided by 05/08/2027Description:The proposed development consists of the decommissioning of 23 no. turbines and the erection of 17 no. wind turbine...Date lodged:07/08/2026EIAR:YesNIS:YesPartiesSSE Renewables (Ireland) Limited
+															(Active)",The proposed development consists of the decommissioning of 23 no. turbines and the erection of 17 no. wind turbine...,Unknown,Case is due to be decided by 05/08/2027 Description: The proposed development consists of the decommissioning of 23 no. ,07/08/2026,,N,https://www.pleanala.ie/en-ie/case/324561,wind,07/08/2026,53.4129,-8.2439
+324102,"Electricity Development Applicationlocated in the townlands of Aglish and Currahaly, County Cork. (www.aglishsubstation.ie).Case reference:324102Status:Approve with ConditionsDescription:10 year planning permission for a 110kV AIS electricity substation, an associated loop-in/loop out grid connection ...Date lodged:18/02/2026
+					;Signed: 06/08/2026EIAR:NoNIS:NoPartiesAglish Solar Farm Limited
+								(Applicant)Aglish Solar Farm Limited
+															(Active)","10 year planning permission for a 110kV AIS electricity substation, an associated loop-in/loop out grid connection ...",Cork,"Approve with Conditions Description: 10 year planning permission for a 110kV AIS electricity substation, an associated l",18/02/2026,,D,https://www.pleanala.ie/en-ie/case/324102,solar,07/08/2026,51.8985,-8.4756
 324485,Filter,Permission for the construction of 7 wind turbines and all associated works. A 10 year planning permission and 35 y...,Carlow,Invalid-fee Description: Permission for the construction of 7 wind turbines and all associated works. A 10 year planning,29/07/2026,,N,https://www.pleanala.ie/en-ie/case/324485,wind,31/07/2026,52.8377,-6.9298
-324411,Filter,"Request to alter the conditions of the already permitted Carrownagowan Wind Farm (ABP-308799-20),",Carlow,Incomplete Application Description: Request to alter the conditions of the already permitted Carrownagowan Wind Farm (AB,30/06/2026,,D,https://www.pleanala.ie/en-ie/case/324411,wind,31/07/2026,52.8377,-6.9298
+324411,Filter,"Request to alter the conditions of the already permitted Carrownagowan Wind Farm (ABP-308799-20),",Carlow,"Grant permission Description: Construction of a detached dormer dwelling, detached domestic garage, and all associated s",30/06/2026,,D,https://www.pleanala.ie/en-ie/case/324411,wind,31/07/2026,52.8377,-6.9298
 500591,"Planning AppealBerrings, Near Berrings, Co. Cork.Case reference:500591Status:Grant permissionDescription:The development and operation of a c. 13.8MW solar photovoltaic (PV) farm and all associated site enabling and site...Date lodged:08/01/2026
 					;Signed: 30/07/2026EIAR:NoNIS:NoPartiesENGIE Developments Ireland Limited
 								(Applicant)ENGIE Developments Ireland Limited
@@ -19,6 +38,8 @@ ref,title,description,county,status,date_lodged,date_signed,list_type,source_url
 								(Planning Authority)
 															(Active)Slievenalicka Locally Owned Turbine Limited
 								(Applicant For Development)
+															(Active)Slievenalicka Locally Owned Turbine Limited
+								(1st Party Appellant)
 															(Active)","10-year planning permission, along with a 35-year operational life for the construction of 1 wind turbine and assoc...",Clare,Unknown,20/07/2026,,N,https://www.pleanala.ie/en-ie/case/501735,wind,24/07/2026,52.8627,-9.0259
 324454,"Pre-Application Consultation Requestlocated in the townlands of Cuilnacappy, Park, and Moneenroe, near Creggs village, County Galwa...Case reference:324454Description:Proposed 110kV substation and grid connection to serve a permitted solar farm (Galway County Council Reg Ref. 23/60...Date lodged:23/07/2026EIAR:NoNIS:NoPartiesElgin Energy Services Limited
 								(Applicant)Elgin Energy Services Limited
@@ -70,9 +91,3 @@ ref,title,description,county,status,date_lodged,date_signed,list_type,source_url
 															(Active)Kathleen Davey
 								(3rd Party Appellant)
 															(Invalid)",Outline Permission for Battery Energy Storage System and all associated site works.,Dublin,Refuse outline permission Description: Outline Permission for Battery Energy Storage System and all associated site work,05/08/2025,,D,https://www.pleanala.ie/en-ie/case/323218,bess,24/07/2026,53.3498,-6.2603
-324440,"REDIII Amendment - Private DevelopmentLocated in Clonmellon, Kilrush Upper, Kilrush Lower, Newtown, Ballinlig, Carnybrogan, Cavestown...Case reference:324440Status:Case is due to be decided by 17/11/2026Description:Section 146B Request to alter permission for the approved Knockanarragh Wind Farm (Ref: ABP-319448-24)Date lodged:15/07/2026EIAR:NoNIS:YesPartiesKnockanarragh Wind Farm Limited
-															(Active)",Section 146B Request to alter permission for the approved Knockanarragh Wind Farm (Ref: ABP-319448-24),Unknown,Case is due to be decided by 17/11/2026 Description: Section 146B Request to alter permission for the approved Knockanar,15/07/2026,,N,https://www.pleanala.ie/en-ie/case/324440,wind,17/07/2026,53.4129,-8.2439
-324058,"Pre-Application Consultation Requestat Glenaree, County Kildare.Case reference:324058Status:Is a Strat. Infrast. Dev.Description:Proposed development of a 110kV Loop-in substation, grid connection and ancillary developmentDate lodged:03/02/2026
-					;Signed: 13/07/2026EIAR:NoNIS:NoPartiesGP Joule Ireland Limited
-								(Applicant)GP Joule Ireland Limited
-															(Active)","Proposed development of a 110kV Loop-in substation, grid connection and ancillary development",Kildare,"Is a Strat. Infrast. Dev. Description: Proposed development of a 110kV Loop-in substation, grid connection and ancillary",03/02/2026,,D,https://www.pleanala.ie/en-ie/case/324058,grid,17/07/2026,53.1584,-6.9028

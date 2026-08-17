@@ -75,6 +75,106 @@
             <![CDATA[
             <div style="font-family: Arial; max-width: 300px;">
                 <b>Filter</b><br>
+                <b>Ref:</b> 324499<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 08/12/2026 Description: Permission for the construction of 7 wind turbines and all associat<br>
+                <b>Lodged:</b> 05/08/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324499" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.9298,52.8377,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealLands to the West of Mannok Cement WorksBallyconnell County Cavan</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealLands to the West of Mannok Cement WorksBallyconnell County Cavan</b><br>
+                <b>Ref:</b> 501825<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Invalid - no acknowledgement of local submission S.127(1)e Description: 40 year operation for development comprising gro<br>
+                <b>Lodged:</b> 05/08/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501825" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.3606,53.9908,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Electricity Development Applicationat Ballyglass, Blackwater, Castlebank, Lakyle</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development Applicationat Ballyglass, Blackwater, Castlebank, Lakyle</b><br>
+                <b>Ref:</b> 324491<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by Description: 10 year planning permission for a 110kV substation, underground grid connectio<br>
+                <b>Lodged:</b> 04/08/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324491" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0259,52.8627,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationlocated in the townlands of Crowagh or D</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationlocated in the townlands of Crowagh or D</b><br>
+                <b>Ref:</b> 324561<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 05/08/2027 Description: The proposed development consists of the decommissioning of 23 no. <br>
+                <b>Lodged:</b> 07/08/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324561" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Electricity Development Applicationlocated in the townlands of Aglish and Currah</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development Applicationlocated in the townlands of Aglish and Currah</b><br>
+                <b>Ref:</b> 324102<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Approve with Conditions Description: 10 year planning permission for a 110kV AIS electricity substation, an associated l<br>
+                <b>Lodged:</b> 18/02/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324102" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Filter</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Filter</b><br>
                 <b>Ref:</b> 324485<br>
                 <b>Type:</b> WIND<br>
                 <b>Status:</b> Invalid-fee Description: Permission for the construction of 7 wind turbines and all associated works. A 10 year planning<br>
@@ -97,7 +197,7 @@
                 <b>Filter</b><br>
                 <b>Ref:</b> 324411<br>
                 <b>Type:</b> WIND<br>
-                <b>Status:</b> Incomplete Application Description: Request to alter the conditions of the already permitted Carrownagowan Wind Farm (AB<br>
+                <b>Status:</b> Grant permission Description: Construction of a detached dormer dwelling, detached domestic garage, and all associated s<br>
                 <b>Lodged:</b> 30/06/2026<br>
                 <a href="https://www.pleanala.ie/en-ie/case/324411" target="_blank">View Details →</a>
             </div>
@@ -365,46 +465,6 @@
         </description>
         <Point>
             <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>REDIII Amendment - Private DevelopmentLocated in Clonmellon, Kilrush Upper, Kilr</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>REDIII Amendment - Private DevelopmentLocated in Clonmellon, Kilrush Upper, Kilr</b><br>
-                <b>Ref:</b> 324440<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 17/11/2026 Description: Section 146B Request to alter permission for the approved Knockanar<br>
-                <b>Lodged:</b> 15/07/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324440" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestat Glenaree, County Kildare.Case reference:3</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestat Glenaree, County Kildare.Case reference:3</b><br>
-                <b>Ref:</b> 324058<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of a 110kV Loop-in substation, grid connection and ancillary<br>
-                <b>Lodged:</b> 03/02/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324058" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.9028,53.1584,0</coordinates>
         </Point>
     </Placemark>
 
