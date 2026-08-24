@@ -69,6 +69,106 @@
     </Style>
 
     <Placemark>
+        <name>Planning AppealLands to the West of Mannok Cement WorksBallyconnell County Cavan</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealLands to the West of Mannok Cement WorksBallyconnell County Cavan</b><br>
+                <b>Ref:</b> 501871<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case due to be decided by 16-12-2026 Description: 40 year operation for development comprising ground mounted solar pane<br>
+                <b>Lodged:</b> 13/08/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501871" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.3606,53.9908,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Appeal - LRDDromdarrig, Mungret, Co. LimerickCase reference:324563Status:Case is</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Appeal - LRDDromdarrig, Mungret, Co. LimerickCase reference:324563Status:Case is</b><br>
+                <b>Ref:</b> 324563<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 30/11/2026 Description: LRD: construction of 169 residential units, creche, pumping station<br>
+                <b>Lodged:</b> 10/08/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324563" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.6267,52.6638,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealRaheen Business Park , Raheen , LimerickCase reference:501855Stat</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealRaheen Business Park , Raheen , LimerickCase reference:501855Stat</b><br>
+                <b>Ref:</b> 501855<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case due to be decided by 14-12-2026 Description: RED III: installation of solar photovoltaic plant, underground cabling<br>
+                <b>Lodged:</b> 10/08/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501855" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.6267,52.6638,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealTownlands of Knockroe, Cunlaghfadda, Harefield, Cloonbaul and Kno</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealTownlands of Knockroe, Cunlaghfadda, Harefield, Cloonbaul and Kno</b><br>
+                <b>Ref:</b> 501853<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case due to be decided by 14-12-2026 Description: Ten-year planning permission for a renewable energy development consis<br>
+                <b>Lodged:</b> 10/08/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501853" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.4001,53.8378,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealTullyneasky West, Clonakilty, Co. CorkCase reference:501307Status</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealTullyneasky West, Clonakilty, Co. CorkCase reference:501307Status</b><br>
+                <b>Ref:</b> 501307<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Grant permission Description: Demolition of 2 existing buildings. Construction of cable landing station, ESB substation,<br>
+                <b>Lodged:</b> 08/05/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501307" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Filter</name>
         <styleUrl>#style_wind</styleUrl>
         <description>
@@ -245,226 +345,6 @@
         </description>
         <Point>
             <coordinates>-9.0568,53.2707,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Filter</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Filter</b><br>
-                <b>Ref:</b> 324452<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case due to be decided by 26-11-2026 Description: The construction of a single storey building for the storage of electr<br>
-                <b>Lodged:</b> 22/07/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324452" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.9298,52.8377,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealTooreen, Slievenalicka, Drumbaun & Lackamore, Co. Clare.Case refe</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealTooreen, Slievenalicka, Drumbaun & Lackamore, Co. Clare.Case refe</b><br>
-                <b>Ref:</b> 501735<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Unknown<br>
-                <b>Lodged:</b> 20/07/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501735" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.0259,52.8627,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestlocated in the townlands of Cuilnacappy, Par</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestlocated in the townlands of Cuilnacappy, Par</b><br>
-                <b>Ref:</b> 324454<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case due to be decided by 26-11-2026 Description: Provision of electric vehicle charging hub for 36 vehicles including s<br>
-                <b>Lodged:</b> 23/07/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324454" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.0568,53.2707,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealMackney Brackernagh(Clancarty) , Site A involves lands to the nor</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealMackney Brackernagh(Clancarty) , Site A involves lands to the nor</b><br>
-                <b>Ref:</b> 501764<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case due to be decided by 26-11-2026 Description: Provision of electric vehicle charging hub for 36 vehicles including s<br>
-                <b>Lodged:</b> 24/07/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501764" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.0568,53.2707,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Electricity Development Applicationat a site north of the Drogheda Business and </name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Electricity Development Applicationat a site north of the Drogheda Business and </b><br>
-                <b>Ref:</b> 324455<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Unknown<br>
-                <b>Lodged:</b> 21/07/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324455" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealKilmullen, Ullard or Controversyland, Clonanny Lea and Loughmansl</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealKilmullen, Ullard or Controversyland, Clonanny Lea and Loughmansl</b><br>
-                <b>Ref:</b> 500706<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Grant permission with conditions Description: Solar Farm. A co-located Battery Energy Storage System (BESS) park. Natura<br>
-                <b>Lodged:</b> 29/01/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/500706" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.9028,53.1584,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestlocated in the lands to the West and South o</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestlocated in the lands to the West and South o</b><br>
-                <b>Ref:</b> 323201<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of a 220kV substation and grid connection and associated inf<br>
-                <b>Lodged:</b> 25/07/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323201" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.6267,52.6638,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Electricity Development ApplicationLocated at Ballyteige Little, Co. Offaly (www</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Electricity Development ApplicationLocated at Ballyteige Little, Co. Offaly (www</b><br>
-                <b>Ref:</b> 323988<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Approve with Conditions Description: Proposed new 110kV Substation to connect into the existing Thornsbury substation.<br>
-                <b>Lodged:</b> 18/12/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323988" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.5,53.1,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestat Coolfin, County OffalyCase reference:3241</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestat Coolfin, County OffalyCase reference:3241</b><br>
-                <b>Ref:</b> 324124<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of 220kV Loop-in-Substation and Grid Connection<br>
-                <b>Lodged:</b> 27/02/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324124" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.5,53.1,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealKillappoge, Croghan, Boyle, Co. RoscommonCase reference:501116Sta</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealKillappoge, Croghan, Boyle, Co. RoscommonCase reference:501116Sta</b><br>
-                <b>Ref:</b> 501116<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Refuse permission Description: Retention of alterations, steel storage container and solar panels with all associated si<br>
-                <b>Lodged:</b> 02/04/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501116" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.1868,53.6291,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealOld Dublin Road, Carrickhenry, Co Sligo.Case reference:323218Stat</name>
-        <styleUrl>#style_bess</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealOld Dublin Road, Carrickhenry, Co Sligo.Case reference:323218Stat</b><br>
-                <b>Ref:</b> 323218<br>
-                <b>Type:</b> BESS<br>
-                <b>Status:</b> Refuse outline permission Description: Outline Permission for Battery Energy Storage System and all associated site work<br>
-                <b>Lodged:</b> 05/08/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323218" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
         </Point>
     </Placemark>
 
