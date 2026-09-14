@@ -69,6 +69,106 @@
     </Style>
 
     <Placemark>
+        <name>Amendment to decision on Electricity Developmentlocated at Lysaghtstown, Mildeto</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Amendment to decision on Electricity Developmentlocated at Lysaghtstown, Mildeto</b><br>
+                <b>Ref:</b> 324628<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case is due to be decided by 07/01/2027 Description: Section 146B request to alter the permitted 110kV substation (ABP-3<br>
+                <b>Lodged:</b> 04/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324628" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealCase reference:324606Status:Case is due to be decided by 04/01/20</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealCase reference:324606Status:Case is due to be decided by 04/01/20</b><br>
+                <b>Ref:</b> 324606<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 04/01/2027<br>
+                <b>Lodged:</b> 31/08/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324606" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.6567,53.6046,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation RequestRicetown, Co. MeathCase reference:324626Stat</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation RequestRicetown, Co. MeathCase reference:324626Stat</b><br>
+                <b>Ref:</b> 324626<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by 06/01/2027 Description: proposed extension and addition of new electrical equipment to a co<br>
+                <b>Lodged:</b> 03/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324626" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.6567,53.6046,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealPollymount, Bellanamullia, Scramoge, Treanaceeve and Ballyhubert,</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealPollymount, Bellanamullia, Scramoge, Treanaceeve and Ballyhubert,</b><br>
+                <b>Ref:</b> 502020<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case due to be decided by 14-01-2027 Description: 10-year planning permission and 35-year operational life of a wind far<br>
+                <b>Lodged:</b> 02/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/502020" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.1868,53.6291,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Filter</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Filter</b><br>
+                <b>Ref:</b> 324452<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Withdrawn Description: Request to alter the already permitted White Hill Wind Farm (ABP-315365-21 & ABP-319903-24),<br>
+                <b>Lodged:</b> 22/07/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324452" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.9298,52.8377,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>REDIII Amendment - Private Developmentlocated in the townlands of Ballydonaghan,</name>
         <styleUrl>#style_wind</styleUrl>
         <description>
@@ -445,106 +545,6 @@
         </description>
         <Point>
             <coordinates>-7.8246,52.6807,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealLands to the West of Mannok Cement WorksBallyconnell County Cavan</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealLands to the West of Mannok Cement WorksBallyconnell County Cavan</b><br>
-                <b>Ref:</b> 501871<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case due to be decided by 16-12-2026 Description: 40 year operation for development comprising ground mounted solar pane<br>
-                <b>Lodged:</b> 13/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501871" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.3606,53.9908,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Appeal - LRDDromdarrig, Mungret, Co. LimerickCase reference:324563Status:Case is</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Appeal - LRDDromdarrig, Mungret, Co. LimerickCase reference:324563Status:Case is</b><br>
-                <b>Ref:</b> 324563<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 30/11/2026 Description: LRD: construction of 169 residential units, creche, pumping station<br>
-                <b>Lodged:</b> 10/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324563" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.6267,52.6638,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealRaheen Business Park , Raheen , LimerickCase reference:501855Stat</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealRaheen Business Park , Raheen , LimerickCase reference:501855Stat</b><br>
-                <b>Ref:</b> 501855<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case due to be decided by 14-12-2026 Description: RED III: installation of solar photovoltaic plant, underground cabling<br>
-                <b>Lodged:</b> 10/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501855" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.6267,52.6638,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealTownlands of Knockroe, Cunlaghfadda, Harefield, Cloonbaul and Kno</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealTownlands of Knockroe, Cunlaghfadda, Harefield, Cloonbaul and Kno</b><br>
-                <b>Ref:</b> 501853<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case due to be decided by 14-12-2026 Description: Ten-year planning permission for a renewable energy development consis<br>
-                <b>Lodged:</b> 10/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501853" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.4001,53.8378,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealTullyneasky West, Clonakilty, Co. CorkCase reference:501307Status</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealTullyneasky West, Clonakilty, Co. CorkCase reference:501307Status</b><br>
-                <b>Ref:</b> 501307<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Grant permission Description: Demolition of 2 existing buildings. Construction of cable landing station, ESB substation,<br>
-                <b>Lodged:</b> 08/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501307" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
         </Point>
     </Placemark>
 

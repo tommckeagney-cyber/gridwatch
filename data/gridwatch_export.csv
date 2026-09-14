@@ -1,4 +1,19 @@
 ref,title,description,county,status,date_lodged,date_signed,list_type,source_url,energy_type,week_ending,latitude,longitude
+324628,"Amendment to decision on Electricity Developmentlocated at Lysaghtstown, Mildeton, Co. Cork .Case reference:324628Status:Case is due to be decided by 07/01/2027Description:Section 146B request to alter the permitted 110kV substation (ABP-308979-20)Date lodged:04/09/2026EIAR:YesNIS:YesPartiesLysaghtstown Solar Farm Limited
+								(Applicant)Lysaghtstown Solar Farm Limited
+															(Active)",Section 146B request to alter the permitted 110kV substation (ABP-308979-20),Cork,Case is due to be decided by 07/01/2027 Description: Section 146B request to alter the permitted 110kV substation (ABP-3,04/09/2026,,N,https://www.pleanala.ie/en-ie/case/324628,solar,04/09/2026,51.8985,-8.4756
+324606,Planning AppealCase reference:324606Status:Case is due to be decided by 04/01/2027Date lodged:31/08/2026EIAR:NoNIS:No,proposed extension and addition of new electrical equipment to a consented 110kV substation compound (ABP-319662-24...,Meath,Case is due to be decided by 04/01/2027,31/08/2026,,N,https://www.pleanala.ie/en-ie/case/324606,grid,04/09/2026,53.6046,-6.6567
+324626,"Pre-Application Consultation RequestRicetown, Co. MeathCase reference:324626Status:Case is due to be decided by 06/01/2027Description:proposed extension and addition of new electrical equipment to a consented 110kV substation compound (ABP-319662-24...Date lodged:03/09/2026EIAR:NoNIS:NoPartiesStatkraft Ireland
+								(Applicant)Statkraft Ireland
+															(Active)",proposed extension and addition of new electrical equipment to a consented 110kV substation compound (ABP-319662-24...,Meath,Case is due to be decided by 06/01/2027 Description: proposed extension and addition of new electrical equipment to a co,03/09/2026,,N,https://www.pleanala.ie/en-ie/case/324626,grid,04/09/2026,53.6046,-6.6567
+502020,"Planning AppealPollymount, Bellanamullia, Scramoge, Treanaceeve and Ballyhubert, Co. Roscommon.Case reference:502020Status:Case due to be decided by 14-01-2027Description:10-year planning permission and 35-year operational life of a wind farm consisting of six wind turbines and all ass...Date lodged:02/09/2026EIAR:YesNIS:YesPartiesBallyfeeny Green Energy Limited
+								(Applicant)John Coggeran & Others
+								(3rd Party Appellant)
+															(Active)Sustainable Energy Authority of Ireland (SEAI)
+															(Active)Roscommon County Council
+								(Planning Authority)
+															(Active)",10-year planning permission and 35-year operational life of a wind farm consisting of six wind turbines and all ass...,Roscommon,Case due to be decided by 14-01-2027 Description: 10-year planning permission and 35-year operational life of a wind far,02/09/2026,,N,https://www.pleanala.ie/en-ie/case/502020,wind,04/09/2026,53.6291,-8.1868
+324452,Filter,"Request to alter the already permitted White Hill Wind Farm (ABP-315365-21 & ABP-319903-24),",Carlow,"Withdrawn Description: Request to alter the already permitted White Hill Wind Farm (ABP-315365-21 & ABP-319903-24),",22/07/2026,,D,https://www.pleanala.ie/en-ie/case/324452,wind,04/09/2026,52.8377,-6.9298
 324593,"REDIII Amendment - Private Developmentlocated in the townlands of Ballydonaghan, Caherhurley, Coumnagun, Carrownagowan, Inchalughoge,...Case reference:324593Status:Case is due to be decided by 28/12/2026Description:Request to alter the conditions of the already permitted Carrownagowan Wind Farm (ABP-308799-20),Date lodged:25/08/2026EIAR:NoNIS:NoPartiesFuturenergy Carrownagowan DAC
 															(Active)","Request to alter the conditions of the already permitted Carrownagowan Wind Farm (ABP-308799-20),",Clare,Case is due to be decided by 28/12/2026 Description: Request to alter the conditions of the already permitted Carrownago,25/08/2026,,N,https://www.pleanala.ie/en-ie/case/324593,wind,28/08/2026,52.8627,-9.0259
 324596,"Electricity Development Applicationand associated underground grid connection works located in lands within the Diageo site comple...Case reference:324596Status:Case is due to be decided by 22/02/2027Description:Proposed 110 kV Substation at a site fronting onto Steeven’s Lane, Dublin 8Date lodged:25/08/2026EIAR:NoNIS:YesPartiesThe Electricity Supply Board (ESB)
@@ -11,8 +26,12 @@ ref,title,description,county,status,date_lodged,date_signed,list_type,source_url
 								(3rd Party Appellant)
 															(Active)Kerry County Council
 								(Planning Authority)
-															(Active)Laurel Ridge Solar Farm Ltd.
-								(Applicant For Development)
+															(Active)Seán Devane
+								(3rd Party Appellant)
+															(Active)David O'Brien
+								(3rd Party Appellant)
+															(Active)Kieran O'Sullivan
+								(3rd Party Appellant)
 															(Active)",RED III: 10 year permission for solar farm and energy storage compound and all associated site works Temporary cons...,Kerry,Case due to be decided by 07-01-2027 Description: RED III: 10 year permission for solar farm and energy storage compound,26/08/2026,,N,https://www.pleanala.ie/en-ie/case/501954,solar,28/08/2026,52.1546,-9.5231
 324602,"Pre-Application Consultation Requestlocated at Knockdinnin, County Louth.Case reference:324602Status:Case is due to be decided by 30/12/2026Description:Proposed development of a 110kV loop in/ loop out substation,Date lodged:27/08/2026EIAR:NoNIS:NoPartiesKnockdinnin Solar Farm Ltd
 								(Applicant)Knockdinnin Solar Farm Ltd
@@ -26,10 +45,6 @@ ref,title,description,county,status,date_lodged,date_signed,list_type,source_url
 								(3rd Party Appellant)
 															(Active)Meath County Council
 								(Planning Authority)
-															(Active)Darren O'Rourke TD & Cllr. Michael Gallagher
-								(Observer)
-															(Active)Circal Oak Solar Limited
-								(Applicant For Development)
 															(Active)","RED III - Construction and operation of up to 559,033 sqm of solar PV arrays and all other site works.",Meath,"Case due to be decided by 06-01-2027 Description: RED III - Construction and operation of up to 559,033 sqm of solar PV ",25/08/2026,,N,https://www.pleanala.ie/en-ie/case/501976,solar,28/08/2026,53.6046,-6.6567
 324608,"Pre-Application Consultation RequestMullanafawnia, Co. OffalyCase reference:324608Status:Case is due to be decided by 28/12/2026Description:Proposed development of a new 110kV substation and 110kV Underground CableDate lodged:24/08/2026EIAR:NoNIS:NoPartiesJCO Limited
 								(Applicant)JCO Limited
@@ -66,16 +81,12 @@ ref,title,description,county,status,date_lodged,date_signed,list_type,source_url
 								(3rd Party Appellant)
 															(Active)Limerick City and County Council
 								(Planning Authority)
-															(Active)Brian Geary Motors Ltd
-								(Applicant For Development)
 															(Active)","Construction of motor sales & service facility, car wash, ESB substation, external plant enclosure, car parking, si...",Limerick,"Case due to be decided by 21-12-2026 Description: Construction of motor sales & service facility, car wash, ESB substati",17/08/2026,,N,https://www.pleanala.ie/en-ie/case/501903,grid,21/08/2026,52.6638,-8.6267
 501904,"Leave to Appeal S37(6)Kilathmoy Substation , Athea Upper , Athea Co. LimerickCase reference:501904Status:Case due to be decided by 15-09-2026Description:RED III: 10 year permission for Long duration energy storage facility to include BESS compound and all associated s...Date lodged:19/08/2026EIAR:NoNIS:YesPartiesWinter Winds Ltd
 								(Applicant)Limerick City and County Council
 								(Planning Authority)
 															(Active)Timothy Scanlon
 								(Applicant For Leave To Appeal)
-															(Active)Winter Winds Ltd
-								(Applicant For Development)
 															(Active)",RED III: 10 year permission for Long duration energy storage facility to include BESS compound and all associated s...,Limerick,Case due to be decided by 15-09-2026 Description: RED III: 10 year permission for Long duration energy storage facility ,19/08/2026,,N,https://www.pleanala.ie/en-ie/case/501904,bess,21/08/2026,52.6638,-8.6267
 501920,"Planning AppealWithin the townlands of Ballykeerogemore, Ballykeerogebeg, Knockea and Garryduff, County Wexfor...Case reference:501920Status:Case due to be decided by 21-12-2026Description:RED III Application. 10-year planning permission for a solar photovoltaic and battery energy storage system develop...Date lodged:17/08/2026EIAR:NoNIS:YesPartiesShelbourne Solar Limited
 								(Applicant)Sheldon Petersen and Sarah O'Neill
@@ -86,8 +97,6 @@ ref,title,description,county,status,date_lodged,date_signed,list_type,source_url
 								(3rd Party Appellant)
 															(Invalid)Wexford County Council
 								(Planning Authority)
-															(Active)Shelbourne Solar Limited
-								(Applicant For Development)
 															(Active)",RED III Application. 10-year planning permission for a solar photovoltaic and battery energy storage system develop...,Wexford,Case due to be decided by 21-12-2026 Description: RED III Application. 10-year planning permission for a solar photovolt,17/08/2026,,N,https://www.pleanala.ie/en-ie/case/501920,solar,21/08/2026,52.4798,-6.4576
 314187,"Pre-Application Consultation RequestKilloshulan and Ballyragget, Co. Kilkenny.Case reference:314187Status:WithdrawnDescription:Proposed 110kV electrical infrastructure which will facilitate the connection of the proposed Killoshulan Wind Farm...Date lodged:27/07/2022
 					;Signed: 18/08/2026EIAR:NoNIS:NoPartiesKilloshulan Renewable Energy Limited
@@ -98,40 +107,3 @@ ref,title,description,county,status,date_lodged,date_signed,list_type,source_url
 					;Signed: 20/08/2026EIAR:NoNIS:YesPartiesSoleirtricity Lisheen Ltd
 								(Applicant)Soleirtricity Lisheen Ltd
 															(Active)","10 year planning permission for a 110kV electrical substation and associated 110kV underground grid connection, cab...",Tipperary,Approve with Conditions Description: 10 year planning permission for a 110kV electrical substation and associated 110kV ,27/02/2026,,D,https://www.pleanala.ie/en-ie/case/324114,grid,21/08/2026,52.6807,-7.8246
-501871,"Planning AppealLands to the West of Mannok Cement WorksBallyconnell County Cavan. , In the Townlands of Muckla...Case reference:501871Status:Case due to be decided by 16-12-2026Description:40 year operation for development comprising ground mounted solar panels, mounted on steel support structures, unde...Date lodged:13/08/2026EIAR:NoNIS:NoPartiesMannok Cement Ltd
-								(Applicant)Trina Maguire
-								(3rd Party Appellant)
-															(Active)James & Patricia Donohoe
-								(3rd Party Appellant)
-															(Active)Cavan County Council
-								(Planning Authority)
-															(Active)Mannok Cement Ltd
-								(Applicant For Development)
-															(Active)Claire Haran
-								(3rd Party Appellant)
-															(Active)","40 year operation for development comprising ground mounted solar panels, mounted on steel support structures, unde...",Cavan,Case due to be decided by 16-12-2026 Description: 40 year operation for development comprising ground mounted solar pane,13/08/2026,,N,https://www.pleanala.ie/en-ie/case/501871,solar,14/08/2026,53.9908,-7.3606
-324563,"Appeal - LRDDromdarrig, Mungret, Co. LimerickCase reference:324563Status:Case is due to be decided by 30/11/2026Description:LRD: construction of 169 residential units, creche, pumping station, 3 ESB substation and associated site works. A ...Date lodged:10/08/2026EIAR:NoNIS:YesPartiesTom Ryan
-															(Active)","LRD: construction of 169 residential units, creche, pumping station, 3 ESB substation and associated site works. A ...",Limerick,"Case is due to be decided by 30/11/2026 Description: LRD: construction of 169 residential units, creche, pumping station",10/08/2026,,N,https://www.pleanala.ie/en-ie/case/324563,grid,14/08/2026,52.6638,-8.6267
-501855,"Planning AppealRaheen Business Park , Raheen , LimerickCase reference:501855Status:Case due to be decided by 14-12-2026Description:RED III: installation of solar photovoltaic plant, underground cabling, security fencing, CCTV and associated site ...Date lodged:10/08/2026EIAR:NoNIS:NoPartiesEli Lilly Kinsale Limited
-								(Applicant)Tom Ryan
-								(3rd Party Appellant)
-															(Active)Eli Lilly Kinsale Limited
-								(Applicant For Development)
-															(Active)Limerick City and County Council
-								(Planning Authority)
-															(Active)","RED III: installation of solar photovoltaic plant, underground cabling, security fencing, CCTV and associated site ...",Limerick,"Case due to be decided by 14-12-2026 Description: RED III: installation of solar photovoltaic plant, underground cabling",10/08/2026,,N,https://www.pleanala.ie/en-ie/case/501855,solar,14/08/2026,52.6638,-8.6267
-501853,"Planning AppealTownlands of Knockroe, Cunlaghfadda, Harefield, Cloonbaul and Knockaunakill, County Mayo.Case reference:501853Status:Case due to be decided by 14-12-2026Description:Ten-year planning permission for a renewable energy development consisting of 7 no. wind turbines. Subsequent decom...Date lodged:10/08/2026EIAR:YesNIS:YesPartiesCunlaghfadda Green Energy Limited
-								(Applicant)Cunlaghfadda Green Energy Limited
-								(1st Party Appellant)
-															(Active)Mayo County Council
-								(Planning Authority)
-															(Active)",Ten-year planning permission for a renewable energy development consisting of 7 no. wind turbines. Subsequent decom...,Mayo,Case due to be decided by 14-12-2026 Description: Ten-year planning permission for a renewable energy development consis,10/08/2026,,N,https://www.pleanala.ie/en-ie/case/501853,wind,14/08/2026,53.8378,-9.4001
-501307,"Planning AppealTullyneasky West, Clonakilty, Co. CorkCase reference:501307Status:Grant permissionDescription:Demolition of 2 existing buildings. Construction of cable landing station, ESB substation, switch room and external...Date lodged:08/05/2026
-					;Signed: 14/08/2026EIAR:NoNIS:NoPartiesAmazon MCS Ireland Ltd
-								(Applicant)Eileen Lynch & Owen McCarthy
-								(3rd Party Appellant)
-															(Active)West Cork County Council
-								(Planning Authority)
-															(Active)Amazon MCS Ireland Ltd
-								(Applicant For Development)
-															(Active)","Demolition of 2 existing buildings. Construction of cable landing station, ESB substation, switch room and external...",Cork,"Grant permission Description: Demolition of 2 existing buildings. Construction of cable landing station, ESB substation,",08/05/2026,,D,https://www.pleanala.ie/en-ie/case/501307,grid,14/08/2026,51.8985,-8.4756
