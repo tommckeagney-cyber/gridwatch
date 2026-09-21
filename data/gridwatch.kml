@@ -69,6 +69,146 @@
     </Style>
 
     <Placemark>
+        <name>Electricity Development ApplicationLocated in the townlands of Ballyneague, Ball</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development ApplicationLocated in the townlands of Ballyneague, Ball</b><br>
+                <b>Ref:</b> 324632<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case is due to be decided by Description: Proposed development of a 220kV Air Insulated Substation (AIS) and Loop-in Gri<br>
+                <b>Lodged:</b> 08/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324632" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>ReferralWestmanstown Sports and Conference Centre, Lucan Road, Clonsilla, Dublin</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>ReferralWestmanstown Sports and Conference Centre, Lucan Road, Clonsilla, Dublin</b><br>
+                <b>Ref:</b> 324639<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case is due to be decided by 11/01/2027 Description: Whether the construction of solar panels surface mounted 254 panels<br>
+                <b>Lodged:</b> 08/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324639" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.2603,53.3498,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealRathduff , Townland of Thomastown Demesne South , Co. TipperaryCa</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealRathduff , Townland of Thomastown Demesne South , Co. TipperaryCa</b><br>
+                <b>Ref:</b> 502104<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case due to be decided by 21-01-2027 Description: RED III. reconfiguration and enlargement to include solar farm and ESB<br>
+                <b>Lodged:</b> 09/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/502104" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.8246,52.6807,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Marine Development - Applicationlocated in the Irish Sea, approximately 10 km of</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Marine Development - Applicationlocated in the Irish Sea, approximately 10 km of</b><br>
+                <b>Ref:</b> 324650<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by Description: Proposed decommissioning of the Arklow Bank Wind Park Phase I, an offshore win<br>
+                <b>Lodged:</b> 10/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324650" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.3647,52.9915,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Amendment to decision on Electricity Developmentlocated within the townlands of </name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Amendment to decision on Electricity Developmentlocated within the townlands of </b><br>
+                <b>Ref:</b> 324130<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Withdrawn Description: Proposed alteration to the permitted Ballinrea 110kV Substation and Underground Grid Connection (<br>
+                <b>Lodged:</b> 09/03/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324130" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Pre-applicationTownlands of Loughill, Ballyouskill,</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Pre-applicationTownlands of Loughill, Ballyouskill,</b><br>
+                <b>Ref:</b> 316156<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Withdrawn Description: Proposed development of Fassa Windfarm which comprises between 13 and 20 no. wind turbines along <br>
+                <b>Lodged:</b> 24/03/2023<br>
+                <a href="https://www.pleanala.ie/en-ie/case/316156" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.2439,53.4129,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Leave to Appeal S37(6)Kilathmoy Substation , Athea Upper , Athea Co. LimerickCas</name>
+        <styleUrl>#style_bess</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Leave to Appeal S37(6)Kilathmoy Substation , Athea Upper , Athea Co. LimerickCas</b><br>
+                <b>Ref:</b> 501904<br>
+                <b>Type:</b> BESS<br>
+                <b>Status:</b> Application for leave to appeal refused Description: RED III: 10 year permission for Long duration energy storage facili<br>
+                <b>Lodged:</b> 19/08/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/501904" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.6267,52.6638,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Amendment to decision on Electricity Developmentlocated at Lysaghtstown, Mildeto</name>
         <styleUrl>#style_solar</styleUrl>
         <description>
@@ -385,166 +525,6 @@
         </description>
         <Point>
             <coordinates>-7.1101,52.2593,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>REDIII Amendment - Private DevelopmentIn the townlands of Ballyline West, Coolke</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>REDIII Amendment - Private DevelopmentIn the townlands of Ballyline West, Coolke</b><br>
-                <b>Ref:</b> 324595<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 23/12/2026 Description: Request to alter the terms of the previously permitted Shronowen Wi<br>
-                <b>Lodged:</b> 20/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324595" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.5231,52.1546,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestlocated in the townlands of Griffinrath, Cor</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestlocated in the townlands of Griffinrath, Cor</b><br>
-                <b>Ref:</b> 324581<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 21/12/2026 Description: Proposed development of a 110kV GIS Substation( Killeenlea), 110kv <br>
-                <b>Lodged:</b> 18/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324581" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Electricity Development Applicationlocated in various townlands across counties </name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Electricity Development Applicationlocated in various townlands across counties </b><br>
-                <b>Ref:</b> 324597<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by Description: Planning Application for a 110kV substation and a 110kV grid connection route <br>
-                <b>Lodged:</b> 21/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324597" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.0,54.0,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealBallycummin , Raheen , Co. LimerickCase reference:501903Status:Ca</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealBallycummin , Raheen , Co. LimerickCase reference:501903Status:Ca</b><br>
-                <b>Ref:</b> 501903<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case due to be decided by 21-12-2026 Description: Construction of motor sales & service facility, car wash, ESB substati<br>
-                <b>Lodged:</b> 17/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501903" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.6267,52.6638,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Leave to Appeal S37(6)Kilathmoy Substation , Athea Upper , Athea Co. LimerickCas</name>
-        <styleUrl>#style_bess</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Leave to Appeal S37(6)Kilathmoy Substation , Athea Upper , Athea Co. LimerickCas</b><br>
-                <b>Ref:</b> 501904<br>
-                <b>Type:</b> BESS<br>
-                <b>Status:</b> Case due to be decided by 15-09-2026 Description: RED III: 10 year permission for Long duration energy storage facility <br>
-                <b>Lodged:</b> 19/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501904" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.6267,52.6638,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealWithin the townlands of Ballykeerogemore, Ballykeerogebeg, Knocke</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealWithin the townlands of Ballykeerogemore, Ballykeerogebeg, Knocke</b><br>
-                <b>Ref:</b> 501920<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case due to be decided by 21-12-2026 Description: RED III Application. 10-year planning permission for a solar photovolt<br>
-                <b>Lodged:</b> 17/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501920" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.4576,52.4798,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation RequestKilloshulan and Ballyragget, Co. Kilkenny.Ca</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation RequestKilloshulan and Ballyragget, Co. Kilkenny.Ca</b><br>
-                <b>Ref:</b> 314187<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Withdrawn Description: Proposed 110kV electrical infrastructure which will facilitate the connection of the proposed Kil<br>
-                <b>Lodged:</b> 27/07/2022<br>
-                <a href="https://www.pleanala.ie/en-ie/case/314187" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.2493,52.6538,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Electricity Development Applicationlocated in the townlands of Killoran, County </name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Electricity Development Applicationlocated in the townlands of Killoran, County </b><br>
-                <b>Ref:</b> 324114<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Approve with Conditions Description: 10 year planning permission for a 110kV electrical substation and associated 110kV <br>
-                <b>Lodged:</b> 27/02/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324114" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.8246,52.6807,0</coordinates>
         </Point>
     </Placemark>
 
