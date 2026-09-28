@@ -69,6 +69,126 @@
     </Style>
 
     <Placemark>
+        <name>Electricity Development Applicationlocated within the townlands of Gotoon, Cools</name>
+        <styleUrl>#style_bess</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Electricity Development Applicationlocated within the townlands of Gotoon, Cools</b><br>
+                <b>Ref:</b> 324642<br>
+                <b>Type:</b> BESS<br>
+                <b>Status:</b> Case is due to be decided by 15/03/2027 Description: Proposed development of a 220kV Loop In Loop Out (LILO) Gas Insulat<br>
+                <b>Lodged:</b> 14/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324642" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.6267,52.6638,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>REDIII Amendment - Private Developmenton lands at Clonmellon, Kilrush Upper, Kil</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>REDIII Amendment - Private Developmenton lands at Clonmellon, Kilrush Upper, Kil</b><br>
+                <b>Ref:</b> 324656<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 19/01/2027 Description: Request to alter the terms of the previously permitted Knockanarrag<br>
+                <b>Lodged:</b> 16/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324656" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.6567,53.6046,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealKnavinstown and Coolfore, Curragha, County MeathCase reference:50</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealKnavinstown and Coolfore, Curragha, County MeathCase reference:50</b><br>
+                <b>Ref:</b> 502115<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case due to be decided by 26-01-2027 Description: 10 year planning consent for solar PV energy installation on 62.29 hec<br>
+                <b>Lodged:</b> 14/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/502115" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.6567,53.6046,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealLISTELLIAN , LETTERKENNY , CO. DONEGALCase reference:323688Status</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealLISTELLIAN , LETTERKENNY , CO. DONEGALCase reference:323688Status</b><br>
+                <b>Ref:</b> 323688<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Grant permission with revised conditions Description: Extension of existing ESB Networks 110KV substation compound, cons<br>
+                <b>Lodged:</b> 18/09/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323688" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.1109,54.6549,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealShessy North Shessy South Lydacan South , South Galway , Co. Galw</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealShessy North Shessy South Lydacan South , South Galway , Co. Galw</b><br>
+                <b>Ref:</b> 500475<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Appeal withdrawn S.140(1)(a) Description: Permission for a proposed solar farm development.<br>
+                <b>Lodged:</b> 15/12/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/500475" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0568,53.2707,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealDunnstown, Co. Kildare.Case reference:319518Status:Grant Permissi</name>
+        <styleUrl>#style_bess</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealDunnstown, Co. Kildare.Case reference:319518Status:Grant Permissi</b><br>
+                <b>Ref:</b> 319518<br>
+                <b>Type:</b> BESS<br>
+                <b>Status:</b> Grant Permissions with Conditions Description: 10 year planning permission for the construction of enclosed battery ener<br>
+                <b>Lodged:</b> 16/04/2024<br>
+                <a href="https://www.pleanala.ie/en-ie/case/319518" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.9298,52.8377,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Electricity Development ApplicationLocated in the townlands of Ballyneague, Ball</name>
         <styleUrl>#style_solar</styleUrl>
         <description>
@@ -137,7 +257,7 @@
                 <b>Marine Development - Applicationlocated in the Irish Sea, approximately 10 km of</b><br>
                 <b>Ref:</b> 324650<br>
                 <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by Description: Proposed decommissioning of the Arklow Bank Wind Park Phase I, an offshore win<br>
+                <b>Status:</b> Case is due to be decided by 25/03/2027 Description: Proposed decommissioning of the Arklow Bank Wind Park Phase I, an o<br>
                 <b>Lodged:</b> 10/09/2026<br>
                 <a href="https://www.pleanala.ie/en-ie/case/324650" target="_blank">View Details →</a>
             </div>
@@ -305,226 +425,6 @@
         </description>
         <Point>
             <coordinates>-6.9298,52.8377,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>REDIII Amendment - Private Developmentlocated in the townlands of Ballydonaghan,</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>REDIII Amendment - Private Developmentlocated in the townlands of Ballydonaghan,</b><br>
-                <b>Ref:</b> 324593<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 28/12/2026 Description: Request to alter the conditions of the already permitted Carrownago<br>
-                <b>Lodged:</b> 25/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324593" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.0259,52.8627,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Electricity Development Applicationand associated underground grid connection wo</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Electricity Development Applicationand associated underground grid connection wo</b><br>
-                <b>Ref:</b> 324596<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 22/02/2027 Description: Proposed 110 kV Substation at a site fronting onto Steeven’s Lane, <br>
-                <b>Lodged:</b> 25/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324596" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealBallyoughtragh South Commons , Farranmanagh Knocknaman and Lishee</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealBallyoughtragh South Commons , Farranmanagh Knocknaman and Lishee</b><br>
-                <b>Ref:</b> 501954<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case due to be decided by 07-01-2027 Description: RED III: 10 year permission for solar farm and energy storage compound<br>
-                <b>Lodged:</b> 26/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501954" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.5231,52.1546,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestlocated at Knockdinnin, County Louth.Case re</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestlocated at Knockdinnin, County Louth.Case re</b><br>
-                <b>Ref:</b> 324602<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case is due to be decided by 30/12/2026 Description: Proposed development of a 110kV loop in/ loop out substation,<br>
-                <b>Lodged:</b> 27/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324602" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.4827,53.9257,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning Appealtownlands of Chamberstown Scottstown, Shalvanstown , Mullagha, Ra</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning Appealtownlands of Chamberstown Scottstown, Shalvanstown , Mullagha, Ra</b><br>
-                <b>Ref:</b> 501976<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case due to be decided by 06-01-2027 Description: RED III - Construction and operation of up to 559,033 sqm of solar PV <br>
-                <b>Lodged:</b> 25/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/501976" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.6567,53.6046,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation RequestMullanafawnia, Co. OffalyCase reference:3246</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation RequestMullanafawnia, Co. OffalyCase reference:3246</b><br>
-                <b>Ref:</b> 324608<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 28/12/2026 Description: Proposed development of a new 110kV substation and 110kV Undergroun<br>
-                <b>Lodged:</b> 24/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324608" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.5,53.1,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Pre-applicationlocated at Inchera Little Island, Co</name>
-        <styleUrl>#style_biogas</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Pre-applicationlocated at Inchera Little Island, Co</b><br>
-                <b>Ref:</b> 324227<br>
-                <b>Type:</b> BIOGAS<br>
-                <b>Status:</b> Is not Strat. Infrast. Dev. Description: The proposed alterations to the approved Renewable Biogas Plant (Cork County Co<br>
-                <b>Lodged:</b> 20/04/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324227" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Appeal - LRDBarrysparks and Crowscastle (lands generally bound by the R132 to th</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Appeal - LRDBarrysparks and Crowscastle (lands generally bound by the R132 to th</b><br>
-                <b>Ref:</b> 324331<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Contribution Appeal Decided Description: 10 year permission for construction of 530 residential units, Creche, 163 car p<br>
-                <b>Lodged:</b> 29/05/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324331" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.2439,53.4129,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestin the townland of Forrest Great, Swords, Co</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestin the townland of Forrest Great, Swords, Co</b><br>
-                <b>Ref:</b> 324386<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Is a Strat. Infrast. Dev. Description: The proposed development Ridgewood 110V/MV Gas Insulated Switchgear (GIS) electri<br>
-                <b>Lodged:</b> 18/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324386" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealDrumanagh House, Loughshinny, Co. DublinCase reference:500519Stat</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealDrumanagh House, Loughshinny, Co. DublinCase reference:500519Stat</b><br>
-                <b>Ref:</b> 500519<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Contribution Appeal Decided Description: Retention of prefabricated offices, equestrian structures and planning permissi<br>
-                <b>Lodged:</b> 22/12/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/500519" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Pre-applicationlocated in the townlands of Ballygui</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Pre-applicationlocated in the townlands of Ballygui</b><br>
-                <b>Ref:</b> 323038<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed Development of 24 no. wind turbines, associated hardstands, electrical c<br>
-                <b>Lodged:</b> 10/07/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323038" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.1101,52.2593,0</coordinates>
         </Point>
     </Placemark>
 
