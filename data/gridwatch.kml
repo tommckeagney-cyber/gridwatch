@@ -69,6 +69,106 @@
     </Style>
 
     <Placemark>
+        <name>Planning AppealGalway Shopping Centre Townparks , Headford Road Galway , Co. Gal</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealGalway Shopping Centre Townparks , Headford Road Galway , Co. Gal</b><br>
+                <b>Ref:</b> 502154<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case due to be decided by 04-02-2027 Description: Prefabricated substation to cater for 7 no. electric car charging poin<br>
+                <b>Lodged:</b> 23/09/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/502154" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0568,53.2707,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestin the townland of Hedgestown, County Dublin</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestin the townland of Hedgestown, County Dublin</b><br>
+                <b>Ref:</b> 324418<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of the Courtlough 110kV/38kV/MV Distribution Substation<br>
+                <b>Lodged:</b> 03/07/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324418" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.2603,53.3498,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationin the townlands of Beagh, Beagh More, C</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationin the townlands of Beagh, Beagh More, C</b><br>
+                <b>Ref:</b> 323699<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Refuse Perm. Description: 11 no. turbine wind farm and associated infrastructure<br>
+                <b>Lodged:</b> 19/09/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323699" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.0568,53.2707,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Pre-Application Consultation Requestto the existing Trien 110kV substation at Tr</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestto the existing Trien 110kV substation at Tr</b><br>
+                <b>Ref:</b> 324422<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Is not Strat. Infrast. Dev. Description: The proposed development of a 110 / 33 kV transformer compound and 110kV under <br>
+                <b>Lodged:</b> 17/06/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324422" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.5231,52.1546,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationlocated in the townlands of Garrane, Bal</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationlocated in the townlands of Garrane, Bal</b><br>
+                <b>Ref:</b> 323635<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Approve with Conditions Description: 9 no. wind turbines, grid connection and all associated site works<br>
+                <b>Lodged:</b> 10/09/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323635" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.6267,52.6638,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Electricity Development Applicationlocated within the townlands of Gotoon, Cools</name>
         <styleUrl>#style_bess</styleUrl>
         <description>
@@ -197,7 +297,7 @@
                 <b>Electricity Development ApplicationLocated in the townlands of Ballyneague, Ball</b><br>
                 <b>Ref:</b> 324632<br>
                 <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case is due to be decided by Description: Proposed development of a 220kV Air Insulated Substation (AIS) and Loop-in Gri<br>
+                <b>Status:</b> Case is due to be decided by 08/03/2027 Description: Proposed development of a 220kV Air Insulated Substation (AIS) and <br>
                 <b>Lodged:</b> 08/09/2026<br>
                 <a href="https://www.pleanala.ie/en-ie/case/324632" target="_blank">View Details →</a>
             </div>
@@ -325,106 +425,6 @@
         </description>
         <Point>
             <coordinates>-8.6267,52.6638,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Amendment to decision on Electricity Developmentlocated at Lysaghtstown, Mildeto</name>
-        <styleUrl>#style_solar</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Amendment to decision on Electricity Developmentlocated at Lysaghtstown, Mildeto</b><br>
-                <b>Ref:</b> 324628<br>
-                <b>Type:</b> SOLAR<br>
-                <b>Status:</b> Case is due to be decided by 07/01/2027 Description: Section 146B request to alter the permitted 110kV substation (ABP-3<br>
-                <b>Lodged:</b> 04/09/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324628" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.4756,51.8985,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealCase reference:324606Status:Case is due to be decided by 04/01/20</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealCase reference:324606Status:Case is due to be decided by 04/01/20</b><br>
-                <b>Ref:</b> 324606<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 04/01/2027<br>
-                <b>Lodged:</b> 31/08/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324606" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.6567,53.6046,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation RequestRicetown, Co. MeathCase reference:324626Stat</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation RequestRicetown, Co. MeathCase reference:324626Stat</b><br>
-                <b>Ref:</b> 324626<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 06/01/2027 Description: proposed extension and addition of new electrical equipment to a co<br>
-                <b>Lodged:</b> 03/09/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324626" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.6567,53.6046,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealPollymount, Bellanamullia, Scramoge, Treanaceeve and Ballyhubert,</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealPollymount, Bellanamullia, Scramoge, Treanaceeve and Ballyhubert,</b><br>
-                <b>Ref:</b> 502020<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case due to be decided by 14-01-2027 Description: 10-year planning permission and 35-year operational life of a wind far<br>
-                <b>Lodged:</b> 02/09/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/502020" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.1868,53.6291,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Filter</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Filter</b><br>
-                <b>Ref:</b> 324452<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Withdrawn Description: Request to alter the already permitted White Hill Wind Farm (ABP-315365-21 & ABP-319903-24),<br>
-                <b>Lodged:</b> 22/07/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324452" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.9298,52.8377,0</coordinates>
         </Point>
     </Placemark>
 
