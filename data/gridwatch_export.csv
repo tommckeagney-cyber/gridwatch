@@ -1,4 +1,21 @@
 ref,title,description,county,status,date_lodged,date_signed,list_type,source_url,energy_type,week_ending,latitude,longitude
+324726,"Pre-Application Consultation RequestLocated in Meadstown and surrounding townlands, Co. CorkCase reference:324726Status:Case is due to be decided by 25/02/2027Description:Proposed 110 kV Substation, Grid connection and associated Solar PV FarmDate lodged:14/10/2026EIAR:NoNIS:NoPartiesCircal Meadstown Solar Ltd
+								(Applicant)Circal Meadstown Solar Ltd
+															(Active)","Proposed 110 kV Substation, Grid connection and associated Solar PV Farm",Cork,"Case is due to be decided by 25/02/2027 Description: Proposed 110 kV Substation, Grid connection and associated Solar PV",14/10/2026,,N,https://www.pleanala.ie/en-ie/case/324726,solar,16/10/2026,51.8985,-8.4756
+502279,"Planning Appeal3 Carlisle Terrace, Church Road, Malahide, Co. Dublin, K36 WK31Case reference:502279Status:Case due to be decided by 23-02-2027Description:Retention Planning Permission of the solar panels mounted on the south, east and west facing slopes of the existing...Date lodged:12/10/2026EIAR:NoNIS:NoPartiesDominick Natin
+								(Applicant)Dominick Natin
+								(1st Party Appellant)
+															(Active)Fingal County Council
+								(Planning Authority)
+															(Active)","Retention Planning Permission of the solar panels mounted on the south, east and west facing slopes of the existing...",Dublin,Case due to be decided by 23-02-2027 Description: Retention Planning Permission of the solar panels mounted on the south,12/10/2026,,N,https://www.pleanala.ie/en-ie/case/502279,solar,16/10/2026,53.3498,-6.2603
+324724,"REDIII Amendment - Private Developmentlocated in Turrock, Cronin, Gortaphuill, Glenrevagh, Tullyneeny, Bredagh, Cuilleenirwan, Cuille...Case reference:324724Status:Case is due to be decided by 15/02/2027Description:Request to alter the already permitted Seven Hills Wind Farm and associated development (ABP-313750-22)Date lodged:12/10/2026EIAR:NoNIS:NoPartiesEnergia Renewables ROI Limited
+															(Active)",Request to alter the already permitted Seven Hills Wind Farm and associated development (ABP-313750-22),Roscommon,Case is due to be decided by 15/02/2027 Description: Request to alter the already permitted Seven Hills Wind Farm and as,12/10/2026,,N,https://www.pleanala.ie/en-ie/case/324724,wind,16/10/2026,53.6291,-8.1868
+324718,"Private Development - REDIII Applicationlocated at the townlands Ballycullane, Ballyguiry, Carronadavderg, Carronahyla, Carronbeg, Clas...Case reference:324718Status:Case is due to be decided by 11/10/2027Description:Proposed development of 23 wind turbines, a 110kV substation, a 220kV loop-in substation, 220kV underground connect...Date lodged:13/10/2026EIAR:YesNIS:YesPartiesSlievegrine Ltd.
+															(Active)","Proposed development of 23 wind turbines, a 110kV substation, a 220kV loop-in substation, 220kV underground connect...",Waterford,"Case is due to be decided by 11/10/2027 Description: Proposed development of 23 wind turbines, a 110kV substation, a 220",13/10/2026,,N,https://www.pleanala.ie/en-ie/case/324718,wind,16/10/2026,52.2593,-7.1101
+323783,Filter,"Planning permission for Cloonkett Wind Farm consisting of 14 no. wind turbines, a permanent 220kV substation and an...",Carlow,"Refuse Perm. Description: Planning permission for Cloonkett Wind Farm consisting of 14 no. wind turbines, a permanent 22",30/09/2025,,D,https://www.pleanala.ie/en-ie/case/323783,wind,16/10/2026,52.8377,-6.9298
+323579,"Private Development - REDIII Applicationwithin the townlands of Leitrim, Lumville, Ballinla, Clarkeville, Ballyfore Big, Ballyfore Litt...Case reference:323579Status:Grant Perm. w   ConditionsDescription:Proposed Windfarm development of 7 Turbines, 110kV substation and associated works.Date lodged:05/09/2025
+					;Signed: 12/10/2026EIAR:YesNIS:YesPartiesBallinla Wind Farm Limited
+															(Active)","Proposed Windfarm development of 7 Turbines, 110kV substation and associated works.",Leitrim,"Grant Perm. w   Conditions Description: Proposed Windfarm development of 7 Turbines, 110kV substation and associated wor",05/09/2025,,D,https://www.pleanala.ie/en-ie/case/323579,wind,16/10/2026,54.0,-8.0
 324709,"Pre-Application Consultation Requeston a site within the Sports Ireland Campus, off Ballycoolin Road, Dublin 11Case reference:324709Status:Case is due to be decided by 22/02/2027Description:Proposed development of Barn Lodge 110kV/ MV Distribution SubstationDate lodged:09/10/2026EIAR:NoNIS:NoPartiesESB
 								(Applicant)ESB
 															(Active)",Proposed development of Barn Lodge 110kV/ MV Distribution Substation,Dublin,Case is due to be decided by 22/02/2027 Description: Proposed development of Barn Lodge 110kV/ MV Distribution Substatio,09/10/2026,,N,https://www.pleanala.ie/en-ie/case/324709,grid,09/10/2026,53.3498,-6.2603
@@ -85,25 +102,3 @@ ref,title,description,county,status,date_lodged,date_signed,list_type,source_url
 323955,"Private Development - REDIII Pre-applicationwithin the townlands of Mountebo, Kilmichael Hill, Lyrane, Craanhill, Craan Lower, Ballygullen,...Case reference:323955Status:Is a Strat. Infrast. Dev.Description:Proposed development of Kilmichael Wind Farm, associated 110kV off-site Substation, and associated worksDate lodged:04/12/2025
 					;Signed: 28/09/2026EIAR:NoNIS:NoPartiesKilmichael Wind Farm Limited
 															(Active)","Proposed development of Kilmichael Wind Farm, associated 110kV off-site Substation, and associated works",Wexford,"Is a Strat. Infrast. Dev. Description: Proposed development of Kilmichael Wind Farm, associated 110kV off-site Substatio",04/12/2025,,D,https://www.pleanala.ie/en-ie/case/323955,wind,02/10/2026,52.4798,-6.4576
-502154,"Planning AppealGalway Shopping Centre Townparks , Headford Road Galway , Co. GalwayCase reference:502154Status:Case due to be decided by 04-02-2027Description:Prefabricated substation to cater for 7 no. electric car charging points, 12 no. electric car parking spaces and as...Date lodged:23/09/2026EIAR:NoNIS:NoPartiesHall Power Limited
-								(Applicant)Michelle O'Sullivan
-								(3rd Party Appellant)
-															(Active)Galway City Council
-								(Planning Authority)
-															(Active)Hall Power Limited
-								(Applicant For Development)
-															(Active)","Prefabricated substation to cater for 7 no. electric car charging points, 12 no. electric car parking spaces and as...",Galway,Case due to be decided by 04-02-2027 Description: Prefabricated substation to cater for 7 no. electric car charging poin,23/09/2026,,N,https://www.pleanala.ie/en-ie/case/502154,grid,25/09/2026,53.2707,-9.0568
-324418,"Pre-Application Consultation Requestin the townland of Hedgestown, County Dublin.Case reference:324418Status:Is a Strat. Infrast. Dev.Description:Proposed development of the Courtlough 110kV/38kV/MV Distribution SubstationDate lodged:03/07/2026
-					;Signed: 21/09/2026EIAR:NoNIS:NoPartiesESB -Courtlough
-								(Applicant)ESB -Courtlough
-															(Active)",Proposed development of the Courtlough 110kV/38kV/MV Distribution Substation,Dublin,Is a Strat. Infrast. Dev. Description: Proposed development of the Courtlough 110kV/38kV/MV Distribution Substation,03/07/2026,,D,https://www.pleanala.ie/en-ie/case/324418,grid,25/09/2026,53.3498,-6.2603
-323699,"Private Development - REDIII Applicationin the townlands of Beagh, Beagh More, Cloonbar, Cloonweelaun, Cloonnaglasha, Cloonteen, Corill...Case reference:323699Status:Refuse Perm.Description:11 no. turbine wind farm and associated infrastructureDate lodged:19/09/2025
-					;Signed: 21/09/2026EIAR:YesNIS:YesPartiesRWE Renewables Ireland Limited
-															(Active)",11 no. turbine wind farm and associated infrastructure,Galway,Refuse Perm. Description: 11 no. turbine wind farm and associated infrastructure,19/09/2025,,D,https://www.pleanala.ie/en-ie/case/323699,wind,25/09/2026,53.2707,-9.0568
-324422,"Pre-Application Consultation Requestto the existing Trien 110kV substation at Trienearagh, Co. KerryCase reference:324422Status:Is not Strat. Infrast. Dev.Description:The proposed development of a 110 / 33 kV transformer compound and 110kV under the fence cable connectionDate lodged:17/06/2026
-					;Signed: 21/09/2026EIAR:NoNIS:NoPartiesCircal Trienearagh Solar Limited
-								(Applicant)Circal Trienearagh Solar Limited
-															(Active)",The proposed development of a 110 / 33 kV transformer compound and 110kV under the fence cable connection,Kerry,Is not Strat. Infrast. Dev. Description: The proposed development of a 110 / 33 kV transformer compound and 110kV under ,17/06/2026,,D,https://www.pleanala.ie/en-ie/case/324422,grid,25/09/2026,52.1546,-9.5231
-323635,"Private Development - REDIII Applicationlocated in the townlands of Garrane, Ballynagoul, Creggane and Charleville, Co. Limerick. (www....Case reference:323635Status:Approve with ConditionsDescription:9 no. wind turbines, grid connection and all associated site worksDate lodged:10/09/2025
-					;Signed: 24/09/2026EIAR:YesNIS:YesPartiesGarrane Green Energy Limited
-															(Active)Gerard Cussen","9 no. wind turbines, grid connection and all associated site works",Limerick,"Approve with Conditions Description: 9 no. wind turbines, grid connection and all associated site works",10/09/2025,,D,https://www.pleanala.ie/en-ie/case/323635,wind,25/09/2026,52.6638,-8.6267

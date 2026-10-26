@@ -69,6 +69,126 @@
     </Style>
 
     <Placemark>
+        <name>Pre-Application Consultation RequestLocated in Meadstown and surrounding townlan</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation RequestLocated in Meadstown and surrounding townlan</b><br>
+                <b>Ref:</b> 324726<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case is due to be decided by 25/02/2027 Description: Proposed 110 kV Substation, Grid connection and associated Solar PV<br>
+                <b>Lodged:</b> 14/10/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324726" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4756,51.8985,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning Appeal3 Carlisle Terrace, Church Road, Malahide, Co. Dublin, K36 WK31Ca</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning Appeal3 Carlisle Terrace, Church Road, Malahide, Co. Dublin, K36 WK31Ca</b><br>
+                <b>Ref:</b> 502279<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Case due to be decided by 23-02-2027 Description: Retention Planning Permission of the solar panels mounted on the south<br>
+                <b>Lodged:</b> 12/10/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/502279" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.2603,53.3498,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>REDIII Amendment - Private Developmentlocated in Turrock, Cronin, Gortaphuill, G</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>REDIII Amendment - Private Developmentlocated in Turrock, Cronin, Gortaphuill, G</b><br>
+                <b>Ref:</b> 324724<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 15/02/2027 Description: Request to alter the already permitted Seven Hills Wind Farm and as<br>
+                <b>Lodged:</b> 12/10/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324724" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.1868,53.6291,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationlocated at the townlands Ballycullane, B</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationlocated at the townlands Ballycullane, B</b><br>
+                <b>Ref:</b> 324718<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Case is due to be decided by 11/10/2027 Description: Proposed development of 23 wind turbines, a 110kV substation, a 220<br>
+                <b>Lodged:</b> 13/10/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324718" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-7.1101,52.2593,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Filter</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Filter</b><br>
+                <b>Ref:</b> 323783<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Refuse Perm. Description: Planning permission for Cloonkett Wind Farm consisting of 14 no. wind turbines, a permanent 22<br>
+                <b>Lodged:</b> 30/09/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323783" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.9298,52.8377,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Private Development - REDIII Applicationwithin the townlands of Leitrim, Lumvill</name>
+        <styleUrl>#style_wind</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Private Development - REDIII Applicationwithin the townlands of Leitrim, Lumvill</b><br>
+                <b>Ref:</b> 323579<br>
+                <b>Type:</b> WIND<br>
+                <b>Status:</b> Grant Perm. w   Conditions Description: Proposed Windfarm development of 7 Turbines, 110kV substation and associated wor<br>
+                <b>Lodged:</b> 05/09/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/323579" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.0,54.0,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Pre-Application Consultation Requeston a site within the Sports Ireland Campus, </name>
         <styleUrl>#style_grid</styleUrl>
         <description>
@@ -405,106 +525,6 @@
         </description>
         <Point>
             <coordinates>-6.4576,52.4798,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Planning AppealGalway Shopping Centre Townparks , Headford Road Galway , Co. Gal</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Planning AppealGalway Shopping Centre Townparks , Headford Road Galway , Co. Gal</b><br>
-                <b>Ref:</b> 502154<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case due to be decided by 04-02-2027 Description: Prefabricated substation to cater for 7 no. electric car charging poin<br>
-                <b>Lodged:</b> 23/09/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/502154" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.0568,53.2707,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestin the townland of Hedgestown, County Dublin</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestin the townland of Hedgestown, County Dublin</b><br>
-                <b>Ref:</b> 324418<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Is a Strat. Infrast. Dev. Description: Proposed development of the Courtlough 110kV/38kV/MV Distribution Substation<br>
-                <b>Lodged:</b> 03/07/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324418" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-6.2603,53.3498,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationin the townlands of Beagh, Beagh More, C</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationin the townlands of Beagh, Beagh More, C</b><br>
-                <b>Ref:</b> 323699<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Refuse Perm. Description: 11 no. turbine wind farm and associated infrastructure<br>
-                <b>Lodged:</b> 19/09/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323699" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.0568,53.2707,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Pre-Application Consultation Requestto the existing Trien 110kV substation at Tr</name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Pre-Application Consultation Requestto the existing Trien 110kV substation at Tr</b><br>
-                <b>Ref:</b> 324422<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Is not Strat. Infrast. Dev. Description: The proposed development of a 110 / 33 kV transformer compound and 110kV under <br>
-                <b>Lodged:</b> 17/06/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324422" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-9.5231,52.1546,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII Applicationlocated in the townlands of Garrane, Bal</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII Applicationlocated in the townlands of Garrane, Bal</b><br>
-                <b>Ref:</b> 323635<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Approve with Conditions Description: 9 no. wind turbines, grid connection and all associated site works<br>
-                <b>Lodged:</b> 10/09/2025<br>
-                <a href="https://www.pleanala.ie/en-ie/case/323635" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.6267,52.6638,0</coordinates>
         </Point>
     </Placemark>
 
