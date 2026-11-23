@@ -69,6 +69,66 @@
     </Style>
 
     <Placemark>
+        <name>Pre-Application Consultation Requestat Ballysumaghan, Fannybrock, Co. SligoCase </name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Pre-Application Consultation Requestat Ballysumaghan, Fannybrock, Co. SligoCase </b><br>
+                <b>Ref:</b> 324781<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Case is due to be decided by Description: Proposed Development of a new 220kV Cloonagh IPP Substation, extension to the <br>
+                <b>Lodged:</b> 09/11/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324781" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-8.4693,54.2693,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Filter</name>
+        <styleUrl>#style_grid</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Filter</b><br>
+                <b>Ref:</b> 324377<br>
+                <b>Type:</b> GRID<br>
+                <b>Status:</b> Alter decision - Is a Material Alteration (No EIAR) Description: Request to alter the terms of the already permitted 110<br>
+                <b>Lodged:</b> 11/06/2026<br>
+                <a href="https://www.pleanala.ie/en-ie/case/324377" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-6.9298,52.8377,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
+        <name>Planning AppealThe Application Site lies on approximately 119.3 hectares of land</name>
+        <styleUrl>#style_solar</styleUrl>
+        <description>
+            <![CDATA[
+            <div style="font-family: Arial; max-width: 300px;">
+                <b>Planning AppealThe Application Site lies on approximately 119.3 hectares of land</b><br>
+                <b>Ref:</b> 500143<br>
+                <b>Type:</b> SOLAR<br>
+                <b>Status:</b> Refuse permission Description: 10 year permission for solar PV energy Development and associated site works. A Natura Im<br>
+                <b>Lodged:</b> 24/10/2025<br>
+                <a href="https://www.pleanala.ie/en-ie/case/500143" target="_blank">View Details →</a>
+            </div>
+            ]]>
+        </description>
+        <Point>
+            <coordinates>-9.5231,52.1546,0</coordinates>
+        </Point>
+    </Placemark>
+
+    <Placemark>
         <name>Planning AppealGraffy, Meenamanragh, Dalraghan More, Glenties, Meenagrubby, Tiev</name>
         <styleUrl>#style_wind</styleUrl>
         <description>
@@ -465,46 +525,6 @@
         </description>
         <Point>
             <coordinates>-7.5,53.5,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Electricity Development ApplicationLocated in the towlands of Derrytrasna, Park </name>
-        <styleUrl>#style_grid</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Electricity Development ApplicationLocated in the towlands of Derrytrasna, Park </b><br>
-                <b>Ref:</b> 324733<br>
-                <b>Type:</b> GRID<br>
-                <b>Status:</b> Case is due to be decided by 16/04/2027 Description: Proposed development of a 110kV Substation and all associated site <br>
-                <b>Lodged:</b> 20/10/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324733" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-7.3,53.0,0</coordinates>
-        </Point>
-    </Placemark>
-
-    <Placemark>
-        <name>Private Development - REDIII ApplicationLocated in the townlands of Largan, Bole</name>
-        <styleUrl>#style_wind</styleUrl>
-        <description>
-            <![CDATA[
-            <div style="font-family: Arial; max-width: 300px;">
-                <b>Private Development - REDIII ApplicationLocated in the townlands of Largan, Bole</b><br>
-                <b>Ref:</b> 324738<br>
-                <b>Type:</b> WIND<br>
-                <b>Status:</b> Case is due to be decided by 20/10/2027 Description: 10-year planning permission for a proposed wind energy development <br>
-                <b>Lodged:</b> 22/10/2026<br>
-                <a href="https://www.pleanala.ie/en-ie/case/324738" target="_blank">View Details →</a>
-            </div>
-            ]]>
-        </description>
-        <Point>
-            <coordinates>-8.1868,53.6291,0</coordinates>
         </Point>
     </Placemark>
 

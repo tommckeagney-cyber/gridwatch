@@ -1,5 +1,50 @@
 [
   {
+    "ref": "324781",
+    "title": "Pre-Application Consultation Requestat Ballysumaghan, Fannybrock, Co. SligoCase reference:324781Status:Case is due to be decided byDescription:Proposed Development of a new 220kV Cloonagh IPP Substation, extension to the existing 220kV Srananagh Substation a...Date lodged:09/11/2026EIAR:NoNIS:NoPartiesBallysumaghan Flexpower Ltd\r\n\t\t\t\t\t\t\t\t(Applicant)Ballysumaghan Flexpower Ltd\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(Active)",
+    "description": "Proposed Development of a new 220kV Cloonagh IPP Substation, extension to the existing 220kV Srananagh Substation a...",
+    "county": "Sligo",
+    "status": "Case is due to be decided by Description: Proposed Development of a new 220kV Cloonagh IPP Substation, extension to the ",
+    "date_lodged": "09/11/2026",
+    "date_signed": null,
+    "list_type": "N",
+    "source_url": "https://www.pleanala.ie/en-ie/case/324781",
+    "energy_type": "grid",
+    "week_ending": "13/11/2026",
+    "latitude": 54.2693,
+    "longitude": -8.4693
+  },
+  {
+    "ref": "324377",
+    "title": "Filter",
+    "description": "Request to alter the terms of the already permitted 110kV substation (ABP-322690-25), increasing from a 2-bay to a ...",
+    "county": "Carlow",
+    "status": "Alter decision - Is a Material Alteration (No EIAR) Description: Request to alter the terms of the already permitted 110",
+    "date_lodged": "11/06/2026",
+    "date_signed": null,
+    "list_type": "D",
+    "source_url": "https://www.pleanala.ie/en-ie/case/324377",
+    "energy_type": "grid",
+    "week_ending": "13/11/2026",
+    "latitude": 52.8377,
+    "longitude": -6.9298
+  },
+  {
+    "ref": "500143",
+    "title": "Planning AppealThe Application Site lies on approximately 119.3 hectares of land located within the townlands ...Case reference:500143Status:Refuse permissionDescription:10 year permission for solar PV energy Development and associated site works. A Natura Impact Statement was submitt...Date lodged:24/10/2025\r\n\t\t\t\t\t;Signed: 13/11/2026EIAR:NoNIS:YesPartiesStatkraft Ireland Limited\r\n\t\t\t\t\t\t\t\t(Applicant)Statkraft Ireland Limited\r\n\t\t\t\t\t\t\t\t(1st Party Appellant)\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(Active)",
+    "description": "10 year permission for solar PV energy Development and associated site works. A Natura Impact Statement was submitt...",
+    "county": "Kerry",
+    "status": "Refuse permission Description: 10 year permission for solar PV energy Development and associated site works. A Natura Im",
+    "date_lodged": "24/10/2025",
+    "date_signed": null,
+    "list_type": "D",
+    "source_url": "https://www.pleanala.ie/en-ie/case/500143",
+    "energy_type": "solar",
+    "week_ending": "13/11/2026",
+    "latitude": 52.1546,
+    "longitude": -9.5231
+  },
+  {
     "ref": "322673",
     "title": "Planning AppealGraffy, Meenamanragh, Dalraghan More, Glenties, Meenagrubby, Tievebrack Banganboy, Stracashel, ...Case reference:322673Status:Refuse PermissionDescription:A 10 year permission for an amended wind farm development PL05B.237656. An Environmental Impact Assessment report (...Date lodged:04/06/2025\r\n\t\t\t\t\t;Signed: 03/11/2026EIAR:YesNIS:YesPartiesCuilfeach Teoranta\r\n\t\t\t\t\t\t\t\t(Applicant)Cuilfeach Teoranta\r\n\t\t\t\t\t\t\t\t(1st Party Appellant)\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(Active)",
     "description": "A 10 year permission for an amended wind farm development PL05B.237656. An Environmental Impact Assessment report (...",
@@ -91,7 +136,7 @@
   },
   {
     "ref": "502380",
-    "title": "Planning AppealTownlands of Lissaniska, Oakwood South, Cahernaglass, Ryehill Demesne, Carrowmore, Parkacurry, ...Case reference:502380Description:REDIII: 10-year planning permission for the development of a solar farm on a site of 239 hectares consisting of the...Date lodged:27/10/2026EIAR:NoNIS:NoPartiesHeron Solar Ltd\r\n\t\t\t\t\t\t\t\t(Applicant)Heron Solar Ltd\r\n\t\t\t\t\t\t\t\t(Applicant For Development)\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(Active)Galway County Council\r\n\t\t\t\t\t\t\t\t(Planning Authority)\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(Active)",
+    "title": "Planning AppealTownlands of Lissaniska, Oakwood South, Cahernaglass, Ryehill Demesne, Carrowmore, Parkacurry, ...Case reference:502380Description:REDIII: 10-year planning permission for the development of a solar farm on a site of 239 hectares consisting of the...Date lodged:27/10/2026EIAR:NoNIS:YesPartiesHeron Solar Ltd\r\n\t\t\t\t\t\t\t\t(Applicant)Heron Solar Ltd\r\n\t\t\t\t\t\t\t\t(Applicant For Development)\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(Active)Galway County Council\r\n\t\t\t\t\t\t\t\t(Planning Authority)\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(Active)",
     "description": "REDIII: 10-year planning permission for the development of a solar farm on a site of 239 hectares consisting of the...",
     "county": "Galway",
     "status": "Unknown",
@@ -298,35 +343,5 @@
     "week_ending": "30/10/2026",
     "latitude": 53.5,
     "longitude": -7.5
-  },
-  {
-    "ref": "324733",
-    "title": "Electricity Development ApplicationLocated in the towlands of Derrytrasna, Park Or Dunamase, Aghnahily, Dysart, Coolnacarrick, Hea...Case reference:324733Status:Case is due to be decided by 16/04/2027Description:Proposed development of a 110kV Substation and all associated site worksDate lodged:20/10/2026EIAR:NoNIS:YesPartiesPerigus Energy Ireland Midco Limited\r\n\t\t\t\t\t\t\t\t(Applicant)Perigus Energy Ireland Midco Limited\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(Active)",
-    "description": "Proposed development of a 110kV Substation and all associated site works",
-    "county": "Laois",
-    "status": "Case is due to be decided by 16/04/2027 Description: Proposed development of a 110kV Substation and all associated site ",
-    "date_lodged": "20/10/2026",
-    "date_signed": null,
-    "list_type": "N",
-    "source_url": "https://www.pleanala.ie/en-ie/case/324733",
-    "energy_type": "grid",
-    "week_ending": "23/10/2026",
-    "latitude": 53.0,
-    "longitude": -7.3
-  },
-  {
-    "ref": "324738",
-    "title": "Private Development - REDIII ApplicationLocated in the townlands of Largan, Boleysillagh, Cloonmeen, Toobrackan, and Tullaghanrock, Cou...Case reference:324738Status:Case is due to be decided by 20/10/2027Description:10-year planning permission for a proposed wind energy development consisting of 10 no. wind turbines and all assoc...Date lodged:22/10/2026EIAR:YesNIS:YesPartiesIslandmore Wind Farm Limited\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(Active)",
-    "description": "10-year planning permission for a proposed wind energy development consisting of 10 no. wind turbines and all assoc...",
-    "county": "Roscommon",
-    "status": "Case is due to be decided by 20/10/2027 Description: 10-year planning permission for a proposed wind energy development ",
-    "date_lodged": "22/10/2026",
-    "date_signed": null,
-    "list_type": "N",
-    "source_url": "https://www.pleanala.ie/en-ie/case/324738",
-    "energy_type": "wind",
-    "week_ending": "23/10/2026",
-    "latitude": 53.6291,
-    "longitude": -8.1868
   }
 ]
